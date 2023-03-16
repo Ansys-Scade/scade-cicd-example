@@ -1,0 +1,55 @@
+
+# Car Driving Control Tests Cases
+
+# Test Reference: CC_TEST_CDC_01
+#
+# Test Case Objectives:
+#    Verify the car is driven by the accelerator when the CC is off.
+#
+# Covered Requirements: CC_HLR_CDC_01
+#
+# Test Case Acceptance Criteria
+#    check that Throttle equals accelerator at each cycle.
+#
+# Test Case Description
+SSM::set Accel 0.0
+SSM::check ThrottleCmd 0.0
+SSM::cycle
+
+SSM::set Accel 51.2345
+SSM::check ThrottleCmd 51.2345 sustain=5 real=0.0001
+SSM::cycle 5
+SSM::set Accel 89.687
+SSM::check ThrottleCmd 89.687 sustain=10 real=0.001
+SSM::cycle 10
+SSM::set Accel 0.0
+SSM::check ThrottleCmd 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CDC_02
+#
+# Test Case Objectives:
+#    
+# Covered Requirements: CC_HLR_CDC_02
+#
+# Test Case Acceptance Criteria
+#    check that the throttle is regulated
+#
+# Test Case Description
+SSM::set Speed 90.05
+SSM::set On true
+SSM::set Off false
+SSM::check CruiseState Defs::ON sustain=5
+SSM::cycle 5
+
+# Test Reference: CC_TEST_CDC_03
+#
+# Test Case Objectives:
+#    
+# Covered Requirements: CC_HLR_CDC_03
+#
+# Test Case Acceptance Criteria
+#  
+# Test Case Description
+## TBD
+

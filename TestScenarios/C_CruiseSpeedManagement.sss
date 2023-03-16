@@ -1,0 +1,71 @@
+
+# Cruise Control Behavior Tests Cases
+
+# Tests environment init
+SSM::set System::SystemSimul/On true
+SSM::set System::SystemSimul/Resume false
+SSM::set System::SystemSimul/Set false
+SSM::set System::SystemSimul/QuickAccel false
+SSM::set System::SystemSimul/QuickDecel false
+SSM::set System::SystemSimul/Accel 100.0
+SSM::set System::SystemSimul/Brake 0.0
+SSM::cycle 15
+SSM::set System::SystemSimul/Accel 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CSM_01
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_01
+#
+# Test Case Acceptance Criteria
+#
+# Test Case Description
+## TBD
+
+# Test Reference: CC_TEST_CSM_02
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_02
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is set to the current vehicle speed when Set is true
+#
+# Test Case Description
+
+SSM::set System::SystemSimul/Set true
+SSM::cycle 1
+SSM::set System::SystemSimul/Set false
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CSM_03
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_03, CC_HLR_CSM_05
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is incremented up to SpeedMax when QuickAccel is true
+#
+# Test Case Description
+SSM::set System::SystemSimul/QuickAccel true
+SSM::cycle 60
+SSM::set System::SystemSimul/QuickAccel false
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CSM_04
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_04, CC_HLR_CSM_05
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is decremented down to SpeedMin when QuickDecel is true
+#
+# Test Case Description
+SSM::set System::SystemSimul/QuickDecel true
+SSM::cycle 60
+SSM::set System::SystemSimul/QuickDecel false
+SSM::cycle 1

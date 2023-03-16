@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="System::SystemSimul" oid="!ed/1BFF7/7BD2/DC/46A46BEE/1F70">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Variable name="CruiseSpeed" type="float32" oid="!ed/1C055/7BD2/DC/46A46C1D/48E2" instancepath="System::SystemSimul/"/>
+					</output>
+					<inputs>
+						<Plug name="F_CruiseSpeed" type="float32" oid="3ea09db9-9628-4fb9-82a2-8877c5c4009e" pathname="..\CruiseControlDisplay\CruiseControl.sgfx" layer="CruiseControl" layerOid="5cd30c1f-65b2-4f6f-97c2-181b890576ae"/>
+						<Plug name="CruiseSpeed" type="float32" oid="28d22a6b-17d1-46af-a4fa-d09143933851" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CruiseState" type="tCruiseState" oid="!ed/1C069/7BD2/DC/46A46C1D/1519" instancepath="System::SystemSimul/"/>
+					</output>
+					<inputs>
+						<Plug name="I_CruiseState" type="int32" oid="ae4ecb9d-5746-475e-8fcb-1149eeccb149" pathname="..\CruiseControlDisplay\CruiseControl.sgfx" layer="CruiseControl" layerOid="5cd30c1f-65b2-4f6f-97c2-181b890576ae"/>
+						<Plug name="CruiseState" type="int32" oid="6ed34439-fe22-4344-b15a-6306303d1a54" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="CarSpeed" type="float32" oid="!ed/1C0B0/7BD2/DC/46A46DE9/45E8" instancepath="System::SystemSimul/"/>
+					</output>
+					<inputs>
+						<Plug name="F_Speed" type="float32" oid="2cdfdd66-d294-4aa9-9740-eb8aa8e2d2b5" pathname="..\CruiseControlDisplay\CruiseControl.sgfx" layer="CruiseControl" layerOid="5cd30c1f-65b2-4f6f-97c2-181b890576ae"/>
+						<Plug name="CarSpeed" type="float32" oid="ae1ae1f9-5006-4eb8-b919-5ec510cb6a77" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="On" type="bool" oid="572914f7-2585-45e5-ba00-0840d6341f89" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="On" type="bool" oid="!ed/1C000/7BD2/DC/46A46C0F/5C14" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="Resume" type="bool" oid="484811f1-a185-44fe-9f9e-0a17ee27bffe" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="Resume" type="bool" oid="!ed/1C010/7BD2/DC/46A46C0F/690D" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="Set" type="bool" oid="48087d9f-5726-4e57-8afc-66b7e067e382" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="Set" type="bool" oid="!ed/1C018/7BD2/DC/46A46C0F/361E" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="QuickAccel" type="bool" oid="eb3a39d7-4d2d-44cc-bd65-0d95d26df1f8" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="QuickAccel" type="bool" oid="!ed/1C020/7BD2/DC/46A46C0F/2D74" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="QuickDecel" type="bool" oid="b470537c-2c47-4380-b8a4-05d27395a533" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="QuickDecel" type="bool" oid="!ed/1C028/7BD2/DC/46A46C0F/41D2" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="Brake" type="float32" oid="c003c620-d045-433a-864c-20665469325d" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="Brake" type="float32" oid="!ed/1C03C/7BD2/DC/46A46C0F/2488" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="Accelerator" type="float32" oid="de22cc91-bbc0-4443-9635-41a5ed405eb5" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="Accel" type="float32" oid="!ed/1C032/7BD2/DC/46A46C0F/293F" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="ThrottleCmd" type="tPercent" oid="!ed/23a2/7085/E80/4c1751534499" instancepath="System::SystemSimul/"/>
+					</output>
+					<inputs>
+						<Plug name="ThrottleCmd" type="float32" oid="84e50b72-79eb-42dd-86be-eaa7bdbaa7d5" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="Off" type="bool" oid="06b9ec2e-d82d-48a3-bdd4-1be24a1dd40c" pathname="ControlPanel.rgfx" layer="symbology_layer" layerOid="109dbcff-f259-42e1-81a3-409c9458f450"/>
+					</output>
+					<inputs>
+						<Variable name="Off" type="bool" oid="!ed/a053/6CBB/12EC/584968955015" instancepath="System::SystemSimul/"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

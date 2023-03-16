@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:simu="http://www.esterel-technologies.com/ns/scade/pragmas/simulator/1" xmlns:SP="unknown_address">
+	<declarations>
+		<Package name="CruiseControlAlternative">
+			<declarations>
+				<Type name="tSpeed2">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/232d9/2FD6/1894/5813721c566c"/>
+					</pragmas>
+				</Type>
+				<Type name="tCruiseState">
+					<definition>
+						<Enum>
+							<values>
+								<Value name="OFF">
+									<pragmas>
+										<ed:Value oid="!ed/232db/2FD6/1894/5813721c3af1"/>
+									</pragmas>
+								</Value>
+								<Value name="INT">
+									<pragmas>
+										<ed:Value oid="!ed/232dc/2FD6/1894/5813721c6c6"/>
+									</pragmas>
+								</Value>
+								<Value name="SBY">
+									<pragmas>
+										<ed:Value oid="!ed/232dd/2FD6/1894/5813721c24b"/>
+									</pragmas>
+								</Value>
+								<Value name="ON">
+									<pragmas>
+										<ed:Value oid="!ed/232de/2FD6/1894/5813721c635f"/>
+									</pragmas>
+								</Value>
+							</values>
+						</Enum>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/232da/2FD6/1894/5813721c312c"/>
+					</pragmas>
+				</Type>
+				<Type name="tPercent2">
+					<definition>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</definition>
+					<pragmas>
+						<ed:Type oid="!ed/232df/2FD6/1894/5813721c3329"/>
+					</pragmas>
+				</Type>
+				<Operator name="Regulation" href="Regulation.xscade"/>
+				<Operator name="CruiseSpeedManagement" href="CruiseSpeedManagement.xscade"/>
+				<Operator name="SaturateThrottle" href="SaturateThrottle1.xscade"/>
+				<Operator name="CruiseRegulation" href="CruiseRegulation1.xscade"/>
+				<Operator name="LimiterUnSymmetrical" href="LimiterUnSymmetrical.xscade"/>
+				<Operator name="SelectCruiseSpeed" href="SelectCruiseSpeed.xscade"/>
+				<Operator name="ModeMonitoring" href="ModeMonitoring.xscade"/>
+				<Operator name="CruiseControl" href="CruiseControl2.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/232d5/2FD6/1894/5813721c4ee4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<diagrams>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/232d6/2FD6/1894/5813721c4c1b" blockKind="constants"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/232d7/2FD6/1894/5813721ce3" blockKind="types"/>
+						<TreeDiagram landscape="false" format="A4 (210 297)" oid="!ed/232d8/2FD6/1894/5813721c576" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

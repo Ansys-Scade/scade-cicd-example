@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" kind="function" name="Prop3">
+	<inputs>
+		<Variable name="CruiseState">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tCruiseState"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/29920/3D07/1E4/46D83832/1869"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Off">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/299DC/3D07/1E4/46D83A0B/DAA"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="prop">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="win_2407/5368/70C/3DE781E1/3081"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="_L8">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="win_2433/23D7/70C/3DE78221/53C9"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L12">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/2997D/3D07/1E4/46D838B1/4CCB"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L10">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tCruiseState"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/29975/3D07/1E4/46D838B1/4BC7"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L15">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/299DF/3D07/1E4/46D83A16/4EBF"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L16">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tCruiseState"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/14270/87D/2750/58289e2c254c"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- _L8 = verif::Implies(_L15, _L12); -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L8"/>
+			</lefts>
+			<right>
+				<!-- verif::Implies(_L15, _L12) -->
+				<CallExpression>
+					<operator>
+						<OpCall name="2">
+							<operator>
+								<OperatorRef name="verif::Implies"/>
+							</operator>
+						</OpCall>
+					</operator>
+					<callParameters>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L15"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L12"/>
+							</path>
+						</IdExpression>
+					</callParameters>
+					<pragmas>
+						<ed:CallExpression xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+							<references>
+								<OperatorRef path="verif::Implies" refOid="win_1299/65E0/128/3AE94DD7/5BBD">
+									<InputRef refOid="win_129D/5893/128/3AE94DE8/6EF7"/>
+									<InputRef refOid="win_129C/3E7C/128/3AE94DE6/17D2"/>
+									<OutputRef refOid="win_129E/2506/128/3AE94DE9/4D98"/>
+								</OperatorRef>
+							</references>
+						</ed:CallExpression>
+					</pragmas>
+				</CallExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="win_2431/6D5B/70C/3DE78221/1BA0"/>
+			</pragmas>
+		</Equation>
+		<!-- prop = _L8; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="prop"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="_L8"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="win_243D/1602/70C/3DE7822E/35E8"/>
+			</pragmas>
+		</Equation>
+		<!-- _L10 = CruiseState; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L10"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="CruiseState"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/29972/3D07/1E4/46D838B1/3055"/>
+			</pragmas>
+		</Equation>
+		<!-- _L12 = _L10 = _L16; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L12"/>
+			</lefts>
+			<right>
+				<!-- _L10 = _L16 -->
+				<BinaryOp name="1" operator="=">
+					<operands>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L10"/>
+							</path>
+						</IdExpression>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L16"/>
+							</path>
+						</IdExpression>
+					</operands>
+				</BinaryOp>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/2997A/3D07/1E4/46D838B1/62F5"/>
+			</pragmas>
+		</Equation>
+		<!-- _L15 = Off; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L15"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="Off"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/299DD/3D07/1E4/46D83A16/A98"/>
+			</pragmas>
+		</Equation>
+		<!-- _L16 = OFF; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L16"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="OFF"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/1426f/87D/2750/58289e2c6ccf"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="win_23F6/3991/70C/3DE781B1/73AB" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+			<comment>Prop3 is falsifiable: </comment>
+			<comment>Transition from Off to Enable shall be &quot;On and  not Off&quot;. Indeed, pressing both On and Off shall not enable the Cruise Control.</comment>
+			<diagrams>
+				<NetDiagram name="eq_Prop3_1" landscape="true" format="A4" oid="!ed/BA96/4D8A/7C0/46A08B17/7A10">
+					<presentationElements>
+						<EquationGE presentable="win_2431/6D5B/70C/3DE78221/1BA0">
+							<position>
+								<Point x="6607" y="2082"/>
+							</position>
+							<size>
+								<Size width="1788" height="1392"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="win_243D/1602/70C/3DE7822E/35E8">
+							<position>
+								<Point x="10600" y="2514"/>
+							</position>
+							<size>
+								<Size width="326" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/29972/3D07/1E4/46D838B1/3055">
+							<position>
+								<Point x="2388" y="3360"/>
+							</position>
+							<size>
+								<Size width="258" height="529"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/2997A/3D07/1E4/46D838B1/62F5">
+							<position>
+								<Point x="3881" y="4331"/>
+							</position>
+							<size>
+								<Size width="1022" height="678"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/29972/3D07/1E4/46D838B1/3055" dstEquation="!ed/2997A/3D07/1E4/46D838B1/62F5">
+							<positions>
+								<Point x="2646" y="3625"/>
+								<Point x="3254" y="3625"/>
+								<Point x="3254" y="4551"/>
+								<Point x="3889" y="4551"/>
+							</positions>
+						</Edge>
+						<EquationGE presentable="!ed/299DD/3D07/1E4/46D83A16/A98">
+							<position>
+								<Point x="2420" y="635"/>
+							</position>
+							<size>
+								<Size width="251" height="503"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_2431/6D5B/70C/3DE78221/1BA0" dstEquation="win_243D/1602/70C/3DE7822E/35E8">
+							<positions>
+								<Point x="8387" y="2778"/>
+								<Point x="9340" y="2778"/>
+								<Point x="9340" y="2778"/>
+								<Point x="10663" y="2778"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/2997A/3D07/1E4/46D838B1/62F5" dstEquation="win_2431/6D5B/70C/3DE78221/1BA0">
+							<positions>
+								<Point x="4895" y="4683"/>
+								<Point x="5689" y="4683"/>
+								<Point x="5689" y="3016"/>
+								<Point x="6615" y="3016"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/299DD/3D07/1E4/46D83A16/A98" dstEquation="win_2431/6D5B/70C/3DE78221/1BA0">
+							<positions>
+								<Point x="2672" y="900"/>
+								<Point x="5689" y="900"/>
+								<Point x="5689" y="2540"/>
+								<Point x="6615" y="2540"/>
+							</positions>
+						</Edge>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/1426f/87D/2750/58289e2c6ccf">
+							<position>
+								<Point x="2434" y="5159"/>
+							</position>
+							<size>
+								<Size width="212" height="318"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/1426f/87D/2750/58289e2c6ccf" dstEquation="!ed/2997A/3D07/1E4/46D838B1/62F5">
+							<positions>
+								<Point x="2646" y="5318"/>
+								<Point x="3254" y="5318"/>
+								<Point x="3254" y="4789"/>
+								<Point x="3889" y="4789"/>
+							</positions>
+						</Edge>
+					</presentationElements>
+				</NetDiagram>
+			</diagrams>
+			<references>
+				<TypeRef path="tCruiseState" refOid="!ed/7131/1D6/4D8/46A0B80F/13C9"/>
+				<ConstVarRef path="OFF" refOid="!ed/717D/1D6/4D8/46A0B8D0/2E5A"/>
+			</references>
+		</ed:Operator>
+	</pragmas>
+</Operator>

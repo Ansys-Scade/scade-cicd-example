@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/2" id="_nY_J4PAQEemSNpI4QBr0rg" name="CruiseControl" identifier="C:\AnsysDev\git\common-examples\CruiseControl\CruiseControl\CruiseControl.rqtf">
+  <documents xsi:type="scade_req:ScadeDocument" id="_nY_J4fAQEemSNpI4QBr0rg" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_nY_J4vAQEemSNpI4QBr0rg" traceableElement="_nY_KNPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_nY_J4_AQEemSNpI4QBr0rg" traceableElement="_nY_KQfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_nY_J5PAQEemSNpI4QBr0rg" traceableElement="_nY_KT_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_nY_J5fAQEemSNpI4QBr0rg" traceableElement="_nY_KXfAQEemSNpI4QBr0rg"/>
+  </documents>
+  <documents xsi:type="scade_req:Specification" id="_nY_J5vAQEemSNpI4QBr0rg" name="High Level Requirements    Word" identifier="High Level Requirements">
+    <children xsi:type="scade_req:Section" id="_nY_J5_AQEemSNpI4QBr0rg" name="2. Cruise Control Requirements" identifier="2." description="">
+      <children xsi:type="scade_req:Section" id="_nY_J6PAQEemSNpI4QBr0rg" name="Interface" identifier="Interface" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J6fAQEemSNpI4QBr0rg" traceableElement="_nY_KM_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J6vAQEemSNpI4QBr0rg" traceableElement="_nY_KNfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J6_AQEemSNpI4QBr0rg" traceableElement="_nY_KNvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J7PAQEemSNpI4QBr0rg" traceableElement="_nY_KN_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J7fAQEemSNpI4QBr0rg" traceableElement="_nY_KOPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J7vAQEemSNpI4QBr0rg" traceableElement="_nY_KOfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J7_AQEemSNpI4QBr0rg" traceableElement="_nY_KOvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J8PAQEemSNpI4QBr0rg" traceableElement="_nY_KO_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J8fAQEemSNpI4QBr0rg" traceableElement="_nY_KPPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J8vAQEemSNpI4QBr0rg" traceableElement="_nY_KPfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J8_AQEemSNpI4QBr0rg" traceableElement="_nY_KPvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J9PAQEemSNpI4QBr0rg" traceableElement="_nY_KP_AQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_nY_J9fAQEemSNpI4QBr0rg" name="Cruise Control behavior" identifier="Cruise Control behavior" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J9vAQEemSNpI4QBr0rg" traceableElement="_nY_KQPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J9_AQEemSNpI4QBr0rg" traceableElement="_nY_KQvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J-PAQEemSNpI4QBr0rg" traceableElement="_nY_KQ_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J-fAQEemSNpI4QBr0rg" traceableElement="_nY_KRPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J-vAQEemSNpI4QBr0rg" traceableElement="_nY_KRfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J-_AQEemSNpI4QBr0rg" traceableElement="_nY_KRvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J_PAQEemSNpI4QBr0rg" traceableElement="_nY_KR_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J_fAQEemSNpI4QBr0rg" traceableElement="_nY_KSPAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_nY_J_vAQEemSNpI4QBr0rg" name="Car driving control" identifier="Car driving control" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_J__AQEemSNpI4QBr0rg" traceableElement="_nY_KSfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KAPAQEemSNpI4QBr0rg" traceableElement="_nY_KSvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KAfAQEemSNpI4QBr0rg" traceableElement="_nY_KS_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KAvAQEemSNpI4QBr0rg" traceableElement="_nY_KTPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KA_AQEemSNpI4QBr0rg" traceableElement="_nY_KTfAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_nY_KBPAQEemSNpI4QBr0rg" name="Cruise speed management" identifier="Cruise speed management" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KBfAQEemSNpI4QBr0rg" traceableElement="_nY_KTvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KBvAQEemSNpI4QBr0rg" traceableElement="_nY_KUPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KB_AQEemSNpI4QBr0rg" traceableElement="_nY_KUfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KCPAQEemSNpI4QBr0rg" traceableElement="_nY_KUvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KCfAQEemSNpI4QBr0rg" traceableElement="_nY_KU_AQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_nY_KCvAQEemSNpI4QBr0rg" name="Pedals pressed detection" identifier="Pedals pressed detection" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KC_AQEemSNpI4QBr0rg" traceableElement="_nY_KVPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KDPAQEemSNpI4QBr0rg" traceableElement="_nY_KVfAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_nY_KDfAQEemSNpI4QBr0rg" name="Cruise Control parameters" identifier="Cruise Control parameters" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KDvAQEemSNpI4QBr0rg" traceableElement="_nY_KVvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KD_AQEemSNpI4QBr0rg" traceableElement="_nY_KV_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KEPAQEemSNpI4QBr0rg" traceableElement="_nY_KWPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KEfAQEemSNpI4QBr0rg" traceableElement="_nY_KWfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KEvAQEemSNpI4QBr0rg" traceableElement="_nY_KWvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KE_AQEemSNpI4QBr0rg" traceableElement="_nY_KW_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_nY_KFPAQEemSNpI4QBr0rg" traceableElement="_nY_KXPAQEemSNpI4QBr0rg"/>
+      </children>
+    </children>
+  </documents>
+  <traceabilityLinks id="_nY_KFfAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KM_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KFvAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KN_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KF_AQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KOPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KGPAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KO_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KGfAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KPfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KGvAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KPvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KG_AQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KP_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KHPAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KQPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KHfAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KQvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KHvAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KQ_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KH_AQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KRPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KIPAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KRfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KIfAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KRvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KIvAQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KR_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KI_AQEemSNpI4QBr0rg" name="CruiseControlBehavior.sss" type="Covering:trace" writable="true" source="_nY_KQfAQEemSNpI4QBr0rg" target="_nY_KSPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KJPAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KSvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KJfAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KS_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KJvAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KTPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KJ_AQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KTfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KKPAQEemSNpI4QBr0rg" name="CruiseSpeedManagement.sss" type="Covering:trace" writable="true" source="_nY_KT_AQEemSNpI4QBr0rg" target="_nY_KTvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KKfAQEemSNpI4QBr0rg" name="CruiseSpeedManagement.sss" type="Covering:trace" writable="true" source="_nY_KT_AQEemSNpI4QBr0rg" target="_nY_KUPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KKvAQEemSNpI4QBr0rg" name="CruiseSpeedManagement.sss" type="Covering:trace" writable="true" source="_nY_KT_AQEemSNpI4QBr0rg" target="_nY_KUfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KK_AQEemSNpI4QBr0rg" name="CruiseSpeedManagement.sss" type="Covering:trace" writable="true" source="_nY_KT_AQEemSNpI4QBr0rg" target="_nY_KUvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KLPAQEemSNpI4QBr0rg" name="CruiseSpeedManagement.sss" type="Covering:trace" writable="true" source="_nY_KT_AQEemSNpI4QBr0rg" target="_nY_KU_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KLfAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KWfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KLvAQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KWvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KL_AQEemSNpI4QBr0rg" name="CruiseRegulation.csv" type="Covering:trace" writable="true" source="_nY_KNPAQEemSNpI4QBr0rg" target="_nY_KW_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KMPAQEemSNpI4QBr0rg" writable="true" source="_nY_KXfAQEemSNpI4QBr0rg" target="_nY_KSfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KMfAQEemSNpI4QBr0rg" writable="true" source="_nY_KXfAQEemSNpI4QBr0rg" target="_nY_KSvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_nY_KMvAQEemSNpI4QBr0rg" writable="true" source="_nY_KXfAQEemSNpI4QBr0rg" target="_nY_KS_AQEemSNpI4QBr0rg"/>
+  <traceableElements id="_nY_KM_AQEemSNpI4QBr0rg" name="CC_HLR_IN_01" identifier="CC_HLR_IN_01" description="On: Enable the CC"/>
+  <traceableElements id="_nY_KNPAQEemSNpI4QBr0rg" identifier="07D20D53-D638-429C-8287-884B44885ECC"/>
+  <traceableElements id="_nY_KNfAQEemSNpI4QBr0rg" name="CC_HLR_IN_02" identifier="CC_HLR_IN_02" description="Off: Disable the CC"/>
+  <traceableElements id="_nY_KNvAQEemSNpI4QBr0rg" name="CC_HLR_IN_03" identifier="CC_HLR_IN_03" description="Resume: Resume the CC after a braking"/>
+  <traceableElements id="_nY_KN_AQEemSNpI4QBr0rg" name="CC_HLR_IN_04" identifier="CC_HLR_IN_04" description="Set: Set the current speed as the new cruise speed"/>
+  <traceableElements id="_nY_KOPAQEemSNpI4QBr0rg" name="CC_HLR_IN_05" identifier="CC_HLR_IN_05" description="QuickDecel: Decrease the cruise speed"/>
+  <traceableElements id="_nY_KOfAQEemSNpI4QBr0rg" name="CC_HLR_IN_06" identifier="CC_HLR_IN_06" description="QuickAccel: Increase the cruise speed"/>
+  <traceableElements id="_nY_KOvAQEemSNpI4QBr0rg" name="CC_HLR_IN_07" identifier="CC_HLR_IN_07" description="Accel: Accelerator pedal sensor"/>
+  <traceableElements id="_nY_KO_AQEemSNpI4QBr0rg" name="CC_HLR_IN_08" identifier="CC_HLR_IN_08" description="Brake: Brake pedal sensor"/>
+  <traceableElements id="_nY_KPPAQEemSNpI4QBr0rg" name="CC_HLR_IN_09" identifier="CC_HLR_IN_09" description="Speed: Car speed sensor"/>
+  <traceableElements id="_nY_KPfAQEemSNpI4QBr0rg" name="CC_HLR_OUT_01" identifier="CC_HLR_OUT_01" description="CruiseSpeed: Cruise speed value"/>
+  <traceableElements id="_nY_KPvAQEemSNpI4QBr0rg" name="CC_HLR_OUT_02" identifier="CC_HLR_OUT_02" description="ThrottleCmd: Throttle command"/>
+  <traceableElements id="_nY_KP_AQEemSNpI4QBr0rg" name="CC_HLR_OUT_03" identifier="CC_HLR_OUT_03" description="CruiseState: this is the state of the CC. It can be OFF, ON, STDBY, INT."/>
+  <traceableElements id="_nY_KQPAQEemSNpI4QBr0rg" name="CC_HLR_CCB_01" identifier="CC_HLR_CCB_01" description="When the driver starts the car, the CC shall be off. The output CruiseState should be set to OFF"/>
+  <traceableElements id="_nY_KQfAQEemSNpI4QBr0rg" identifier="77F5655F-3092-4B53-B1B6-BE317DED53D3"/>
+  <traceableElements id="_nY_KQvAQEemSNpI4QBr0rg" name="CC_HLR_CCB_02" identifier="CC_HLR_CCB_02" description="The CC shall be set on when the driver push the on button."/>
+  <traceableElements id="_nY_KQ_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_03" identifier="CC_HLR_CCB_03" description="The CC shall automatically go off when the off button is pressed."/>
+  <traceableElements id="_nY_KRPAQEemSNpI4QBr0rg" name="CC_HLR_CCB_04" identifier="CC_HLR_CCB_04" description="If the car speed is in the speed limit and the accelerator pedal is not pressed, the CC shall be on and regulate the car speed. The output CruiseState shall be set to ON."/>
+  <traceableElements id="_nY_KRfAQEemSNpI4QBr0rg" name="CC_HLR_CCB_05" identifier="CC_HLR_CCB_05" description="The CC system shall be automatically disabled when the accelerator pedal is pressed, or the car speed is outside the speed limit. The output CruiseState shall be set to STDBY."/>
+  <traceableElements id="_nY_KRvAQEemSNpI4QBr0rg" name="CC_HLR_CCB_06" identifier="CC_HLR_CCB_06" description="The system shall return to the ON state when both the accelerator pedal is not pressed, and the car speed is inside the speed limit. The last set cruise speed shall be re-used."/>
+  <traceableElements id="_nY_KR_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_07" identifier="CC_HLR_CCB_07" description="The CC shall be immediately interrupted when the brake is pressed. The output CruiseState shall be set to INT."/>
+  <traceableElements id="_nY_KSPAQEemSNpI4QBr0rg" name="CC_HLR_CCB_08" identifier="CC_HLR_CCB_08" description="The system shall resume either to the ON or STDBY states, depending on the Accelerator pedal and the Speed value when the resume button is pressed. The last set cruise speed shall be re-used."/>
+  <traceableElements id="_nY_KSfAQEemSNpI4QBr0rg" name="CC_HLR_CDC_01" identifier="CC_HLR_CDC_01" description="When the CC is off, the car speed shall be driven using the accelerator pedal."/>
+  <traceableElements id="_nY_KSvAQEemSNpI4QBr0rg" name="CC_HLR_CDC_02" identifier="CC_HLR_CDC_02" description="When the CC is on, the car speed shall be automatically regulated."/>
+  <traceableElements id="_nY_KS_AQEemSNpI4QBr0rg" name="CC_HLR_CDC_03" identifier="CC_HLR_CDC_03" description="The regulation shall be done using a proportional and integral algorithm, with Kp and Ki factors."/>
+  <traceableElements id="_nY_KTPAQEemSNpI4QBr0rg" name="CC_HLR_CDC_04" identifier="CC_HLR_CDC_04" description="The regulation algorithm shall be protected against the overshoot of its integral part: the integral action shall be reset when the CC is going on, and frozen when the throttle output is saturated."/>
+  <traceableElements id="_nY_KTfAQEemSNpI4QBr0rg" name="CC_HLR_CDC_05" identifier="CC_HLR_CDC_05" description="The throttle command shall be saturated at ThrottleSatMax when automatically regulating, in order to limit the car acceleration for the comfort."/>
+  <traceableElements id="_nY_KTvAQEemSNpI4QBr0rg" name="CC_HLR_CSM_01" identifier="CC_HLR_CSM_01" description="The Cruise Speed shall be managed only when the cruise control is enabled, meaning ON, STDBY, or INT states."/>
+  <traceableElements id="_nY_KT_AQEemSNpI4QBr0rg" identifier="57FB5819-CF2D-4E9D-8472-07838A2752DE"/>
+  <traceableElements id="_nY_KUPAQEemSNpI4QBr0rg" name="CC_HLR_CSM_02" identifier="CC_HLR_CSM_02" description="The cruise speed shall be set to the current speed when the set button is pressed."/>
+  <traceableElements id="_nY_KUfAQEemSNpI4QBr0rg" name="CC_HLR_CSM_03" identifier="CC_HLR_CSM_03" description="The cruise speed shall be increased of SpeedInc km/h when the QUICKACCEL button is pressed. only if this new value of the cruise speed is still lower than the maximal speed SpeedMax km/h."/>
+  <traceableElements id="_nY_KUvAQEemSNpI4QBr0rg" name="CC_HLR_CSM_04" identifier="CC_HLR_CSM_04" description="The cruise speed shall be decreased of SpeedInc km/h when the QUICKDECEL button is pressed."/>
+  <traceableElements id="_nY_KU_AQEemSNpI4QBr0rg" name="CC_HLR_CSM_05" identifier="CC_HLR_CSM_05" description="The Cruise Speed shall be maintained between SpeedMin and SpeedMax km/h values."/>
+  <traceableElements id="_nY_KVPAQEemSNpI4QBr0rg" name="CC_HLR_PPD_01" identifier="CC_HLR_PPD_01" description="The accelerator pedal shall be detected as pressed when its value is above PedalsMin."/>
+  <traceableElements id="_nY_KVfAQEemSNpI4QBr0rg" name="CC_HLR_PPD_02" identifier="CC_HLR_PPD_02" description="The Brake pedal shall be detected as pressed when its value is above PedalsMin."/>
+  <traceableElements id="_nY_KVvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_01" identifier="CC_HLR_CCP_01" description="SpeedMin: 30.0 Km/h"/>
+  <traceableElements id="_nY_KV_AQEemSNpI4QBr0rg" name="CC_HLR_CCP_02" identifier="CC_HLR_CCP_02" description="SpeedMax: 150.0 Km/h"/>
+  <traceableElements id="_nY_KWPAQEemSNpI4QBr0rg" name="CC_HLR_CCP_03" identifier="CC_HLR_CCP_03" description="SpeedInc: 2.5 Km/h"/>
+  <traceableElements id="_nY_KWfAQEemSNpI4QBr0rg" name="CC_HLR_CCP_04" identifier="CC_HLR_CCP_04" description="Kp: 8.113"/>
+  <traceableElements id="_nY_KWvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_05" identifier="CC_HLR_CCP_05" description="Ki: 0.5"/>
+  <traceableElements id="_nY_KW_AQEemSNpI4QBr0rg" name="CC_HLR_CCP_06" identifier="CC_HLR_CCP_06" description="ThrottleSatMax: 45.0 percent"/>
+  <traceableElements id="_nY_KXPAQEemSNpI4QBr0rg" name="CC_HLR_CCP_07" identifier="CC_HLR_CCP_07" description="PedalsMin: 3.0 percent."/>
+  <traceableElements id="_nY_KXfAQEemSNpI4QBr0rg" identifier="423C8AEE-FC8F-4F05-9650-1737D9182567"/>
+</scade_req:ReqProject>

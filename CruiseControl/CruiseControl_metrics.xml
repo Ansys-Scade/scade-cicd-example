@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metricsResults project="C:\AnsysDev\examples\cicd\CruiseControl\\CruiseControl.etp" configuration="KCG" date="2023-02-09T16:53:56">
+	<categories>
+		<category category_name="Model">
+			<metrics>
+				<metric metric_id="SCADE_M004" metric_name="Total number of sensors" description="The overall number of sensors defined in the model" min="0" average="0" max="0">
+					<objects>
+						<object path="CruiseControl" value="0"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M006" metric_name="Total number of diagrams" description="The overall number of diagrams defined in the model" min="11" average="11" max="11">
+					<objects>
+						<object path="CruiseControl" value="11"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M001" metric_name="Total number of operators" description="The overall number of operators defined in the model" min="11" average="11" max="11">
+					<objects>
+						<object path="CruiseControl" value="11"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M003" metric_name="Total number of constants" description="The overall number of constants defined in the model" min="10" average="10" max="10">
+					<objects>
+						<object path="CruiseControl" value="10"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M002" metric_name="Total number of  types" description="The overall number of types defined in the model" min="4" average="4" max="4">
+					<objects>
+						<object path="CruiseControl" value="4"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M005" metric_name="Total number of packages" description="The overall number of packages defined in the model" min="4" average="4" max="4">
+					<objects>
+						<object path="CruiseControl" value="4"/>
+					</objects>
+				</metric>
+			</metrics>
+		</category>
+		<category category_name="Package">
+			<metrics>
+				<metric metric_id="SCADE_M007" metric_name="Number of operators" description="The number of operators defined in this package" min="0" average="2" max="6">
+					<objects>
+						<object path="CruiseControl" value="0"/>
+						<object path="Defs::" value="0"/>
+						<object path="Proof::" value="6"/>
+						<object path="System::" value="1"/>
+						<object path="CruiseControl::" value="4"/>
+					</objects>
+				</metric>
+			</metrics>
+		</category>
+		<category category_name="Operator">
+			<metrics>
+				<metric metric_id="SCADE_M013" metric_name="Total number of user operator instances" description="The number of user operators instances in the operator and in included scopes" min="0" average="1" max="6">
+					<objects>
+						<object path="Proof::Prop5/" value="1"/>
+						<object path="Proof::Prop4/" value="1"/>
+						<object path="Proof::Prop3/" value="1"/>
+						<object path="Proof::Prop2/" value="1"/>
+						<object path="Proof::Prop1/" value="1"/>
+						<object path="Proof::Proof/" value="6"/>
+						<object path="System::SystemSimul/" value="2"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="1"/>
+						<object path="CruiseControl::CruiseControl/" value="2"/>
+						<object path="CruiseControl::CruiseRegulation/" value="3"/>
+						<object path="CruiseControl::SaturateThrottle/" value="0"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M010" metric_name="Total number of probes" description="The number of probes defined in this operator including inner scopes" min="0" average="0" max="1">
+					<objects>
+						<object path="Proof::Prop5/" value="0"/>
+						<object path="Proof::Prop4/" value="0"/>
+						<object path="Proof::Prop3/" value="0"/>
+						<object path="Proof::Prop2/" value="0"/>
+						<object path="Proof::Prop1/" value="0"/>
+						<object path="Proof::Proof/" value="0"/>
+						<object path="System::SystemSimul/" value="1"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="0"/>
+						<object path="CruiseControl::CruiseControl/" value="0"/>
+						<object path="CruiseControl::CruiseRegulation/" value="0"/>
+						<object path="CruiseControl::SaturateThrottle/" value="0"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M011" metric_name="Total number of local variables" description="The number of local variables defined in this operator including inner scopes" min="0" average="0" max="3">
+					<objects>
+						<object path="Proof::Prop5/" value="0"/>
+						<object path="Proof::Prop4/" value="0"/>
+						<object path="Proof::Prop3/" value="0"/>
+						<object path="Proof::Prop2/" value="0"/>
+						<object path="Proof::Prop1/" value="0"/>
+						<object path="Proof::Proof/" value="0"/>
+						<object path="System::SystemSimul/" value="0"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="1"/>
+						<object path="CruiseControl::CruiseControl/" value="2"/>
+						<object path="CruiseControl::CruiseRegulation/" value="3"/>
+						<object path="CruiseControl::SaturateThrottle/" value="0"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M009" metric_name="Number of outputs" description="The number of operator's outputs" min="1" average="1" max="5">
+					<objects>
+						<object path="Proof::Prop5/" value="1"/>
+						<object path="Proof::Prop4/" value="1"/>
+						<object path="Proof::Prop3/" value="1"/>
+						<object path="Proof::Prop2/" value="1"/>
+						<object path="Proof::Prop1/" value="1"/>
+						<object path="Proof::Proof/" value="5"/>
+						<object path="System::SystemSimul/" value="3"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="1"/>
+						<object path="CruiseControl::CruiseControl/" value="3"/>
+						<object path="CruiseControl::CruiseRegulation/" value="1"/>
+						<object path="CruiseControl::SaturateThrottle/" value="2"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M008" metric_name="Number of inputs" description="The number of operator's inputs" min="1" average="4" max="9">
+					<objects>
+						<object path="Proof::Prop5/" value="3"/>
+						<object path="Proof::Prop4/" value="3"/>
+						<object path="Proof::Prop3/" value="2"/>
+						<object path="Proof::Prop2/" value="2"/>
+						<object path="Proof::Prop1/" value="2"/>
+						<object path="Proof::Proof/" value="9"/>
+						<object path="System::SystemSimul/" value="8"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="4"/>
+						<object path="CruiseControl::CruiseControl/" value="9"/>
+						<object path="CruiseControl::CruiseRegulation/" value="2"/>
+						<object path="CruiseControl::SaturateThrottle/" value="1"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M012" metric_name="Total number of signals" description="The number of signals defined in this operator including inner scopes" min="0" average="0" max="0">
+					<objects>
+						<object path="Proof::Prop5/" value="0"/>
+						<object path="Proof::Prop4/" value="0"/>
+						<object path="Proof::Prop3/" value="0"/>
+						<object path="Proof::Prop2/" value="0"/>
+						<object path="Proof::Prop1/" value="0"/>
+						<object path="Proof::Proof/" value="0"/>
+						<object path="System::SystemSimul/" value="0"/>
+						<object path="CruiseControl::CruiseSpeedMgt/" value="0"/>
+						<object path="CruiseControl::CruiseControl/" value="0"/>
+						<object path="CruiseControl::CruiseRegulation/" value="0"/>
+						<object path="CruiseControl::SaturateThrottle/" value="0"/>
+					</objects>
+				</metric>
+			</metrics>
+		</category>
+		<category category_name="StateMachine">
+			<metrics>
+				<metric metric_id="SCADE_M016" metric_name="Number of transitions" description="The number of transitions of the state machine" min="2" average="2" max="2">
+					<objects>
+						<object path="CruiseControl::CruiseControl/SM1:" value="2"/>
+						<object path="CruiseControl::CruiseControl/SM1:Enabled:SM2:" value="2"/>
+						<object path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:" value="2"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M014" metric_name="Number of states" description="The number of states of the state machine" min="2" average="2" max="2">
+					<objects>
+						<object path="CruiseControl::CruiseControl/SM1:" value="2"/>
+						<object path="CruiseControl::CruiseControl/SM1:Enabled:SM2:" value="2"/>
+						<object path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:" value="2"/>
+					</objects>
+				</metric>
+				<metric metric_id="SCADE_M015" metric_name="Depth of state machines" description="The maximum depth of nested state machines" min="3" average="3" max="3">
+					<objects>
+						<object path="CruiseControl::CruiseControl/SM1:" value="3"/>
+					</objects>
+				</metric>
+			</metrics>
+		</category>
+	</categories>
+</metricsResults>

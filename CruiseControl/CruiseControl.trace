@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<traceability version="1.3">
+    <object id="win_1D84/31CB/578/3C3C74B4/5733">
+        <requirement id="CC_HLR_CCP_04"/>
+    </object>
+    <object id="win_124C/58BC/548/41BD9617/37A">
+        <requirement id="CC_HLR_CCP_06"/>
+    </object>
+    <object id="!ed/E02F/4D8A/7C0/46A0A78D/3D58">
+        <requirement id="CC_HLR_CCP_03"/>
+    </object>
+    <object id="win_1CC8/3726/578/3C3C6C0B/76D8">
+        <requirement id="CC_HLR_CCP_02"/>
+    </object>
+    <object id="!ed/E04C/4D8A/7C0/46A0A795/2C38">
+        <requirement id="CC_HLR_CCP_01"/>
+    </object>
+    <object id="!ed/E05B/4D8A/7C0/46A0A797/5468">
+        <requirement id="CC_HLR_CCP_07"/>
+    </object>
+    <object id="!ed/E0AE/4D8A/7C0/46A0A7A8/471">
+        <requirement id="CC_HLR_CCP_05"/>
+    </object>
+    <object id="win_12C83/6382/448/3E916EA5/6697">
+        <requirement id="CC_HLR_CDC_05"/>
+    </object>
+    <object id="win_4443/6DD3/508/3C3C5DE9/3529">
+        <requirement id="CC_HLR_CDC_03"/>
+        <requirement id="CC_HLR_CDC_04"/>
+    </object>
+    <object id="!ed/4A7A/59EE/B28/46A5B3D7/365">
+        <requirement id="CC_HLR_CCB_01"/>
+        <requirement id="CC_HLR_CCB_02"/>
+        <requirement id="CC_HLR_CCB_03"/>
+        <requirement id="CC_HLR_CCB_04"/>
+        <requirement id="CC_HLR_CCB_05"/>
+        <requirement id="CC_HLR_CCB_06"/>
+        <requirement id="CC_HLR_CCB_07"/>
+        <requirement id="CC_HLR_CCB_08"/>
+    </object>
+    <object id="!ed/4A99/59EE/B28/46A5B3D7/6CB3">
+        <requirement id="CC_HLR_CCB_01"/>
+    </object>
+    <object id="!ed/4A9A/59EE/B28/46A5B3D7/1225">
+        <requirement id="CC_HLR_CCB_02"/>
+    </object>
+    <object id="!ed/4AA1/59EE/B28/46A5B3D7/5B8E">
+        <requirement id="CC_HLR_CCB_04"/>
+        <requirement id="CC_HLR_CDC_02"/>
+    </object>
+    <object id="!ed/4AA2/59EE/B28/46A5B3D7/3D6F">
+        <requirement id="CC_HLR_CCB_05"/>
+    </object>
+    <object id="!ed/4AA7/59EE/B28/46A5B3D7/6681">
+        <requirement id="CC_HLR_CCB_06"/>
+    </object>
+    <object id="!ed/4BBF/6C88/B78/46CEB1DD/5A97">
+        <requirement id="CC_HLR_PPD_01"/>
+    </object>
+    <object id="!ed/4A9F/59EE/B28/46A5B3D7/41D5">
+        <requirement id="CC_HLR_CCB_07"/>
+        <requirement id="CC_HLR_PPD_02"/>
+    </object>
+    <object id="!ed/4AAC/59EE/B28/46A5B3D7/2926">
+        <requirement id="CC_HLR_CCB_08"/>
+    </object>
+    <object id="!ed/4D4C/6C88/B78/46CED48F/C2">
+        <requirement id="CC_HLR_CSM_01"/>
+    </object>
+    <object id="!ed/4A9C/59EE/B28/46A5B3D7/1E95">
+        <requirement id="CC_HLR_CCB_03"/>
+    </object>
+    <object id="!ed/4A7B/59EE/B28/46A5B3D7/59DF">
+        <requirement id="CC_HLR_OUT_01"/>
+    </object>
+    <object id="!ed/4A7C/59EE/B28/46A5B3D7/80E">
+        <requirement id="CC_HLR_OUT_02"/>
+        <requirement id="CC_HLR_CDC_01"/>
+    </object>
+    <object id="!ed/4A7D/59EE/B28/46A5B3D7/7A0">
+        <requirement id="CC_HLR_OUT_03"/>
+    </object>
+    <object id="!ed/4A7E/59EE/B28/46A5B3D7/4DBD">
+        <requirement id="CC_HLR_IN_01"/>
+    </object>
+    <object id="!ed/4A7F/59EE/B28/46A5B3D7/435D">
+        <requirement id="CC_HLR_IN_02"/>
+    </object>
+    <object id="!ed/4A80/59EE/B28/46A5B3D7/745">
+        <requirement id="CC_HLR_IN_03"/>
+    </object>
+    <object id="!ed/4A81/59EE/B28/46A5B3D7/1722">
+        <requirement id="CC_HLR_IN_04"/>
+    </object>
+    <object id="!ed/4A82/59EE/B28/46A5B3D7/3703">
+        <requirement id="CC_HLR_IN_06"/>
+    </object>
+    <object id="!ed/4A83/59EE/B28/46A5B3D7/269">
+        <requirement id="CC_HLR_IN_05"/>
+    </object>
+    <object id="!ed/4A84/59EE/B28/46A5B3D7/12CB">
+        <requirement id="CC_HLR_IN_07"/>
+    </object>
+    <object id="!ed/4A85/59EE/B28/46A5B3D7/6ED8">
+        <requirement id="CC_HLR_IN_08"/>
+    </object>
+    <object id="!ed/4A86/59EE/B28/46A5B3D7/4448">
+        <requirement id="CC_HLR_IN_09"/>
+    </object>
+    <object id="!ed/2748/7A4A/6DC/48f761724240">
+        <requirement id="CC_HLR_CSM_01"/>
+        <requirement id="CC_HLR_CSM_02"/>
+        <requirement id="CC_HLR_CSM_03"/>
+        <requirement id="CC_HLR_CSM_04"/>
+        <requirement id="CC_HLR_CSM_05"/>
+    </object>
+</traceability>

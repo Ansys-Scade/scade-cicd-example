@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scade_req:ReqProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scade_req="http://www.ansys.com/scade/lifecycle/almgateway/scade_req/2" id="_e8VGoPAQEemSNpI4QBr0rg" name="CruiseControl" identifier="C:\AnsysDev\git\common-examples\CruiseControl\CruiseControl\CruiseControl.rqtf">
+  <documents xsi:type="scade_req:ScadeDocument" id="_e8VGofAQEemSNpI4QBr0rg" location="">
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGovAQEemSNpI4QBr0rg" traceableElement="_e8VuBfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGo_AQEemSNpI4QBr0rg" traceableElement="_e8VuB_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGpPAQEemSNpI4QBr0rg" traceableElement="_e8VuCfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGpfAQEemSNpI4QBr0rg" traceableElement="_e8VuC_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGpvAQEemSNpI4QBr0rg" traceableElement="_e8VuDfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGp_AQEemSNpI4QBr0rg" traceableElement="_e8VuD_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGqPAQEemSNpI4QBr0rg" traceableElement="_e8VuEfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGqfAQEemSNpI4QBr0rg" traceableElement="_e8VuE_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGqvAQEemSNpI4QBr0rg" traceableElement="_e8VuFfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGq_AQEemSNpI4QBr0rg" traceableElement="_e8VuF_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGrPAQEemSNpI4QBr0rg" traceableElement="_e8VuGfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGrfAQEemSNpI4QBr0rg" traceableElement="_e8VuG_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGrvAQEemSNpI4QBr0rg" traceableElement="_e8VuHfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGr_AQEemSNpI4QBr0rg" traceableElement="_e8VuHvAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGsPAQEemSNpI4QBr0rg" traceableElement="_e8VuIPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGsfAQEemSNpI4QBr0rg" traceableElement="_e8VuIvAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGsvAQEemSNpI4QBr0rg" traceableElement="_e8VuJPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGs_AQEemSNpI4QBr0rg" traceableElement="_e8VuJvAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGtPAQEemSNpI4QBr0rg" traceableElement="_e8VuKPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGtfAQEemSNpI4QBr0rg" traceableElement="_e8VuKvAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGtvAQEemSNpI4QBr0rg" traceableElement="_e8VuLPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGt_AQEemSNpI4QBr0rg" traceableElement="_e8VuMPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGuPAQEemSNpI4QBr0rg" traceableElement="_e8VuM_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGufAQEemSNpI4QBr0rg" traceableElement="_e8VuNfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGuvAQEemSNpI4QBr0rg" traceableElement="_e8VuNvAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGu_AQEemSNpI4QBr0rg" traceableElement="_e8VuPPAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGvPAQEemSNpI4QBr0rg" traceableElement="_e8VuP_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGvfAQEemSNpI4QBr0rg" traceableElement="_e8VuQfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGvvAQEemSNpI4QBr0rg" traceableElement="_e8VuQ_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGv_AQEemSNpI4QBr0rg" traceableElement="_e8VuRfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGwPAQEemSNpI4QBr0rg" traceableElement="_e8VuR_AQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGwfAQEemSNpI4QBr0rg" traceableElement="_e8VuSfAQEemSNpI4QBr0rg"/>
+    <children xsi:type="scade_req:TraceableElementRef" id="_e8VGwvAQEemSNpI4QBr0rg" traceableElement="_e8VuS_AQEemSNpI4QBr0rg"/>
+  </documents>
+  <documents xsi:type="scade_req:Specification" id="_e8VGw_AQEemSNpI4QBr0rg" name="High Level Requirements    Word" identifier="High Level Requirements">
+    <children xsi:type="scade_req:Section" id="_e8VGxPAQEemSNpI4QBr0rg" name="2. Cruise Control Requirements" identifier="2." description="">
+      <children xsi:type="scade_req:Section" id="_e8VGxfAQEemSNpI4QBr0rg" name="Interface" identifier="Interface" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGxvAQEemSNpI4QBr0rg" traceableElement="_e8VuBPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGx_AQEemSNpI4QBr0rg" traceableElement="_e8VuBvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGyPAQEemSNpI4QBr0rg" traceableElement="_e8VuCPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGyfAQEemSNpI4QBr0rg" traceableElement="_e8VuCvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGyvAQEemSNpI4QBr0rg" traceableElement="_e8VuDPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGy_AQEemSNpI4QBr0rg" traceableElement="_e8VuDvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGzPAQEemSNpI4QBr0rg" traceableElement="_e8VuEPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VGzfAQEemSNpI4QBr0rg" traceableElement="_e8VuEvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtsPAQEemSNpI4QBr0rg" traceableElement="_e8VuFPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtsfAQEemSNpI4QBr0rg" traceableElement="_e8VuFvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtsvAQEemSNpI4QBr0rg" traceableElement="_e8VuGPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vts_AQEemSNpI4QBr0rg" traceableElement="_e8VuGvAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_e8VttPAQEemSNpI4QBr0rg" name="Cruise Control behavior" identifier="Cruise Control behavior" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VttfAQEemSNpI4QBr0rg" traceableElement="_e8VuHPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VttvAQEemSNpI4QBr0rg" traceableElement="_e8VuH_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vtt_AQEemSNpI4QBr0rg" traceableElement="_e8VuIfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtuPAQEemSNpI4QBr0rg" traceableElement="_e8VuI_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtufAQEemSNpI4QBr0rg" traceableElement="_e8VuJfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtuvAQEemSNpI4QBr0rg" traceableElement="_e8VuJ_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vtu_AQEemSNpI4QBr0rg" traceableElement="_e8VuKfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtvPAQEemSNpI4QBr0rg" traceableElement="_e8VuK_AQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_e8VtvfAQEemSNpI4QBr0rg" name="Car driving control" identifier="Car driving control" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtvvAQEemSNpI4QBr0rg" traceableElement="_e8VuLfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vtv_AQEemSNpI4QBr0rg" traceableElement="_e8VuLvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtwPAQEemSNpI4QBr0rg" traceableElement="_e8VuL_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtwfAQEemSNpI4QBr0rg" traceableElement="_e8VuMfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtwvAQEemSNpI4QBr0rg" traceableElement="_e8VuMvAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_e8Vtw_AQEemSNpI4QBr0rg" name="Cruise speed management" identifier="Cruise speed management" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtxPAQEemSNpI4QBr0rg" traceableElement="_e8VuNPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtxfAQEemSNpI4QBr0rg" traceableElement="_e8VuN_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtxvAQEemSNpI4QBr0rg" traceableElement="_e8VuOPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vtx_AQEemSNpI4QBr0rg" traceableElement="_e8VuOfAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtyPAQEemSNpI4QBr0rg" traceableElement="_e8VuOvAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_e8VtyfAQEemSNpI4QBr0rg" name="Pedals pressed detection" identifier="Pedals pressed detection" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtyvAQEemSNpI4QBr0rg" traceableElement="_e8VuO_AQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vty_AQEemSNpI4QBr0rg" traceableElement="_e8VuPfAQEemSNpI4QBr0rg"/>
+      </children>
+      <children xsi:type="scade_req:Section" id="_e8VtzPAQEemSNpI4QBr0rg" name="Cruise Control parameters" identifier="Cruise Control parameters" description="">
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtzfAQEemSNpI4QBr0rg" traceableElement="_e8VuPvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8VtzvAQEemSNpI4QBr0rg" traceableElement="_e8VuQPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vtz_AQEemSNpI4QBr0rg" traceableElement="_e8VuQvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vt0PAQEemSNpI4QBr0rg" traceableElement="_e8VuRPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vt0fAQEemSNpI4QBr0rg" traceableElement="_e8VuRvAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vt0vAQEemSNpI4QBr0rg" traceableElement="_e8VuSPAQEemSNpI4QBr0rg"/>
+        <children xsi:type="scade_req:TraceableElementRef" id="_e8Vt0_AQEemSNpI4QBr0rg" traceableElement="_e8VuSvAQEemSNpI4QBr0rg"/>
+      </children>
+    </children>
+  </documents>
+  <traceabilityLinks id="_e8Vt1PAQEemSNpI4QBr0rg" name="On" type="Covering:trace" writable="true" source="_e8VuBfAQEemSNpI4QBr0rg" target="_e8VuBPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt1fAQEemSNpI4QBr0rg" name="Off" type="Covering:trace" writable="true" source="_e8VuB_AQEemSNpI4QBr0rg" target="_e8VuBvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt1vAQEemSNpI4QBr0rg" name="Resume" type="Covering:trace" writable="true" source="_e8VuCfAQEemSNpI4QBr0rg" target="_e8VuCPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt1_AQEemSNpI4QBr0rg" name="Set" type="Covering:trace" writable="true" source="_e8VuC_AQEemSNpI4QBr0rg" target="_e8VuCvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt2PAQEemSNpI4QBr0rg" name="QuickDecel" type="Covering:trace" writable="true" source="_e8VuDfAQEemSNpI4QBr0rg" target="_e8VuDPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt2fAQEemSNpI4QBr0rg" name="QuickAccel" type="Covering:trace" writable="true" source="_e8VuD_AQEemSNpI4QBr0rg" target="_e8VuDvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt2vAQEemSNpI4QBr0rg" name="Accel" type="Covering:trace" writable="true" source="_e8VuEfAQEemSNpI4QBr0rg" target="_e8VuEPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt2_AQEemSNpI4QBr0rg" name="Brake" type="Covering:trace" writable="true" source="_e8VuE_AQEemSNpI4QBr0rg" target="_e8VuEvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt3PAQEemSNpI4QBr0rg" name="Speed" type="Covering:trace" writable="true" source="_e8VuFfAQEemSNpI4QBr0rg" target="_e8VuFPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt3fAQEemSNpI4QBr0rg" name="CruiseSpeed" type="Covering:trace" writable="true" source="_e8VuF_AQEemSNpI4QBr0rg" target="_e8VuFvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt3vAQEemSNpI4QBr0rg" name="ThrottleCmd" type="Covering:trace" writable="true" source="_e8VuGfAQEemSNpI4QBr0rg" target="_e8VuGPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt3_AQEemSNpI4QBr0rg" name="CruiseState" type="Covering:trace" writable="true" source="_e8VuG_AQEemSNpI4QBr0rg" target="_e8VuGvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt4PAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuHPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt4fAQEemSNpI4QBr0rg" name="Off" type="Covering:trace" writable="true" source="_e8VuHvAQEemSNpI4QBr0rg" target="_e8VuHPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt4vAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuH_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt4_AQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuIPAQEemSNpI4QBr0rg" target="_e8VuH_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt5PAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuIfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt5fAQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuIvAQEemSNpI4QBr0rg" target="_e8VuIfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt5vAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuI_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt5_AQEemSNpI4QBr0rg" name="On" type="Covering:trace" writable="true" source="_e8VuJPAQEemSNpI4QBr0rg" target="_e8VuI_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt6PAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuJfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt6fAQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuJvAQEemSNpI4QBr0rg" target="_e8VuJfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt6vAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuJ_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt6_AQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuKPAQEemSNpI4QBr0rg" target="_e8VuJ_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt7PAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuKfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt7fAQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuKvAQEemSNpI4QBr0rg" target="_e8VuKfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt7vAQEemSNpI4QBr0rg" name="CruiseControl" type="Covering:trace" writable="true" source="_e8VuHfAQEemSNpI4QBr0rg" target="_e8VuK_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt7_AQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuLPAQEemSNpI4QBr0rg" target="_e8VuK_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt8PAQEemSNpI4QBr0rg" name="ThrottleCmd" type="Covering:trace" writable="true" source="_e8VuGfAQEemSNpI4QBr0rg" target="_e8VuLfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt8fAQEemSNpI4QBr0rg" name="On" type="Covering:trace" writable="true" source="_e8VuJPAQEemSNpI4QBr0rg" target="_e8VuLvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt8vAQEemSNpI4QBr0rg" name="CruiseRegulation" type="Covering:trace" writable="true" source="_e8VuMPAQEemSNpI4QBr0rg" target="_e8VuL_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt8_AQEemSNpI4QBr0rg" name="CruiseRegulation" type="Covering:trace" writable="true" source="_e8VuMPAQEemSNpI4QBr0rg" target="_e8VuMfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt9PAQEemSNpI4QBr0rg" name="SaturateThrottle" type="Covering:trace" writable="true" source="_e8VuM_AQEemSNpI4QBr0rg" target="_e8VuMvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt9fAQEemSNpI4QBr0rg" name="local_CruiseSpeed" type="Covering:trace" writable="true" source="_e8VuNfAQEemSNpI4QBr0rg" target="_e8VuNPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt9vAQEemSNpI4QBr0rg" name="CruiseSpeedMgt" type="Covering:trace" writable="true" source="_e8VuNvAQEemSNpI4QBr0rg" target="_e8VuNPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt9_AQEemSNpI4QBr0rg" name="CruiseSpeedMgt" type="Covering:trace" writable="true" source="_e8VuNvAQEemSNpI4QBr0rg" target="_e8VuN_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt-PAQEemSNpI4QBr0rg" name="CruiseSpeedMgt" type="Covering:trace" writable="true" source="_e8VuNvAQEemSNpI4QBr0rg" target="_e8VuOPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt-fAQEemSNpI4QBr0rg" name="CruiseSpeedMgt" type="Covering:trace" writable="true" source="_e8VuNvAQEemSNpI4QBr0rg" target="_e8VuOfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt-vAQEemSNpI4QBr0rg" name="CruiseSpeedMgt" type="Covering:trace" writable="true" source="_e8VuNvAQEemSNpI4QBr0rg" target="_e8VuOvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt-_AQEemSNpI4QBr0rg" name="StdbyCondition" type="Covering:trace" writable="true" source="_e8VuPPAQEemSNpI4QBr0rg" target="_e8VuO_AQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt_PAQEemSNpI4QBr0rg" name="1" type="Covering:trace" writable="true" source="_e8VuKvAQEemSNpI4QBr0rg" target="_e8VuPfAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt_fAQEemSNpI4QBr0rg" name="SpeedMin" type="Covering:trace" writable="true" source="_e8VuP_AQEemSNpI4QBr0rg" target="_e8VuPvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt_vAQEemSNpI4QBr0rg" name="SpeedMax" type="Covering:trace" writable="true" source="_e8VuQfAQEemSNpI4QBr0rg" target="_e8VuQPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8Vt__AQEemSNpI4QBr0rg" name="SpeedInc" type="Covering:trace" writable="true" source="_e8VuQ_AQEemSNpI4QBr0rg" target="_e8VuQvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8VuAPAQEemSNpI4QBr0rg" name="Kp" type="Covering:trace" writable="true" source="_e8VuRfAQEemSNpI4QBr0rg" target="_e8VuRPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8VuAfAQEemSNpI4QBr0rg" name="Ki" type="Covering:trace" writable="true" source="_e8VuR_AQEemSNpI4QBr0rg" target="_e8VuRvAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8VuAvAQEemSNpI4QBr0rg" name="RegulThrottleMax" type="Covering:trace" writable="true" source="_e8VuSfAQEemSNpI4QBr0rg" target="_e8VuSPAQEemSNpI4QBr0rg"/>
+  <traceabilityLinks id="_e8VuA_AQEemSNpI4QBr0rg" name="PedalsMin" type="Covering:trace" writable="true" source="_e8VuS_AQEemSNpI4QBr0rg" target="_e8VuSvAQEemSNpI4QBr0rg"/>
+  <traceableElements id="_e8VuBPAQEemSNpI4QBr0rg" name="CC_HLR_IN_01" identifier="CC_HLR_IN_01" description="On: Enable the CC"/>
+  <traceableElements id="_e8VuBfAQEemSNpI4QBr0rg" identifier="!ed/4A7E/59EE/B28/46A5B3D7/4DBD"/>
+  <traceableElements id="_e8VuBvAQEemSNpI4QBr0rg" name="CC_HLR_IN_02" identifier="CC_HLR_IN_02" description="Off: Disable the CC"/>
+  <traceableElements id="_e8VuB_AQEemSNpI4QBr0rg" identifier="!ed/4A7F/59EE/B28/46A5B3D7/435D"/>
+  <traceableElements id="_e8VuCPAQEemSNpI4QBr0rg" name="CC_HLR_IN_03" identifier="CC_HLR_IN_03" description="Resume: Resume the CC after a braking"/>
+  <traceableElements id="_e8VuCfAQEemSNpI4QBr0rg" identifier="!ed/4A80/59EE/B28/46A5B3D7/745"/>
+  <traceableElements id="_e8VuCvAQEemSNpI4QBr0rg" name="CC_HLR_IN_04" identifier="CC_HLR_IN_04" description="Set: Set the current speed as the new cruise speed"/>
+  <traceableElements id="_e8VuC_AQEemSNpI4QBr0rg" identifier="!ed/4A81/59EE/B28/46A5B3D7/1722"/>
+  <traceableElements id="_e8VuDPAQEemSNpI4QBr0rg" name="CC_HLR_IN_05" identifier="CC_HLR_IN_05" description="QuickDecel: Decrease the cruise speed"/>
+  <traceableElements id="_e8VuDfAQEemSNpI4QBr0rg" identifier="!ed/4A83/59EE/B28/46A5B3D7/269"/>
+  <traceableElements id="_e8VuDvAQEemSNpI4QBr0rg" name="CC_HLR_IN_06" identifier="CC_HLR_IN_06" description="QuickAccel: Increase the cruise speed"/>
+  <traceableElements id="_e8VuD_AQEemSNpI4QBr0rg" identifier="!ed/4A82/59EE/B28/46A5B3D7/3703"/>
+  <traceableElements id="_e8VuEPAQEemSNpI4QBr0rg" name="CC_HLR_IN_07" identifier="CC_HLR_IN_07" description="Accel: Accelerator pedal sensor"/>
+  <traceableElements id="_e8VuEfAQEemSNpI4QBr0rg" identifier="!ed/4A84/59EE/B28/46A5B3D7/12CB"/>
+  <traceableElements id="_e8VuEvAQEemSNpI4QBr0rg" name="CC_HLR_IN_08" identifier="CC_HLR_IN_08" description="Brake: Brake pedal sensor"/>
+  <traceableElements id="_e8VuE_AQEemSNpI4QBr0rg" identifier="!ed/4A85/59EE/B28/46A5B3D7/6ED8"/>
+  <traceableElements id="_e8VuFPAQEemSNpI4QBr0rg" name="CC_HLR_IN_09" identifier="CC_HLR_IN_09" description="Speed: Car speed sensor"/>
+  <traceableElements id="_e8VuFfAQEemSNpI4QBr0rg" identifier="!ed/4A86/59EE/B28/46A5B3D7/4448"/>
+  <traceableElements id="_e8VuFvAQEemSNpI4QBr0rg" name="CC_HLR_OUT_01" identifier="CC_HLR_OUT_01" description="CruiseSpeed: Cruise speed value"/>
+  <traceableElements id="_e8VuF_AQEemSNpI4QBr0rg" identifier="!ed/4A7B/59EE/B28/46A5B3D7/59DF"/>
+  <traceableElements id="_e8VuGPAQEemSNpI4QBr0rg" name="CC_HLR_OUT_02" identifier="CC_HLR_OUT_02" description="ThrottleCmd: Throttle command"/>
+  <traceableElements id="_e8VuGfAQEemSNpI4QBr0rg" identifier="!ed/4A7C/59EE/B28/46A5B3D7/80E"/>
+  <traceableElements id="_e8VuGvAQEemSNpI4QBr0rg" name="CC_HLR_OUT_03" identifier="CC_HLR_OUT_03" description="CruiseState: this is the state of the CC. It can be OFF, ON, STDBY, INT."/>
+  <traceableElements id="_e8VuG_AQEemSNpI4QBr0rg" identifier="!ed/4A7D/59EE/B28/46A5B3D7/7A0"/>
+  <traceableElements id="_e8VuHPAQEemSNpI4QBr0rg" name="CC_HLR_CCB_01" identifier="CC_HLR_CCB_01" description="When the driver starts the car, the CC shall be off. The output CruiseState should be set to OFF"/>
+  <traceableElements id="_e8VuHfAQEemSNpI4QBr0rg" identifier="!ed/4A7A/59EE/B28/46A5B3D7/365"/>
+  <traceableElements id="_e8VuHvAQEemSNpI4QBr0rg" identifier="!ed/4A99/59EE/B28/46A5B3D7/6CB3"/>
+  <traceableElements id="_e8VuH_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_02" identifier="CC_HLR_CCB_02" description="The CC shall be set on when the driver push the on button."/>
+  <traceableElements id="_e8VuIPAQEemSNpI4QBr0rg" identifier="!ed/4A9A/59EE/B28/46A5B3D7/1225"/>
+  <traceableElements id="_e8VuIfAQEemSNpI4QBr0rg" name="CC_HLR_CCB_03" identifier="CC_HLR_CCB_03" description="The CC shall automatically go off when the off button is pressed."/>
+  <traceableElements id="_e8VuIvAQEemSNpI4QBr0rg" identifier="!ed/4A9C/59EE/B28/46A5B3D7/1E95"/>
+  <traceableElements id="_e8VuI_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_04" identifier="CC_HLR_CCB_04" description="If the car speed is in the speed limit and the accelerator pedal is not pressed, the CC shall be on and regulate the car speed. The output CruiseState shall be set to ON."/>
+  <traceableElements id="_e8VuJPAQEemSNpI4QBr0rg" identifier="!ed/4AA1/59EE/B28/46A5B3D7/5B8E"/>
+  <traceableElements id="_e8VuJfAQEemSNpI4QBr0rg" name="CC_HLR_CCB_05" identifier="CC_HLR_CCB_05" description="The CC system shall be automatically disabled when the accelerator pedal is pressed, or the car speed is outside the speed limit. The output CruiseState shall be set to STDBY."/>
+  <traceableElements id="_e8VuJvAQEemSNpI4QBr0rg" identifier="!ed/4AA2/59EE/B28/46A5B3D7/3D6F"/>
+  <traceableElements id="_e8VuJ_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_06" identifier="CC_HLR_CCB_06" description="The system shall return to the ON state when both the accelerator pedal is not pressed, and the car speed is inside the speed limit. The last set cruise speed shall be re-used."/>
+  <traceableElements id="_e8VuKPAQEemSNpI4QBr0rg" identifier="!ed/4AA7/59EE/B28/46A5B3D7/6681"/>
+  <traceableElements id="_e8VuKfAQEemSNpI4QBr0rg" name="CC_HLR_CCB_07" identifier="CC_HLR_CCB_07" description="The CC shall be immediately interrupted when the brake is pressed. The output CruiseState shall be set to INT."/>
+  <traceableElements id="_e8VuKvAQEemSNpI4QBr0rg" identifier="!ed/4A9F/59EE/B28/46A5B3D7/41D5"/>
+  <traceableElements id="_e8VuK_AQEemSNpI4QBr0rg" name="CC_HLR_CCB_08" identifier="CC_HLR_CCB_08" description="The system shall resume either to the ON or STDBY states, depending on the Accelerator pedal and the Speed value when the resume button is pressed. The last set cruise speed shall be re-used."/>
+  <traceableElements id="_e8VuLPAQEemSNpI4QBr0rg" identifier="!ed/4AAC/59EE/B28/46A5B3D7/2926"/>
+  <traceableElements id="_e8VuLfAQEemSNpI4QBr0rg" name="CC_HLR_CDC_01" identifier="CC_HLR_CDC_01" description="When the CC is off, the car speed shall be driven using the accelerator pedal."/>
+  <traceableElements id="_e8VuLvAQEemSNpI4QBr0rg" name="CC_HLR_CDC_02" identifier="CC_HLR_CDC_02" description="When the CC is on, the car speed shall be automatically regulated."/>
+  <traceableElements id="_e8VuL_AQEemSNpI4QBr0rg" name="CC_HLR_CDC_03" identifier="CC_HLR_CDC_03" description="The regulation shall be done using a proportional and integral algorithm, with Kp and Ki factors."/>
+  <traceableElements id="_e8VuMPAQEemSNpI4QBr0rg" identifier="win_4443/6DD3/508/3C3C5DE9/3529"/>
+  <traceableElements id="_e8VuMfAQEemSNpI4QBr0rg" name="CC_HLR_CDC_04" identifier="CC_HLR_CDC_04" description="The regulation algorithm shall be protected against the overshoot of its integral part: the integral action shall be reset when the CC is going on, and frozen when the throttle output is saturated."/>
+  <traceableElements id="_e8VuMvAQEemSNpI4QBr0rg" name="CC_HLR_CDC_05" identifier="CC_HLR_CDC_05" description="The throttle command shall be saturated at ThrottleSatMax when automatically regulating, in order to limit the car acceleration for the comfort."/>
+  <traceableElements id="_e8VuM_AQEemSNpI4QBr0rg" identifier="win_12C83/6382/448/3E916EA5/6697"/>
+  <traceableElements id="_e8VuNPAQEemSNpI4QBr0rg" name="CC_HLR_CSM_01" identifier="CC_HLR_CSM_01" description="The Cruise Speed shall be managed only when the cruise control is enabled, meaning ON, STDBY, or INT states."/>
+  <traceableElements id="_e8VuNfAQEemSNpI4QBr0rg" identifier="!ed/4D4C/6C88/B78/46CED48F/C2"/>
+  <traceableElements id="_e8VuNvAQEemSNpI4QBr0rg" identifier="!ed/2748/7A4A/6DC/48f761724240"/>
+  <traceableElements id="_e8VuN_AQEemSNpI4QBr0rg" name="CC_HLR_CSM_02" identifier="CC_HLR_CSM_02" description="The cruise speed shall be set to the current speed when the set button is pressed."/>
+  <traceableElements id="_e8VuOPAQEemSNpI4QBr0rg" name="CC_HLR_CSM_03" identifier="CC_HLR_CSM_03" description="The cruise speed shall be increased of SpeedInc km/h when the QUICKACCEL button is pressed. only if this new value of the cruise speed is still lower than the maximal speed SpeedMax km/h."/>
+  <traceableElements id="_e8VuOfAQEemSNpI4QBr0rg" name="CC_HLR_CSM_04" identifier="CC_HLR_CSM_04" description="The cruise speed shall be decreased of SpeedInc km/h when the QUICKDECEL button is pressed."/>
+  <traceableElements id="_e8VuOvAQEemSNpI4QBr0rg" name="CC_HLR_CSM_05" identifier="CC_HLR_CSM_05" description="The Cruise Speed shall be maintained between SpeedMin and SpeedMax km/h values."/>
+  <traceableElements id="_e8VuO_AQEemSNpI4QBr0rg" name="CC_HLR_PPD_01" identifier="CC_HLR_PPD_01" description="The accelerator pedal shall be detected as pressed when its value is above PedalsMin."/>
+  <traceableElements id="_e8VuPPAQEemSNpI4QBr0rg" identifier="!ed/4BBF/6C88/B78/46CEB1DD/5A97"/>
+  <traceableElements id="_e8VuPfAQEemSNpI4QBr0rg" name="CC_HLR_PPD_02" identifier="CC_HLR_PPD_02" description="The Brake pedal shall be detected as pressed when its value is above PedalsMin."/>
+  <traceableElements id="_e8VuPvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_01" identifier="CC_HLR_CCP_01" description="SpeedMin: 30.0 Km/h"/>
+  <traceableElements id="_e8VuP_AQEemSNpI4QBr0rg" identifier="!ed/E04C/4D8A/7C0/46A0A795/2C38"/>
+  <traceableElements id="_e8VuQPAQEemSNpI4QBr0rg" name="CC_HLR_CCP_02" identifier="CC_HLR_CCP_02" description="SpeedMax: 150.0 Km/h"/>
+  <traceableElements id="_e8VuQfAQEemSNpI4QBr0rg" identifier="win_1CC8/3726/578/3C3C6C0B/76D8"/>
+  <traceableElements id="_e8VuQvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_03" identifier="CC_HLR_CCP_03" description="SpeedInc: 2.5 Km/h"/>
+  <traceableElements id="_e8VuQ_AQEemSNpI4QBr0rg" identifier="!ed/E02F/4D8A/7C0/46A0A78D/3D58"/>
+  <traceableElements id="_e8VuRPAQEemSNpI4QBr0rg" name="CC_HLR_CCP_04" identifier="CC_HLR_CCP_04" description="Kp: 8.113"/>
+  <traceableElements id="_e8VuRfAQEemSNpI4QBr0rg" identifier="win_1D84/31CB/578/3C3C74B4/5733"/>
+  <traceableElements id="_e8VuRvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_05" identifier="CC_HLR_CCP_05" description="Ki: 0.5"/>
+  <traceableElements id="_e8VuR_AQEemSNpI4QBr0rg" identifier="!ed/E0AE/4D8A/7C0/46A0A7A8/471"/>
+  <traceableElements id="_e8VuSPAQEemSNpI4QBr0rg" name="CC_HLR_CCP_06" identifier="CC_HLR_CCP_06" description="ThrottleSatMax: 45.0 percent"/>
+  <traceableElements id="_e8VuSfAQEemSNpI4QBr0rg" identifier="win_124C/58BC/548/41BD9617/37A"/>
+  <traceableElements id="_e8VuSvAQEemSNpI4QBr0rg" name="CC_HLR_CCP_07" identifier="CC_HLR_CCP_07" description="PedalsMin: 3.0 percent."/>
+  <traceableElements id="_e8VuS_AQEemSNpI4QBr0rg" identifier="!ed/E05B/4D8A/7C0/46A0A797/5468"/>
+</scade_req:ReqProject>

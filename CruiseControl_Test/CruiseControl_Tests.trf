@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ResultFile xmlns:test="http://www.esterel-technologies.com/ns/testenv/2">
+	<rawFile>
+		<RawFile pathname="Test_TEE\CruiseControl_Tests_RAW.txt" procedureOid="07D56479-0C3F-497C-83AD-815CE0E49BB4"/>
+	</rawFile>
+</ResultFile>

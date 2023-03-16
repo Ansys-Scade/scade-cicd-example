@@ -1,0 +1,118 @@
+
+# Cruise Control Behavior Tests Cases
+
+# Tests environment init
+SSM::set System::SystemSimul/On false
+SSM::set System::SystemSimul/Resume false
+SSM::set System::SystemSimul/Set false
+SSM::set System::SystemSimul/QuickAccel false
+SSM::set System::SystemSimul/QuickDecel false
+SSM::set System::SystemSimul/Accel 0.0
+SSM::set System::SystemSimul/Brake 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_01
+#
+# Test Case Objectives:
+#    verify the CC is off when on button was never activated.
+#
+# Covered Requirements: CC_HLR_CCB_01
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is OFF
+#
+# Test Case Description
+SSM::set System::SystemSimul/Accel 100.0
+SSM::cycle 20
+SSM::cycle 1
+SSM::set System::SystemSimul/Accel 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_02
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_02, CC_HLR_CCB_04
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is ON
+#    check that the Speed is regulated around CruiseSpeed
+#
+# Test Case Description#
+SSM::set System::SystemSimul/On true
+SSM::cycle 10
+
+# Test Reference: CC_TEST_CCB_03
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_03
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is OFF
+#
+# Test Case Description
+SSM::set System::SystemSimul/On false
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_05
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_05
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is STDBY
+#
+# Test Case Description
+SSM::set System::SystemSimul/Accel 100.0
+SSM::cycle 1
+SSM::set System::SystemSimul/On true
+SSM::cycle 1
+# Accelerator pressed up to speed remains greater than SpeedMax 
+SSM::cycle 30
+
+# Test Reference: CC_TEST_CCB_06
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_06
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState come back to ON when Speed is lower than SpeedMax
+#
+# Test Case Description
+SSM::set System::SystemSimul/Accel 0.0
+SSM::cycle 20
+
+# Test Reference: CC_TEST_CCB_07
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_07
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is INT when Brake is true
+#
+# Test Case Description
+SSM::set System::SystemSimul/Brake 10.0
+SSM::cycle 1
+SSM::set System::SystemSimul/Brake 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_08
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CCB_08
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState comes back to ON when Resume is true
+#
+# Test Case Description
+SSM::set System::SystemSimul/Resume true
+SSM::cycle
+SSM::set System::SystemSimul/Resume false
+SSM::cycle
+
+

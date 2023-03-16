@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Procedure xmlns:test="http://www.esterel-technologies.com/ns/testenv/2" oid="07D56479-0C3F-497C-83AD-815CE0E49BB4" name="CruiseControl_Tests" operator="CruiseControl::CruiseControl">
+	<testElements>
+		<Record oid="89DEC80F-8525-4A43-8195-61772EE53B32" name="CarDrivingControl" description="This Record containts Test cases testing Car Driving Control Requirements.">
+			<inits>
+				<Scenario oid="58F79AAF-781F-47EC-B884-D2E9C138C6BA" persistAs="..\TestScenarios\CruiseControl_Aliases.sss"/>
+				<Scenario oid="9243C824-4B14-4450-A2EF-57E931655CD0" persistAs="..\TestScenarios\InitOff.sss"/>
+			</inits>
+			<preambles>
+				<Scenario oid="AD3F2993-A75F-41C2-9201-C42AB9515426" persistAs="..\TestScenarios\CarDrivingControl.sss"/>
+			</preambles>
+			<scenarios>
+				<Scenario oid="07D20D53-D638-429C-8287-884B44885ECC" persistAs="..\TestScenarios\CruiseRegulation.csv"/>
+			</scenarios>
+		</Record>
+		<Record oid="BFEED03F-F89C-4ADA-944B-8DA948D3378B" name="CruiseControlBehavior" description="This Record containts Test cases testing Cruise Control Behavior Requirements.">
+			<inits>
+				<Scenario oid="1D353958-C7E8-4DF2-A51A-0A3E7CBFC1B5" persistAs="..\TestScenarios\CruiseControl_Aliases.sss"/>
+				<Scenario oid="1137A09A-89F1-4E2B-B08D-CB2F4A44830D" persistAs="..\TestScenarios\InitOff.sss"/>
+			</inits>
+			<scenarios>
+				<Scenario oid="77F5655F-3092-4B53-B1B6-BE317DED53D3" persistAs="..\TestScenarios\CruiseControlBehavior.sss"/>
+			</scenarios>
+		</Record>
+		<Record oid="1D37A1C9-D197-4C9E-BA6E-F3CFB2A680FB" name="CruiseSpeedManagement" description="This Record containts Test cases testing Cruise Speed Management Requirements.">
+			<inits>
+				<Scenario oid="6087EDF6-9B08-4325-BC03-459FB0152768" persistAs="..\TestScenarios\CruiseControl_Aliases.sss"/>
+				<Scenario oid="CDB0BE7C-566B-479C-BA04-CF9BCF4C0C57" persistAs="..\TestScenarios\InitOn.sss"/>
+			</inits>
+			<scenarios>
+				<Scenario oid="57FB5819-CF2D-4E9D-8472-07838A2752DE" persistAs="..\TestScenarios\CruiseSpeedManagement.sss"/>
+			</scenarios>
+		</Record>
+	</testElements>
+</Procedure>

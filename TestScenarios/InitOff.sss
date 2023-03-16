@@ -1,0 +1,16 @@
+
+# Car Driving Control Tests Cases
+
+# Tests environment init OFF
+SSM::set On false
+SSM::set Off true
+SSM::set Resume false
+SSM::set Set false
+SSM::set QuickAccel false
+SSM::set QuickDecel false
+SSM::set Accel 0.0
+SSM::set Brake 0.0
+SSM::set Speed 0.0
+
+SSM::set_tolerance path=CruiseSpeed real=0.1
+SSM::set_tolerance path=ThrottleCmd real=0.1

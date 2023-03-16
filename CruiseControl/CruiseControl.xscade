@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:simu="http://www.esterel-technologies.com/ns/scade/pragmas/simulator/1">
+	<declarations>
+		<Package name="CruiseControl">
+			<declarations>
+				<Operator name="SaturateThrottle" href="SaturateThrottle.xscade"/>
+				<Operator name="CruiseRegulation" href="CruiseRegulation.xscade"/>
+				<Operator name="CruiseControl" href="CruiseControl1.xscade"/>
+				<Operator name="CruiseSpeedMgt" href="CruiseSpeedMgt.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/401B/4AFD/A70/46A07F51/6F3B" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/401C/4AFD/A70/46A07F51/E6F" blockKind="constants"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/401D/4AFD/A70/46A07F51/546E" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/401E/4AFD/A70/46A07F51/6D8A" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+		<Open>
+			<package>
+				<PackageRef name="Defs"/>
+			</package>
+			<pragmas>
+				<ed:Open oid="!ed/a16d/29FC/3480/5821c47223e8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<references>
+						<PackageRef path="Defs" refOid="!ed/9ea2/29FC/3480/5821bdaa78ce"/>
+					</references>
+				</ed:Open>
+			</pragmas>
+		</Open>
+	</declarations>
+</File>

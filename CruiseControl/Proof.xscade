@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Proof">
+			<declarations>
+				<Open>
+					<package>
+						<PackageRef name="Defs"/>
+					</package>
+					<pragmas>
+						<ed:Open oid="!ed/1e42d/87D/2750/5828a4c06546"/>
+					</pragmas>
+				</Open>
+				<Operator name="Proof" href="Proof1.xscade"/>
+				<Operator name="Prop1" href="Prop1.xscade"/>
+				<Operator name="Prop2" href="Prop2.xscade"/>
+				<Operator name="Prop3" href="Prop3.xscade"/>
+				<Operator name="Prop4" href="Prop4.xscade"/>
+				<Operator name="Prop5" href="Prop5.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/E0B0/4D8A/7C0/46A0A7C4/1623" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/E0B1/4D8A/7C0/46A0A7C4/5ED1" blockKind="constants"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/E0B2/4D8A/7C0/46A0A7C4/32E6" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/E0B3/4D8A/7C0/46A0A7C4/4675" blockKind="sensors"/>
+					</diagrams>
+					<references>
+						<PackageRef path="Defs" refOid="!ed/9ea2/29FC/3480/5821bdaa78ce"/>
+					</references>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

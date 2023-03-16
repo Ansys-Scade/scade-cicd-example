@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3" xmlns:simu="http://www.esterel-technologies.com/ns/scade/pragmas/simulator/1" kind="node" name="ModeMonitoring">
+	<inputs>
+		<Variable name="On">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/233b6/2FD6/1894/5813721c69e4"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Off">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/234a2/2FD6/1894/581374163269"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Resume">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/233b7/2FD6/1894/5813721c72af"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Accel">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tPercent2"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/233b8/2FD6/1894/5813721c5494"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Brake">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tPercent2"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/233b9/2FD6/1894/5813721c6986"/>
+			</pragmas>
+		</Variable>
+		<Variable name="Speed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tSpeed2"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/233ba/2FD6/1894/5813721c2c7f"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="CruiseState">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="tCruiseState"/>
+					</type>
+				</NamedType>
+			</type>
+			<default>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="OFF"/>
+					</path>
+				</IdExpression>
+			</default>
+			<pragmas>
+				<ed:Variable oid="!ed/233b5/2FD6/1894/5813721c670e"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<data>
+		<StateMachine name="SM1">
+			<states>
+				<State initial="true" name="Off">
+					<unless>
+						<Transition kind="restart">
+							<target>
+								<StateRef name="Enabled"/>
+							</target>
+							<condition>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="On"/>
+									</path>
+								</IdExpression>
+							</condition>
+							<pragmas>
+								<ed:Transition oid="!ed/23394/2FD6/1894/5813721cb21"/>
+							</pragmas>
+						</Transition>
+					</unless>
+					<pragmas>
+						<ed:State oid="!ed/23393/2FD6/1894/5813721c3bb1"/>
+					</pragmas>
+				</State>
+				<State name="Enabled">
+					<unless>
+						<Transition kind="restart">
+							<target>
+								<StateRef name="Off"/>
+							</target>
+							<condition>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Off"/>
+									</path>
+								</IdExpression>
+							</condition>
+							<pragmas>
+								<ed:Transition oid="!ed/233b3/2FD6/1894/5813721c1a1b"/>
+							</pragmas>
+						</Transition>
+					</unless>
+					<data>
+						<StateMachine name="SM2">
+							<states>
+								<State initial="true" name="Active">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="Interrupt"/>
+											</target>
+											<condition>
+												<!-- Brake > CruiseControl::PedalsMin -->
+												<BinaryOp name="5" operator="&gt;">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Brake"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="CruiseControl::PedalsMin"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</BinaryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/233ad/2FD6/1894/5813721c1455"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<locals>
+										<Variable name="StdbyCondition">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233ac/2FD6/1894/5813721c5bee"/>
+											</pragmas>
+										</Variable>
+										<Variable name="_L4">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233a8/2FD6/1894/5813721c3bfe"/>
+											</pragmas>
+										</Variable>
+										<Variable name="_L3">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233a9/2FD6/1894/5813721c3be1"/>
+											</pragmas>
+										</Variable>
+										<Variable name="_L2">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233aa/2FD6/1894/5813721c6ea2"/>
+											</pragmas>
+										</Variable>
+										<Variable name="_L1">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="bool"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233ab/2FD6/1894/5813721c1e0e"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<StateMachine name="SM3">
+											<states>
+												<State name="On">
+													<unless>
+														<Transition kind="restart">
+															<target>
+																<StateRef name="StandBy"/>
+															</target>
+															<condition>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="StdbyCondition"/>
+																	</path>
+																</IdExpression>
+															</condition>
+															<pragmas>
+																<ed:Transition oid="!ed/2339d/2FD6/1894/5813721c76ca"/>
+															</pragmas>
+														</Transition>
+													</unless>
+													<locals>
+														<Variable name="_L9">
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="tCruiseState"/>
+																	</type>
+																</NamedType>
+															</type>
+															<pragmas>
+																<ed:Variable oid="!ed/2339c/2FD6/1894/5813721c4a69"/>
+															</pragmas>
+														</Variable>
+													</locals>
+													<data>
+														<!-- _L9 = ON; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="_L9"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="ON"/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/2339a/2FD6/1894/5813721c374f"/>
+															</pragmas>
+														</Equation>
+														<!-- CruiseState = _L9; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="CruiseState"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="_L9"/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/2339b/2FD6/1894/5813721c1076"/>
+															</pragmas>
+														</Equation>
+													</data>
+													<pragmas>
+														<ed:State oid="!ed/23399/2FD6/1894/5813721c3f7f"/>
+													</pragmas>
+												</State>
+												<State initial="true" name="StandBy">
+													<unless>
+														<Transition kind="restart">
+															<target>
+																<StateRef name="On"/>
+															</target>
+															<condition>
+																<!--  not StdbyCondition -->
+																<UnaryOp name="1" operator="not">
+																	<operand>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="StdbyCondition"/>
+																			</path>
+																		</IdExpression>
+																	</operand>
+																</UnaryOp>
+															</condition>
+															<pragmas>
+																<ed:Transition oid="!ed/233a2/2FD6/1894/5813721c21db"/>
+															</pragmas>
+														</Transition>
+													</unless>
+													<locals>
+														<Variable name="_L2">
+															<type>
+																<NamedType>
+																	<type>
+																		<TypeRef name="tCruiseState"/>
+																	</type>
+																</NamedType>
+															</type>
+															<pragmas>
+																<ed:Variable oid="!ed/233a1/2FD6/1894/5813721c7061"/>
+															</pragmas>
+														</Variable>
+													</locals>
+													<data>
+														<!-- _L2 = SBY; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="_L2"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="SBY"/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/2339f/2FD6/1894/5813721c4de"/>
+															</pragmas>
+														</Equation>
+														<!-- CruiseState = _L2; -->
+														<Equation>
+															<lefts>
+																<VariableRef name="CruiseState"/>
+															</lefts>
+															<right>
+																<IdExpression>
+																	<path>
+																		<ConstVarRef name="_L2"/>
+																	</path>
+																</IdExpression>
+															</right>
+															<pragmas>
+																<ed:Equation oid="!ed/233a0/2FD6/1894/5813721c6fe9"/>
+															</pragmas>
+														</Equation>
+													</data>
+													<pragmas>
+														<ed:State oid="!ed/2339e/2FD6/1894/5813721c23ae"/>
+													</pragmas>
+												</State>
+											</states>
+											<pragmas>
+												<ed:StateMachine oid="!ed/23398/2FD6/1894/5813721c6c82"/>
+											</pragmas>
+										</StateMachine>
+										<!-- _L1 = Speed > CruiseControl::SpeedMax; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L1"/>
+											</lefts>
+											<right>
+												<!-- Speed > CruiseControl::SpeedMax -->
+												<BinaryOp name="8" operator="&gt;">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Speed"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="CruiseControl::SpeedMax"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</BinaryOp>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233a3/2FD6/1894/5813721c4dba"/>
+											</pragmas>
+										</Equation>
+										<!-- _L2 = _L3 or _L4 or _L1; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L2"/>
+											</lefts>
+											<right>
+												<!-- _L3 or _L4 or _L1 -->
+												<NAryOp name="1" operator="or">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L3"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L4"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="_L1"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</NAryOp>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233a4/2FD6/1894/5813721c3e6b"/>
+											</pragmas>
+										</Equation>
+										<!-- _L3 = Accel > CruiseControl::PedalsMin; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L3"/>
+											</lefts>
+											<right>
+												<!-- Accel > CruiseControl::PedalsMin -->
+												<BinaryOp name="7" operator="&gt;">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Accel"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="CruiseControl::PedalsMin"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</BinaryOp>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233a5/2FD6/1894/5813721c2fde"/>
+											</pragmas>
+										</Equation>
+										<!-- _L4 = Speed < CruiseControl::SpeedMin; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L4"/>
+											</lefts>
+											<right>
+												<!-- Speed < CruiseControl::SpeedMin -->
+												<BinaryOp name="2" operator="&lt;">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Speed"/>
+															</path>
+														</IdExpression>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="CruiseControl::SpeedMin"/>
+															</path>
+														</IdExpression>
+													</operands>
+												</BinaryOp>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233a6/2FD6/1894/5813721c6f9d"/>
+											</pragmas>
+										</Equation>
+										<!-- StdbyCondition = _L2; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="StdbyCondition"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L2"/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233a7/2FD6/1894/5813721c1809"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/23397/2FD6/1894/5813721c63a0"/>
+									</pragmas>
+								</State>
+								<State name="Interrupt">
+									<unless>
+										<Transition kind="restart">
+											<target>
+												<StateRef name="Active"/>
+											</target>
+											<condition>
+												<!-- Resume and  not (Brake > CruiseControl::PedalsMin) -->
+												<NAryOp name="2" operator="and">
+													<operands>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="Resume"/>
+															</path>
+														</IdExpression>
+														<!--  not (Brake > CruiseControl::PedalsMin) -->
+														<UnaryOp name="6" operator="not">
+															<operand>
+																<!-- (Brake > CruiseControl::PedalsMin) -->
+																<BinaryOp name="6" operator="&gt;">
+																	<operands>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="Brake"/>
+																			</path>
+																		</IdExpression>
+																		<IdExpression>
+																			<path>
+																				<ConstVarRef name="CruiseControl::PedalsMin"/>
+																			</path>
+																		</IdExpression>
+																	</operands>
+																</BinaryOp>
+															</operand>
+														</UnaryOp>
+													</operands>
+												</NAryOp>
+											</condition>
+											<pragmas>
+												<ed:Transition oid="!ed/233b2/2FD6/1894/5813721c2a43"/>
+											</pragmas>
+										</Transition>
+									</unless>
+									<locals>
+										<Variable name="_L2">
+											<type>
+												<NamedType>
+													<type>
+														<TypeRef name="tCruiseState"/>
+													</type>
+												</NamedType>
+											</type>
+											<pragmas>
+												<ed:Variable oid="!ed/233b1/2FD6/1894/5813721c5df5"/>
+											</pragmas>
+										</Variable>
+									</locals>
+									<data>
+										<!-- _L2 = INT; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="_L2"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="INT"/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233af/2FD6/1894/5813721c6faf"/>
+											</pragmas>
+										</Equation>
+										<!-- CruiseState = _L2; -->
+										<Equation>
+											<lefts>
+												<VariableRef name="CruiseState"/>
+											</lefts>
+											<right>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L2"/>
+													</path>
+												</IdExpression>
+											</right>
+											<pragmas>
+												<ed:Equation oid="!ed/233b0/2FD6/1894/5813721c3598"/>
+											</pragmas>
+										</Equation>
+									</data>
+									<pragmas>
+										<ed:State oid="!ed/233ae/2FD6/1894/5813721c51ba"/>
+									</pragmas>
+								</State>
+							</states>
+							<pragmas>
+								<ed:StateMachine oid="!ed/23396/2FD6/1894/5813721c21f1"/>
+							</pragmas>
+						</StateMachine>
+					</data>
+					<pragmas>
+						<ed:State oid="!ed/23395/2FD6/1894/5813721c24eb"/>
+					</pragmas>
+				</State>
+			</states>
+			<pragmas>
+				<ed:StateMachine oid="!ed/23392/2FD6/1894/5813721c305"/>
+			</pragmas>
+		</StateMachine>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/23391/2FD6/1894/5813721c67b8" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+			<diagrams>
+				<NetDiagram name="diagram_ModeMonitoring_1" landscape="false" format="A4 (210 297)" oid="!ed/233b4/2FD6/1894/5813721c1d7c">
+					<presentationElements>
+						<StateMachineGE presentable="!ed/23392/2FD6/1894/5813721c305">
+							<position>
+								<Point x="402" y="169"/>
+							</position>
+							<size>
+								<Size width="21823" height="9377"/>
+							</size>
+						</StateMachineGE>
+						<StateGE presentable="!ed/23393/2FD6/1894/5813721c3bb1">
+							<position>
+								<Point x="820" y="4154"/>
+							</position>
+							<size>
+								<Size width="2354" height="1852"/>
+							</size>
+						</StateGE>
+						<StateGE presentable="!ed/23395/2FD6/1894/5813721c24eb">
+							<position>
+								<Point x="4895" y="370"/>
+							</position>
+							<size>
+								<Size width="17065" height="9049"/>
+							</size>
+						</StateGE>
+						<StateMachineGE presentable="!ed/23396/2FD6/1894/5813721c21f1">
+							<position>
+								<Point x="5080" y="1085"/>
+							</position>
+							<size>
+								<Size width="16695" height="8229"/>
+							</size>
+						</StateMachineGE>
+						<StateGE presentable="!ed/23397/2FD6/1894/5813721c63a0">
+							<position>
+								<Point x="5345" y="1323"/>
+							</position>
+							<size>
+								<Size width="10451" height="7779"/>
+							</size>
+						</StateGE>
+						<StateMachineGE presentable="!ed/23398/2FD6/1894/5813721c6c82">
+							<position>
+								<Point x="5583" y="2117"/>
+							</position>
+							<size>
+								<Size width="10081" height="4392"/>
+							</size>
+						</StateMachineGE>
+						<StateGE presentable="!ed/23399/2FD6/1894/5813721c3f7f">
+							<position>
+								<Point x="5927" y="3175"/>
+							</position>
+							<size>
+								<Size width="3466" height="2223"/>
+							</size>
+						</StateGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/2339a/2FD6/1894/5813721c374f">
+							<position>
+								<Point x="6641" y="4366"/>
+							</position>
+							<size>
+								<Size width="169" height="296"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/2339b/2FD6/1894/5813721c1076">
+							<position>
+								<Point x="7382" y="4233"/>
+							</position>
+							<size>
+								<Size width="317" height="503"/>
+							</size>
+						</EquationGE>
+						<StateGE presentable="!ed/2339e/2FD6/1894/5813721c23ae">
+							<position>
+								<Point x="11695" y="3175"/>
+							</position>
+							<size>
+								<Size width="3466" height="2222"/>
+							</size>
+						</StateGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/2339f/2FD6/1894/5813721c4de">
+							<position>
+								<Point x="12568" y="4366"/>
+							</position>
+							<size>
+								<Size width="169" height="296"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/233a0/2FD6/1894/5813721c6fe9">
+							<position>
+								<Point x="13150" y="4233"/>
+							</position>
+							<size>
+								<Size width="317" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/233a3/2FD6/1894/5813721c4dba">
+							<position>
+								<Point x="9843" y="8149"/>
+							</position>
+							<size>
+								<Size width="170" height="296"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/233a4/2FD6/1894/5813721c3e6b">
+							<position>
+								<Point x="11113" y="6710"/>
+							</position>
+							<size>
+								<Size width="1604" height="2106"/>
+							</size>
+						</EquationGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/233a5/2FD6/1894/5813721c2fde">
+							<position>
+								<Point x="9843" y="7091"/>
+							</position>
+							<size>
+								<Size width="170" height="297"/>
+							</size>
+						</EquationGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/233a6/2FD6/1894/5813721c6f9d">
+							<position>
+								<Point x="9885" y="7620"/>
+							</position>
+							<size>
+								<Size width="170" height="296"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/233a7/2FD6/1894/5813721c1809">
+							<position>
+								<Point x="13335" y="7514"/>
+							</position>
+							<size>
+								<Size width="352" height="503"/>
+							</size>
+						</EquationGE>
+						<StateGE presentable="!ed/233ae/2FD6/1894/5813721c51ba">
+							<position>
+								<Point x="17754" y="3916"/>
+							</position>
+							<size>
+								<Size width="3466" height="2222"/>
+							</size>
+						</StateGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/233af/2FD6/1894/5813721c6faf">
+							<position>
+								<Point x="18521" y="5080"/>
+							</position>
+							<size>
+								<Size width="169" height="296"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/233b0/2FD6/1894/5813721c3598">
+							<position>
+								<Point x="19209" y="4948"/>
+							</position>
+							<size>
+								<Size width="317" height="502"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/233af/2FD6/1894/5813721c6faf" dstEquation="!ed/233b0/2FD6/1894/5813721c3598">
+							<positions>
+								<Point x="18690" y="5249"/>
+								<Point x="18965" y="5249"/>
+								<Point x="18965" y="5207"/>
+								<Point x="19262" y="5207"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/233a4/2FD6/1894/5813721c3e6b" dstEquation="!ed/233a7/2FD6/1894/5813721c1809">
+							<positions>
+								<Point x="12721" y="7768"/>
+								<Point x="13018" y="7768"/>
+								<Point x="13018" y="7768"/>
+								<Point x="13335" y="7768"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="!ed/233a3/2FD6/1894/5813721c4dba" dstEquation="!ed/233a4/2FD6/1894/5813721c3e6b">
+							<positions>
+								<Point x="10012" y="8319"/>
+								<Point x="10562" y="8319"/>
+								<Point x="10562" y="8319"/>
+								<Point x="11113" y="8319"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/233a5/2FD6/1894/5813721c2fde" dstEquation="!ed/233a4/2FD6/1894/5813721c3e6b">
+							<positions>
+								<Point x="10012" y="7260"/>
+								<Point x="10562" y="7260"/>
+								<Point x="10562" y="7260"/>
+								<Point x="11113" y="7260"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/233a6/2FD6/1894/5813721c6f9d" dstEquation="!ed/233a4/2FD6/1894/5813721c3e6b">
+							<positions>
+								<Point x="10054" y="7789"/>
+								<Point x="10583" y="7789"/>
+								<Point x="10583" y="7789"/>
+								<Point x="11113" y="7789"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2339f/2FD6/1894/5813721c4de" dstEquation="!ed/233a0/2FD6/1894/5813721c6fe9">
+							<positions>
+								<Point x="12742" y="4530"/>
+								<Point x="12975" y="4530"/>
+								<Point x="12975" y="4487"/>
+								<Point x="13187" y="4487"/>
+							</positions>
+						</Edge>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2339a/2FD6/1894/5813721c374f" dstEquation="!ed/2339b/2FD6/1894/5813721c1076">
+							<positions>
+								<Point x="6816" y="4530"/>
+								<Point x="7112" y="4530"/>
+								<Point x="7112" y="4487"/>
+								<Point x="7430" y="4487"/>
+							</positions>
+						</Edge>
+						<TransitionGE presentable="!ed/23394/2FD6/1894/5813721cb21">
+							<positions>
+								<Point x="3174" y="4471"/>
+								<Point x="4022" y="4048"/>
+								<Point x="4286" y="4075"/>
+								<Point x="4895" y="4577"/>
+							</positions>
+							<labelSize>
+								<Size width="1545" height="360"/>
+							</labelSize>
+							<labelPos>
+								<Point x="3229" y="3364"/>
+							</labelPos>
+							<slashPos>
+								<Point x="3979" y="3366"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/233b3/2FD6/1894/5813721c1a1b">
+							<positions>
+								<Point x="4895" y="5768"/>
+								<Point x="4154" y="6324"/>
+								<Point x="4022" y="6271"/>
+								<Point x="3174" y="5715"/>
+							</positions>
+							<labelSize>
+								<Size width="1376" height="635"/>
+							</labelSize>
+							<labelPos>
+								<Point x="2461" y="6827"/>
+							</labelPos>
+							<slashPos>
+								<Point x="3048" y="6837"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/233ad/2FD6/1894/5813721c1455">
+							<positions>
+								<Point x="15796" y="4445"/>
+								<Point x="16695" y="3995"/>
+								<Point x="17066" y="3784"/>
+								<Point x="17754" y="4286"/>
+							</positions>
+							<labelSize>
+								<Size width="5125" height="635"/>
+							</labelSize>
+							<labelPos>
+								<Point x="15896" y="2711"/>
+							</labelPos>
+							<slashPos>
+								<Point x="20235" y="2709"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/2339d/2FD6/1894/5813721c76ca">
+							<positions>
+								<Point x="9393" y="3598"/>
+								<Point x="10186" y="3149"/>
+								<Point x="10901" y="3175"/>
+								<Point x="11695" y="3651"/>
+							</positions>
+							<labelSize>
+								<Size width="2477" height="318"/>
+							</labelSize>
+							<labelPos>
+								<Point x="9843" y="2440"/>
+							</labelPos>
+							<slashPos>
+								<Point x="11536" y="2434"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/233a2/2FD6/1894/5813721c21db">
+							<positions>
+								<Point x="11695" y="5027"/>
+								<Point x="10954" y="5371"/>
+								<Point x="10213" y="5450"/>
+								<Point x="9393" y="5027"/>
+							</positions>
+							<labelSize>
+								<Size width="3450" height="635"/>
+							</labelSize>
+							<labelPos>
+								<Point x="9708" y="5805"/>
+							</labelPos>
+							<slashPos>
+								<Point x="12234" y="5800"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/233b2/2FD6/1894/5813721c2a43">
+							<positions>
+								<Point x="17754" y="5768"/>
+								<Point x="17251" y="6059"/>
+								<Point x="16854" y="6218"/>
+								<Point x="15796" y="5715"/>
+							</positions>
+							<labelSize>
+								<Size width="3958" height="1270"/>
+							</labelSize>
+							<labelPos>
+								<Point x="16150" y="7049"/>
+							</labelPos>
+							<slashPos>
+								<Point x="19304" y="7049"/>
+							</slashPos>
+						</TransitionGE>
+					</presentationElements>
+				</NetDiagram>
+			</diagrams>
+		</ed:Operator>
+		<simu:SampleTime period="100" offset="0" unit="ms"/>
+	</pragmas>
+</Operator>

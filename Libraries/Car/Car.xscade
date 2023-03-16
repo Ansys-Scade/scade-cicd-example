@@ -1,0 +1,3179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Package name="Car">
+			<declarations>
+				<Open>
+					<package>
+						<PackageRef name="CarType"/>
+					</package>
+					<pragmas>
+						<ed:Open oid="!ed/1C46D/7BD2/DC/46A4703B/3DDC"/>
+					</pragmas>
+				</Open>
+				<Constant name="Iengine">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0.025"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_5A9/17EE/6BC/3E8D84CB/28AB"/>
+					</pragmas>
+				</Constant>
+				<Constant name="KBRAKE">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="200.0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_94AD/6475/2F0/3C3DA87C/40FC"/>
+					</pragmas>
+				</Constant>
+				<Constant name="KTRANSM">
+					<type>
+						<Table>
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<size>
+								<ConstValue value="5"/>
+							</size>
+							<pragmas>
+								<ed:Table oid="!ed/6F9F/4D8A/7C0/46A0833F/3B7C"/>
+							</pragmas>
+						</Table>
+					</type>
+					<value>
+						<!-- [4.75, 2.68, 1.87, 1.42, 1.17] -->
+						<DataArrayOp>
+							<data>
+								<ConstValue value="4.75"/>
+								<ConstValue value="2.68"/>
+								<ConstValue value="1.87"/>
+								<ConstValue value="1.42"/>
+								<ConstValue value="1.17"/>
+							</data>
+						</DataArrayOp>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_39FF/25E3/5A8/3C3D9700/28E1"/>
+					</pragmas>
+				</Constant>
+				<Constant name="MASS">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="1450.0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_1C2A/2939/2F0/3C3D992A/529E"/>
+					</pragmas>
+				</Constant>
+				<Constant name="TCYCLE">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="0.1"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_1C42/10AD/2F0/3C3D99B7/5B6A"/>
+					</pragmas>
+				</Constant>
+				<Constant name="Tengine">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="-0.04"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_19C/6ABD/6BC/3E8D8393/2A80"/>
+					</pragmas>
+				</Constant>
+				<Constant name="TorqMax">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="400.0"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_39F3/578D/5A8/3C3D96A9/51BD"/>
+					</pragmas>
+				</Constant>
+				<Constant name="VehicleDynamic">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float64"/>
+							</type>
+						</NamedType>
+					</type>
+					<value>
+						<ConstValue value="2.5"/>
+					</value>
+					<pragmas>
+						<ed:Constant oid="win_3073/B89/5F0/3FD84A5B/7247"/>
+					</pragmas>
+				</Constant>
+				<Operator kind="node" name="Body">
+					<inputs>
+						<Variable name="Torq">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tTorq"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_125/5A72/624/3C3EF06E/732"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Brake">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_126/170C/624/3C3EF06E/A9E"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="VehicleSpeed">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_127/5638/624/3C3EF06E/116C"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L24">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1AF/3517/624/3C3EF06E/41D"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L21">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_19F/1CB9/624/3C3EF06E/73D4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L20">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_19C/5767/624/3C3EF06E/793"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L19">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_190/2E92/624/3C3EF06E/6381"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L18">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_189/2A33/624/3C3EF06E/4135"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L17">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_185/7BDF/624/3C3EF06E/5A09"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L16">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_17E/1166/624/3C3EF06E/7839"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L14">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_177/42EE/624/3C3EF06E/7556"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L13">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_16E/186B/624/3C3EF06E/4BFC"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L12">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_167/5C82/624/3C3EF06E/4E17"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L11">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_160/7109/624/3C3EF06E/62F9"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L10">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_15D/10C3/624/3C3EF06E/23A3"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L9">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_156/7696/624/3C3EF06E/1ED"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L8">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_153/51E/624/3C3EF06E/5F1A"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L7">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_14A/4CA7/624/3C3EF06E/3458"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L6">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_143/B05/624/3C3EF06E/174"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_12E/3EEE/624/3C3EF06E/236"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L26">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tTorq"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1DB/7036/624/3C3EF0C7/36A9"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L27">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1E5/706/624/3C3EF228/2BDB"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L28">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1E9/4B87/624/3C3EF248/2A87"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L30">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1FA/1B5F/624/3C3EF25B/3060"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L31">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_200/2048/624/3C3EF2FB/3E66"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L34">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_2173/7F3B/530/3C42A860/1E7"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L35">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_2178/6859/530/3C42A8B7/5C23"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L36">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_2180/6315/530/3C42A8EE/4D31"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L37">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_2183/C97/530/3C42A8F8/A14"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L38">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1916/4950/528/3E8D9646/23A9"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L39">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_191B/1CD7/528/3E8D964F/2301"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L40">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1925/7C09/528/3E8D9659/2DA2"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L41">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_192B/2B2C/528/3E8D966C/E54"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L42">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1930/7A75/528/3E8D9670/6F2A"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L49">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_3075/B89/5F0/3FD84B8C/35D6"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L24 = KBRAKE; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L24"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="KBRAKE"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1AE/3380/624/3C3EF06E/74F6"/>
+							</pragmas>
+						</Equation>
+						<!-- _L21 = pre _L18; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L21"/>
+							</lefts>
+							<right>
+								<!-- pre _L18 -->
+								<PreOp name="15">
+									<flow>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L18"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</flow>
+								</PreOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_19E/5348/624/3C3EF06E/4FAE"/>
+							</pragmas>
+						</Equation>
+						<!-- _L20 = 0.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L20"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_19B/3008/624/3C3EF06E/38B6"/>
+							</pragmas>
+						</Equation>
+						<!-- VehicleSpeed = _L18; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="VehicleSpeed"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L18"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_198/1AB2/624/3C3EF06E/472"/>
+							</pragmas>
+						</Equation>
+						<!-- _L19 = (_L20) -> (_L21); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L19"/>
+							</lefts>
+							<right>
+								<!-- (_L20) -> (_L21) -->
+								<InitOp name="14">
+									<value>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L20"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</value>
+									<flow>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L21"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</flow>
+								</InitOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_18F/B79/624/3C3EF06E/7A71"/>
+							</pragmas>
+						</Equation>
+						<!-- _L18 = _L16 + _L19; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L18"/>
+							</lefts>
+							<right>
+								<!-- _L16 + _L19 -->
+								<NAryOp name="13" operator="+">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L16"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_188/187B/624/3C3EF06E/3C03"/>
+							</pragmas>
+						</Equation>
+						<!-- _L17 = MASS; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L17"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="MASS"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_184/4231/624/3C3EF06E/1C16"/>
+							</pragmas>
+						</Equation>
+						<!-- _L16 = _L13 / _L17; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L16"/>
+							</lefts>
+							<right>
+								<!-- _L13 / _L17 -->
+								<BinaryOp name="12" operator="/">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L13"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L17"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_17D/38F0/624/3C3EF06E/1390"/>
+							</pragmas>
+						</Equation>
+						<!-- _L14 = TCYCLE; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L14"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="TCYCLE"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_176/32C2/624/3C3EF06E/2F43"/>
+							</pragmas>
+						</Equation>
+						<!-- _L13 = _L6 * _L14 * _L49; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L13"/>
+							</lefts>
+							<right>
+								<!-- _L6 * _L14 * _L49 -->
+								<NAryOp name="11" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L6"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L14"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L49"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_16D/68D1/624/3C3EF06E/3393"/>
+							</pragmas>
+						</Equation>
+						<!-- _L12 = _L2 * _L24; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L12"/>
+							</lefts>
+							<right>
+								<!-- _L2 * _L24 -->
+								<NAryOp name="2" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L24"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_166/49C9/624/3C3EF06E/2421"/>
+							</pragmas>
+						</Equation>
+						<!-- _L11 = _L40 + _L12 + _L7 + _L9; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L11"/>
+							</lefts>
+							<right>
+								<!-- _L40 + _L12 + _L7 + _L9 -->
+								<NAryOp name="3" operator="+">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L40"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L12"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L7"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L9"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_15F/695D/624/3C3EF06E/22DC"/>
+							</pragmas>
+						</Equation>
+						<!-- _L10 = 2.5; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L10"/>
+							</lefts>
+							<right>
+								<ConstValue value="2.5"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_15C/3988/624/3C3EF06E/817"/>
+							</pragmas>
+						</Equation>
+						<!-- _L9 = _L19 * _L10; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L9"/>
+							</lefts>
+							<right>
+								<!-- _L19 * _L10 -->
+								<NAryOp name="5" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L10"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_155/1B5A/624/3C3EF06E/5AEA"/>
+							</pragmas>
+						</Equation>
+						<!-- _L8 = 0.3; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L8"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.3"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_152/EA3/624/3C3EF06E/34AA"/>
+							</pragmas>
+						</Equation>
+						<!-- _L7 = _L19 * _L19 * _L8; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L7"/>
+							</lefts>
+							<right>
+								<!-- _L19 * _L19 * _L8 -->
+								<NAryOp name="4" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L8"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_149/256C/624/3C3EF06E/2E1"/>
+							</pragmas>
+						</Equation>
+						<!-- _L6 = _L26 - _L34; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L6"/>
+							</lefts>
+							<right>
+								<!-- _L26 - _L34 -->
+								<BinaryOp name="10" operator="-">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L26"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L34"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_142/4CDA/624/3C3EF06E/5206"/>
+							</pragmas>
+						</Equation>
+						<!-- _L2 = Brake; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Brake"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_12D/3CEE/624/3C3EF06E/6851"/>
+							</pragmas>
+						</Equation>
+						<!-- _L26 = Torq; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L26"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Torq"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1D9/7D0/624/3C3EF0C7/4284"/>
+							</pragmas>
+						</Equation>
+						<!-- _L27 = _L19 > _L28; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L27"/>
+							</lefts>
+							<right>
+								<!-- _L19 > _L28 -->
+								<BinaryOp name="8" operator="&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L28"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1E1/3B7F/624/3C3EF228/1C6A"/>
+							</pragmas>
+						</Equation>
+						<!-- _L28 = 0.1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L28"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.1"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1E7/6EF3/624/3C3EF248/7940"/>
+							</pragmas>
+						</Equation>
+						<!-- _L30 = if _L27 then (_L11) else (_L35); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L30"/>
+							</lefts>
+							<right>
+								<!-- if _L27 then (_L11) else (_L35) -->
+								<IfThenElseOp name="7">
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L27"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L11"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</then>
+									<else>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L35"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</else>
+								</IfThenElseOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1F3/65A7/624/3C3EF25B/20DE"/>
+							</pragmas>
+						</Equation>
+						<!-- _L31 =  - _L11; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L31"/>
+							</lefts>
+							<right>
+								<!--  - _L11 -->
+								<UnaryOp name="6" operator="-">
+									<operand>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L11"/>
+											</path>
+										</IdExpression>
+									</operand>
+								</UnaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1FD/1E6E/624/3C3EF2FB/1F03"/>
+							</pragmas>
+						</Equation>
+						<!-- _L34 = if _L36 then (_L31) else (_L30); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L34"/>
+							</lefts>
+							<right>
+								<!-- if _L36 then (_L31) else (_L30) -->
+								<IfThenElseOp name="16">
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L36"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L31"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</then>
+									<else>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L30"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</else>
+								</IfThenElseOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_216C/1813/530/3C42A860/1BFE"/>
+							</pragmas>
+						</Equation>
+						<!-- _L35 = 0.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L35"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_2176/4B6B/530/3C42A8B7/4CA3"/>
+							</pragmas>
+						</Equation>
+						<!-- _L36 = _L19 < _L37; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L36"/>
+							</lefts>
+							<right>
+								<!-- _L19 < _L37 -->
+								<BinaryOp name="9" operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L37"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_217C/12C4/530/3C42A8EE/6DF1"/>
+							</pragmas>
+						</Equation>
+						<!-- _L37 = -0.1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L37"/>
+							</lefts>
+							<right>
+								<ConstValue value="-0.1"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_2181/359D/530/3C42A8F8/2474"/>
+							</pragmas>
+						</Equation>
+						<!-- _L38 = _L26 <= _L39; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L38"/>
+							</lefts>
+							<right>
+								<!-- _L26 <= _L39 -->
+								<BinaryOp name="0" operator="&lt;=">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L26"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L39"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1912/3B1C/528/3E8D9646/667E"/>
+							</pragmas>
+						</Equation>
+						<!-- _L39 = 1.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L39"/>
+							</lefts>
+							<right>
+								<ConstValue value="1.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1919/1980/528/3E8D964F/4DBC"/>
+							</pragmas>
+						</Equation>
+						<!-- _L40 = if _L38 then (_L42) else (_L41); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L40"/>
+							</lefts>
+							<right>
+								<!-- if _L38 then (_L42) else (_L41) -->
+								<IfThenElseOp name="1">
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L38"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L42"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</then>
+									<else>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L41"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</else>
+								</IfThenElseOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_191E/16BA/528/3E8D9659/5269"/>
+							</pragmas>
+						</Equation>
+						<!-- _L41 = 0.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L41"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1929/20E8/528/3E8D966C/33B3"/>
+							</pragmas>
+						</Equation>
+						<!-- _L42 = 150.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L42"/>
+							</lefts>
+							<right>
+								<ConstValue value="150.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_192E/2C5C/528/3E8D9670/11F4"/>
+							</pragmas>
+						</Equation>
+						<!-- _L49 = VehicleDynamic; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L49"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="VehicleDynamic"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_3074/B89/5F0/3FD84B8C/28D9"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="win_124/4FE0/624/3C3EF06E/1321" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+							<diagrams>
+								<NetDiagram name="eq_vehicle" landscape="true" format="A4 (210 297)" defaultPageFormat="false" oid="!ed/6C25/4D8A/7C0/46A080A1/438C">
+									<presentationElements>
+										<EquationGE kind="OBJ_LIT" presentable="win_1AE/3380/624/3C3EF06E/74F6">
+											<position>
+												<Point x="2985" y="6117"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE rotation="180" presentable="win_19E/5348/624/3C3EF06E/4FAE">
+											<position>
+												<Point x="20870" y="11557"/>
+											</position>
+											<size>
+												<Size width="1021" height="651"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_188/187B/624/3C3EF06E/3C03" dstEquation="win_19E/5348/624/3C3EF06E/4FAE">
+											<positions>
+												<Point x="22140" y="10033"/>
+												<Point x="22585" y="10033"/>
+												<Point x="22585" y="11896"/>
+												<Point x="21886" y="11896"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_19B/3008/624/3C3EF06E/38B6">
+											<position>
+												<Point x="19050" y="12531"/>
+											</position>
+											<size>
+												<Size width="170" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_198/1AB2/624/3C3EF06E/472">
+											<position>
+												<Point x="23029" y="9779"/>
+											</position>
+											<size>
+												<Size width="466" height="508"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_188/187B/624/3C3EF06E/3C03" dstEquation="win_198/1AB2/624/3C3EF06E/472">
+											<positions>
+												<Point x="22140" y="10033"/>
+												<Point x="23178" y="10033"/>
+												<Point x="23178" y="10033"/>
+												<Point x="23093" y="10033"/>
+											</positions>
+										</Edge>
+										<EquationGE rotation="180" symetrical="true" presentable="win_18F/B79/624/3C3EF06E/7A71">
+											<position>
+												<Point x="19092" y="11536"/>
+											</position>
+											<size>
+												<Size width="1021" height="677"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_19E/5348/624/3C3EF06E/4FAE" dstEquation="win_18F/B79/624/3C3EF06E/7A71">
+											<positions>
+												<Point x="20870" y="11875"/>
+												<Point x="20532" y="11875"/>
+												<Point x="20532" y="11875"/>
+												<Point x="20108" y="11875"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_19B/3008/624/3C3EF06E/38B6" dstEquation="win_18F/B79/624/3C3EF06E/7A71">
+											<positions>
+												<Point x="19219" y="12700"/>
+												<Point x="19600" y="12700"/>
+												<Point x="19600" y="12213"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_188/187B/624/3C3EF06E/3C03">
+											<position>
+												<Point x="21124" y="9694"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_17D/38F0/624/3C3EF06E/1390" dstEquation="win_188/187B/624/3C3EF06E/3C03">
+											<positions>
+												<Point x="20362" y="8065"/>
+												<Point x="20765" y="8065"/>
+												<Point x="20765" y="9906"/>
+												<Point x="21124" y="9906"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_188/187B/624/3C3EF06E/3C03">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="17928" y="11875"/>
+												<Point x="17928" y="10139"/>
+												<Point x="21124" y="10139"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_184/4231/624/3C3EF06E/1C16">
+											<position>
+												<Point x="18606" y="8996"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_17D/38F0/624/3C3EF06E/1390">
+											<position>
+												<Point x="19346" y="7726"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_16D/68D1/624/3C3EF06E/3393" dstEquation="win_17D/38F0/624/3C3EF06E/1390">
+											<positions>
+												<Point x="18161" y="7938"/>
+												<Point x="18627" y="7938"/>
+												<Point x="18627" y="7938"/>
+												<Point x="19346" y="7938"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_184/4231/624/3C3EF06E/1C16" dstEquation="win_17D/38F0/624/3C3EF06E/1390">
+											<positions>
+												<Point x="18775" y="9165"/>
+												<Point x="19071" y="9165"/>
+												<Point x="19071" y="8170"/>
+												<Point x="19346" y="8170"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_176/32C2/624/3C3EF06E/2F43">
+											<position>
+												<Point x="15896" y="7789"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_16D/68D1/624/3C3EF06E/3393">
+											<position>
+												<Point x="17124" y="7176"/>
+											</position>
+											<size>
+												<Size width="1041" height="1499"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_142/4CDA/624/3C3EF06E/5206" dstEquation="win_16D/68D1/624/3C3EF06E/3393">
+											<positions>
+												<Point x="15304" y="6943"/>
+												<Point x="16531" y="6943"/>
+												<Point x="16531" y="7557"/>
+												<Point x="17124" y="7557"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_176/32C2/624/3C3EF06E/2F43" dstEquation="win_16D/68D1/624/3C3EF06E/3393">
+											<positions>
+												<Point x="16066" y="7959"/>
+												<Point x="16658" y="7959"/>
+												<Point x="16658" y="7959"/>
+												<Point x="17124" y="7959"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_3074/B89/5F0/3FD84B8C/28D9" dstEquation="win_16D/68D1/624/3C3EF06E/3393">
+											<positions>
+												<Point x="16129" y="8297"/>
+												<Point x="16616" y="8297"/>
+												<Point x="16616" y="8297"/>
+												<Point x="17124" y="8297"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_166/49C9/624/3C3EF06E/2421">
+											<position>
+												<Point x="3852" y="5842"/>
+											</position>
+											<size>
+												<Size width="991" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_12D/3CEE/624/3C3EF06E/6851" dstEquation="win_166/49C9/624/3C3EF06E/2421">
+											<positions>
+												<Point x="1503" y="6054"/>
+												<Point x="2667" y="6054"/>
+												<Point x="2667" y="6054"/>
+												<Point x="3852" y="6054"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_1AE/3380/624/3C3EF06E/74F6" dstEquation="win_166/49C9/624/3C3EF06E/2421">
+											<positions>
+												<Point x="3154" y="6287"/>
+												<Point x="3493" y="6287"/>
+												<Point x="3493" y="6287"/>
+												<Point x="3852" y="6287"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_15F/695D/624/3C3EF06E/22DC">
+											<position>
+												<Point x="5588" y="7239"/>
+											</position>
+											<size>
+												<Size width="1016" height="965"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_191E/16BA/528/3E8D9659/5269" dstEquation="win_15F/695D/624/3C3EF06E/22DC">
+											<positions>
+												<Point x="5927" y="4339"/>
+												<Point x="6223" y="4339"/>
+												<Point x="6223" y="5906"/>
+												<Point x="5313" y="5906"/>
+												<Point x="5313" y="7430"/>
+												<Point x="5588" y="7430"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_166/49C9/624/3C3EF06E/2421" dstEquation="win_15F/695D/624/3C3EF06E/22DC">
+											<positions>
+												<Point x="4847" y="6181"/>
+												<Point x="5059" y="6181"/>
+												<Point x="5059" y="7620"/>
+												<Point x="5588" y="7620"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_149/256C/624/3C3EF06E/2E1" dstEquation="win_15F/695D/624/3C3EF06E/22DC">
+											<positions>
+												<Point x="4487" y="9038"/>
+												<Point x="5059" y="9038"/>
+												<Point x="5059" y="7832"/>
+												<Point x="5588" y="7832"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="4" srcEquation="win_155/1B5A/624/3C3EF06E/5AEA" dstEquation="win_15F/695D/624/3C3EF06E/22DC">
+											<positions>
+												<Point x="4551" y="10435"/>
+												<Point x="5292" y="10435"/>
+												<Point x="5292" y="8022"/>
+												<Point x="5588" y="8022"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_15C/3988/624/3C3EF06E/817">
+											<position>
+												<Point x="2921" y="10372"/>
+											</position>
+											<size>
+												<Size width="170" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_155/1B5A/624/3C3EF06E/5AEA">
+											<position>
+												<Point x="3535" y="10097"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_155/1B5A/624/3C3EF06E/5AEA">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="2032" y="11875"/>
+												<Point x="2032" y="10308"/>
+												<Point x="3535" y="10308"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_15C/3988/624/3C3EF06E/817" dstEquation="win_155/1B5A/624/3C3EF06E/5AEA">
+											<positions>
+												<Point x="3090" y="10541"/>
+												<Point x="3302" y="10541"/>
+												<Point x="3302" y="10541"/>
+												<Point x="3535" y="10541"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_152/EA3/624/3C3EF06E/34AA">
+											<position>
+												<Point x="2963" y="9038"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_149/256C/624/3C3EF06E/2E1">
+											<position>
+												<Point x="3471" y="8700"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_149/256C/624/3C3EF06E/2E1">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="2032" y="11875"/>
+												<Point x="2032" y="10287"/>
+												<Point x="2032" y="10287"/>
+												<Point x="2032" y="8869"/>
+												<Point x="3471" y="8869"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_149/256C/624/3C3EF06E/2E1">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="2032" y="11875"/>
+												<Point x="2032" y="9038"/>
+												<Point x="3471" y="9038"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_152/EA3/624/3C3EF06E/34AA" dstEquation="win_149/256C/624/3C3EF06E/2E1">
+											<positions>
+												<Point x="3133" y="9208"/>
+												<Point x="3302" y="9208"/>
+												<Point x="3302" y="9208"/>
+												<Point x="3471" y="9208"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_142/4CDA/624/3C3EF06E/5206">
+											<position>
+												<Point x="14266" y="6604"/>
+											</position>
+											<size>
+												<Size width="1041" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_1D9/7D0/624/3C3EF0C7/4284" dstEquation="win_142/4CDA/624/3C3EF06E/5206">
+											<positions>
+												<Point x="2498" y="1080"/>
+												<Point x="13208" y="1080"/>
+												<Point x="13208" y="6816"/>
+												<Point x="14266" y="6816"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_216C/1813/530/3C42A860/1BFE" dstEquation="win_142/4CDA/624/3C3EF06E/5206">
+											<positions>
+												<Point x="12721" y="7472"/>
+												<Point x="13208" y="7472"/>
+												<Point x="13208" y="7049"/>
+												<Point x="14266" y="7049"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_12D/3CEE/624/3C3EF06E/6851">
+											<position>
+												<Point x="1037" y="5800"/>
+											</position>
+											<size>
+												<Size width="465" height="508"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_1D9/7D0/624/3C3EF0C7/4284">
+											<position>
+												<Point x="2032" y="826"/>
+											</position>
+											<size>
+												<Size width="466" height="508"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_1E1/3B7F/624/3C3EF228/1C6A">
+											<position>
+												<Point x="8319" y="9419"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_1E1/3B7F/624/3C3EF228/1C6A">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="6689" y="11875"/>
+												<Point x="6689" y="9631"/>
+												<Point x="8319" y="9631"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_1E7/6EF3/624/3C3EF248/7940" dstEquation="win_1E1/3B7F/624/3C3EF228/1C6A">
+											<positions>
+												<Point x="7578" y="9864"/>
+												<Point x="7938" y="9864"/>
+												<Point x="7938" y="9864"/>
+												<Point x="8319" y="9864"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_1E7/6EF3/624/3C3EF248/7940">
+											<position>
+												<Point x="7408" y="9694"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE symetrical="true" presentable="win_1F3/65A7/624/3C3EF25B/20DE">
+											<position>
+												<Point x="9716" y="7430"/>
+											</position>
+											<size>
+												<Size width="1016" height="914"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_1E1/3B7F/624/3C3EF228/1C6A" dstEquation="win_1F3/65A7/624/3C3EF25B/20DE">
+											<positions>
+												<Point x="9335" y="9758"/>
+												<Point x="10224" y="9758"/>
+												<Point x="10224" y="8340"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_15F/695D/624/3C3EF06E/22DC" dstEquation="win_1F3/65A7/624/3C3EF25B/20DE">
+											<positions>
+												<Point x="6604" y="7726"/>
+												<Point x="7006" y="7726"/>
+												<Point x="7006" y="7726"/>
+												<Point x="9716" y="7726"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_2176/4B6B/530/3C42A8B7/4CA3" dstEquation="win_1F3/65A7/624/3C3EF25B/20DE">
+											<positions>
+												<Point x="9123" y="8043"/>
+												<Point x="9419" y="8043"/>
+												<Point x="9419" y="8043"/>
+												<Point x="9716" y="8043"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_1FD/1E6E/624/3C3EF2FB/1F03">
+											<position>
+												<Point x="8975" y="6138"/>
+											</position>
+											<size>
+												<Size width="1016" height="635"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_15F/695D/624/3C3EF06E/22DC" dstEquation="win_1FD/1E6E/624/3C3EF2FB/1F03">
+											<positions>
+												<Point x="6604" y="7726"/>
+												<Point x="7006" y="7726"/>
+												<Point x="7006" y="6456"/>
+												<Point x="8975" y="6456"/>
+											</positions>
+										</Edge>
+										<EquationGE symetrical="true" presentable="win_216C/1813/530/3C42A860/1BFE">
+											<position>
+												<Point x="11684" y="7006"/>
+											</position>
+											<size>
+												<Size width="1041" height="914"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_217C/12C4/530/3C42A8EE/6DF1" dstEquation="win_216C/1813/530/3C42A860/1BFE">
+											<positions>
+												<Point x="11261" y="10859"/>
+												<Point x="12213" y="10859"/>
+												<Point x="12213" y="7916"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_1FD/1E6E/624/3C3EF2FB/1F03" dstEquation="win_216C/1813/530/3C42A860/1BFE">
+											<positions>
+												<Point x="9991" y="6456"/>
+												<Point x="10816" y="6456"/>
+												<Point x="10816" y="7303"/>
+												<Point x="11684" y="7303"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_1F3/65A7/624/3C3EF25B/20DE" dstEquation="win_216C/1813/530/3C42A860/1BFE">
+											<positions>
+												<Point x="10732" y="7895"/>
+												<Point x="11218" y="7895"/>
+												<Point x="11218" y="7620"/>
+												<Point x="11684" y="7620"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_2176/4B6B/530/3C42A8B7/4CA3">
+											<position>
+												<Point x="8954" y="7874"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_217C/12C4/530/3C42A8EE/6DF1">
+											<position>
+												<Point x="10245" y="10520"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_18F/B79/624/3C3EF06E/7A71" dstEquation="win_217C/12C4/530/3C42A8EE/6DF1">
+											<positions>
+												<Point x="19092" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="14182" y="11875"/>
+												<Point x="8721" y="11875"/>
+												<Point x="8721" y="10732"/>
+												<Point x="10245" y="10732"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_2181/359D/530/3C42A8F8/2474" dstEquation="win_217C/12C4/530/3C42A8EE/6DF1">
+											<positions>
+												<Point x="9652" y="10964"/>
+												<Point x="9948" y="10964"/>
+												<Point x="9948" y="10964"/>
+												<Point x="10245" y="10964"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_2181/359D/530/3C42A8F8/2474">
+											<position>
+												<Point x="9483" y="10795"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_1912/3B1C/528/3E8D9646/667E">
+											<position>
+												<Point x="3725" y="1715"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_1D9/7D0/624/3C3EF0C7/4284" dstEquation="win_1912/3B1C/528/3E8D9646/667E">
+											<positions>
+												<Point x="2498" y="1080"/>
+												<Point x="3387" y="1080"/>
+												<Point x="3387" y="1926"/>
+												<Point x="3725" y="1926"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_1919/1980/528/3E8D964F/4DBC" dstEquation="win_1912/3B1C/528/3E8D9646/667E">
+											<positions>
+												<Point x="2900" y="2159"/>
+												<Point x="3302" y="2159"/>
+												<Point x="3302" y="2159"/>
+												<Point x="3725" y="2159"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_1919/1980/528/3E8D964F/4DBC">
+											<position>
+												<Point x="2731" y="1990"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_191E/16BA/528/3E8D9659/5269">
+											<position>
+												<Point x="4890" y="3874"/>
+											</position>
+											<size>
+												<Size width="1041" height="940"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_1912/3B1C/528/3E8D9646/667E" dstEquation="win_191E/16BA/528/3E8D9659/5269">
+											<positions>
+												<Point x="4741" y="2053"/>
+												<Point x="5419" y="2053"/>
+												<Point x="5419" y="3874"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_192E/2C5C/528/3E8D9670/11F4" dstEquation="win_191E/16BA/528/3E8D9659/5269">
+											<positions>
+												<Point x="4191" y="4191"/>
+												<Point x="4530" y="4191"/>
+												<Point x="4530" y="4191"/>
+												<Point x="4890" y="4191"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_1929/20E8/528/3E8D966C/33B3" dstEquation="win_191E/16BA/528/3E8D9659/5269">
+											<positions>
+												<Point x="2921" y="4509"/>
+												<Point x="3747" y="4509"/>
+												<Point x="3747" y="4509"/>
+												<Point x="4890" y="4509"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_1929/20E8/528/3E8D966C/33B3">
+											<position>
+												<Point x="2752" y="4339"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="win_192E/2C5C/528/3E8D9670/11F4">
+											<position>
+												<Point x="4022" y="4022"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="win_3074/B89/5F0/3FD84B8C/28D9">
+											<position>
+												<Point x="15960" y="8128"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="function" name="PowerTrainStatic">
+					<inputs>
+						<Variable name="Throttle">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_22D/5DAC/624/3C3EFA37/3F94"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="Torq">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tTorq"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_232/43F0/624/3C3EFA61/5188"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L7">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_230/4195/624/3C3EFA41/56D5"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L8">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_199/4F2E/6BC/3E8D8388/25FD"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L9">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1A3/7E5E/6BC/3E8D83A5/42B8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L11">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_588/34B2/6BC/3E8D8415/5565"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L12">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_590/536C/6BC/3E8D8428/7CF6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L13">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_595/424E/6BC/3E8D8430/3726"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L14">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_59D/1198/6BC/3E8D8449/8D8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L15">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5A4/4C79/6BC/3E8D847F/4611"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L16">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5B5/426F/6BC/3E8D84E9/5C16"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L18">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_2A12/2752/6BC/3E8D882F/73C8"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L19">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_599/56C2/5EC/3E8D9889/46B4"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L21">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5A4/7F86/5EC/3E8D9892/1C78"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L27">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5CB/B6/5EC/3E8D98B4/640A"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L28">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5D1/2B53/5EC/3E8D98BD/7E72"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L29">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5DB/3502/5EC/3E8D98D7/20E6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L30">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_5E4/57F9/5EC/3E8D98DD/27C6"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L32">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="float64"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_59FC/151C/5EC/3E8D9A5C/27F4"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L7 = Throttle; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L7"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Throttle"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_22E/1D5/624/3C3EFA41/12"/>
+							</pragmas>
+						</Equation>
+						<!-- Torq = _L14; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="Torq"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L14"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_234/422C/624/3C3EFA72/1F41"/>
+							</pragmas>
+						</Equation>
+						<!-- _L8 = _L30 * _L9; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L8"/>
+							</lefts>
+							<right>
+								<!-- _L30 * _L9 -->
+								<NAryOp name="3" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L30"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L9"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_195/7B6A/6BC/3E8D8388/4720"/>
+							</pragmas>
+						</Equation>
+						<!-- _L9 = Tengine; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L9"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Tengine"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1A1/7A9D/6BC/3E8D83A5/2769"/>
+							</pragmas>
+						</Equation>
+						<!-- _L11 = mathext::ExpR(_L8); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L11"/>
+							</lefts>
+							<right>
+								<!-- mathext::ExpR(_L8) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="8">
+											<operator>
+												<OperatorRef name="mathext::ExpR"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L8"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_586/4EF8/6BC/3E8D8415/17D9"/>
+							</pragmas>
+						</Equation>
+						<!-- _L12 = _L13 - _L11; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L12"/>
+							</lefts>
+							<right>
+								<!-- _L13 - _L11 -->
+								<BinaryOp name="2" operator="-">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L13"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L11"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_58C/E67/6BC/3E8D8428/6FFD"/>
+							</pragmas>
+						</Equation>
+						<!-- _L13 = 1.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L13"/>
+							</lefts>
+							<right>
+								<ConstValue value="1.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_593/6691/6BC/3E8D8430/B6F"/>
+							</pragmas>
+						</Equation>
+						<!-- _L14 = _L12 * _L12 * _L18; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L14"/>
+							</lefts>
+							<right>
+								<!-- _L12 * _L12 * _L18 -->
+								<NAryOp name="0" operator="*">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L12"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L12"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L18"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</NAryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_599/1099/6BC/3E8D8449/3098"/>
+							</pragmas>
+						</Equation>
+						<!-- _L15 = TorqMax; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L15"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="TorqMax"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5A2/5267/6BC/3E8D847F/12CD"/>
+							</pragmas>
+						</Equation>
+						<!-- _L16 = Iengine; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L16"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Iengine"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5B3/1F6A/6BC/3E8D84E9/FF9"/>
+							</pragmas>
+						</Equation>
+						<!-- _L18 = _L15 / _L16; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L18"/>
+							</lefts>
+							<right>
+								<!-- _L15 / _L16 -->
+								<BinaryOp name="1" operator="/">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L15"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L16"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_2A0E/6A01/6BC/3E8D882F/4442"/>
+							</pragmas>
+						</Equation>
+						<!-- _L19 = _L7 > _L27; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L19"/>
+							</lefts>
+							<right>
+								<!-- _L7 > _L27 -->
+								<BinaryOp name="4" operator="&gt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L7"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L27"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_595/5552/5EC/3E8D9889/F2D"/>
+							</pragmas>
+						</Equation>
+						<!-- _L21 = _L7 < _L28; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L21"/>
+							</lefts>
+							<right>
+								<!-- _L7 < _L28 -->
+								<BinaryOp name="5" operator="&lt;">
+									<operands>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L7"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L28"/>
+											</path>
+										</IdExpression>
+									</operands>
+								</BinaryOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5A0/41B2/5EC/3E8D9892/10C1"/>
+							</pragmas>
+						</Equation>
+						<!-- _L27 = 100.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L27"/>
+							</lefts>
+							<right>
+								<ConstValue value="100.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5C9/3CCC/5EC/3E8D98B4/57C4"/>
+							</pragmas>
+						</Equation>
+						<!-- _L28 = 0.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L28"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5CF/2256/5EC/3E8D98BD/7EFC"/>
+							</pragmas>
+						</Equation>
+						<!-- _L29 = if _L19 then (_L27) else (_L7); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L29"/>
+							</lefts>
+							<right>
+								<!-- if _L19 then (_L27) else (_L7) -->
+								<IfThenElseOp name="6">
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L19"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L27"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</then>
+									<else>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L7"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</else>
+								</IfThenElseOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5D4/64C2/5EC/3E8D98D7/7759"/>
+							</pragmas>
+						</Equation>
+						<!-- _L30 = if _L21 then (_L32) else (_L29); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L30"/>
+							</lefts>
+							<right>
+								<!-- if _L21 then (_L32) else (_L29) -->
+								<IfThenElseOp name="7">
+									<if>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L21"/>
+											</path>
+										</IdExpression>
+									</if>
+									<then>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L32"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</then>
+									<else>
+										<ListExpression>
+											<items>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="_L29"/>
+													</path>
+												</IdExpression>
+											</items>
+										</ListExpression>
+									</else>
+								</IfThenElseOp>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_5DD/716C/5EC/3E8D98DD/6600"/>
+							</pragmas>
+						</Equation>
+						<!-- _L32 = 0.0; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L32"/>
+							</lefts>
+							<right>
+								<ConstValue value="0.0"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_59FA/11A7/5EC/3E8D9A5C/3814"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="win_205/7240/624/3C3EF9FA/6012" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+							<diagrams>
+								<NetDiagram name="eq_powertrain" landscape="true" format="A4 (210 297)" defaultPageFormat="false" oid="!ed/6CD0/4D8A/7C0/46A080A1/54F1">
+									<presentationElements>
+										<EquationGE presentable="win_22E/1D5/624/3C3EFA41/12">
+											<position>
+												<Point x="1842" y="3344"/>
+											</position>
+											<size>
+												<Size width="423" height="508"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_234/422C/624/3C3EFA72/1F41">
+											<position>
+												<Point x="19135" y="3535"/>
+											</position>
+											<size>
+												<Size width="529" height="508"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_599/1099/6BC/3E8D8449/3098" dstEquation="win_234/422C/624/3C3EFA72/1F41">
+											<positions>
+												<Point x="18479" y="3810"/>
+												<Point x="18817" y="3810"/>
+												<Point x="18817" y="3789"/>
+												<Point x="19219" y="3789"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_195/7B6A/6BC/3E8D8388/4720">
+											<position>
+												<Point x="9208" y="3069"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_5DD/716C/5EC/3E8D98DD/6600" dstEquation="win_195/7B6A/6BC/3E8D8388/4720">
+											<positions>
+												<Point x="7578" y="3302"/>
+												<Point x="8382" y="3302"/>
+												<Point x="8382" y="3302"/>
+												<Point x="9208" y="3302"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_1A1/7A9D/6BC/3E8D83A5/2769" dstEquation="win_195/7B6A/6BC/3E8D8388/4720">
+											<positions>
+												<Point x="7705" y="5101"/>
+												<Point x="8594" y="5101"/>
+												<Point x="8594" y="3514"/>
+												<Point x="9208" y="3514"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_1A1/7A9D/6BC/3E8D83A5/2769">
+											<position>
+												<Point x="7535" y="4932"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_586/4EF8/6BC/3E8D8415/17D9">
+											<position>
+												<Point x="11028" y="2604"/>
+											</position>
+											<size>
+												<Size width="2398" height="1604"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_195/7B6A/6BC/3E8D8388/4720" dstEquation="win_586/4EF8/6BC/3E8D8415/17D9">
+											<positions>
+												<Point x="10224" y="3408"/>
+												<Point x="10732" y="3408"/>
+												<Point x="10732" y="3408"/>
+												<Point x="11028" y="3408"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_58C/E67/6BC/3E8D8428/6FFD">
+											<position>
+												<Point x="15177" y="2985"/>
+											</position>
+											<size>
+												<Size width="1022" height="651"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_593/6691/6BC/3E8D8430/B6F" dstEquation="win_58C/E67/6BC/3E8D8428/6FFD">
+											<positions>
+												<Point x="14584" y="2667"/>
+												<Point x="14880" y="2667"/>
+												<Point x="14880" y="3196"/>
+												<Point x="15177" y="3196"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_586/4EF8/6BC/3E8D8415/17D9" dstEquation="win_58C/E67/6BC/3E8D8428/6FFD">
+											<positions>
+												<Point x="13420" y="3408"/>
+												<Point x="13716" y="3408"/>
+												<Point x="13716" y="3408"/>
+												<Point x="15177" y="3408"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_593/6691/6BC/3E8D8430/B6F">
+											<position>
+												<Point x="14415" y="2498"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_599/1099/6BC/3E8D8449/3098">
+											<position>
+												<Point x="17463" y="2815"/>
+											</position>
+											<size>
+												<Size width="1021" height="1974"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_58C/E67/6BC/3E8D8428/6FFD" dstEquation="win_599/1099/6BC/3E8D8449/3098">
+											<positions>
+												<Point x="16193" y="3323"/>
+												<Point x="16806" y="3323"/>
+												<Point x="16806" y="3323"/>
+												<Point x="17463" y="3323"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_58C/E67/6BC/3E8D8428/6FFD" dstEquation="win_599/1099/6BC/3E8D8449/3098">
+											<positions>
+												<Point x="16193" y="3323"/>
+												<Point x="16828" y="3323"/>
+												<Point x="16828" y="3810"/>
+												<Point x="17463" y="3810"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_2A0E/6A01/6BC/3E8D882F/4442" dstEquation="win_599/1099/6BC/3E8D8449/3098">
+											<positions>
+												<Point x="16171" y="5546"/>
+												<Point x="16806" y="5546"/>
+												<Point x="16806" y="4318"/>
+												<Point x="17463" y="4318"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_5A2/5267/6BC/3E8D847F/12CD">
+											<position>
+												<Point x="13991" y="4868"/>
+											</position>
+											<size>
+												<Size width="170" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="win_5B3/1F6A/6BC/3E8D84E9/FF9">
+											<position>
+												<Point x="13991" y="5948"/>
+											</position>
+											<size>
+												<Size width="170" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_2A0E/6A01/6BC/3E8D882F/4442">
+											<position>
+												<Point x="15155" y="5207"/>
+											</position>
+											<size>
+												<Size width="1021" height="678"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_5A2/5267/6BC/3E8D847F/12CD" dstEquation="win_2A0E/6A01/6BC/3E8D882F/4442">
+											<positions>
+												<Point x="14161" y="5038"/>
+												<Point x="14647" y="5038"/>
+												<Point x="14647" y="5440"/>
+												<Point x="15155" y="5440"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_5B3/1F6A/6BC/3E8D84E9/FF9" dstEquation="win_2A0E/6A01/6BC/3E8D882F/4442">
+											<positions>
+												<Point x="14161" y="6117"/>
+												<Point x="14647" y="6117"/>
+												<Point x="14647" y="5652"/>
+												<Point x="15155" y="5652"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_595/5552/5EC/3E8D9889/F2D">
+											<position>
+												<Point x="3429" y="2074"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_22E/1D5/624/3C3EFA41/12" dstEquation="win_595/5552/5EC/3E8D9889/F2D">
+											<positions>
+												<Point x="2265" y="3598"/>
+												<Point x="2582" y="3598"/>
+												<Point x="2582" y="2307"/>
+												<Point x="3429" y="2307"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_5C9/3CCC/5EC/3E8D98B4/57C4" dstEquation="win_595/5552/5EC/3E8D9889/F2D">
+											<positions>
+												<Point x="2032" y="2519"/>
+												<Point x="2477" y="2519"/>
+												<Point x="2477" y="2519"/>
+												<Point x="3429" y="2519"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_5A0/41B2/5EC/3E8D9892/10C1">
+											<position>
+												<Point x="3429" y="868"/>
+											</position>
+											<size>
+												<Size width="1016" height="660"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_22E/1D5/624/3C3EFA41/12" dstEquation="win_5A0/41B2/5EC/3E8D9892/10C1">
+											<positions>
+												<Point x="2265" y="3598"/>
+												<Point x="2582" y="3598"/>
+												<Point x="2582" y="1080"/>
+												<Point x="3429" y="1080"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_5CF/2256/5EC/3E8D98BD/7EFC" dstEquation="win_5A0/41B2/5EC/3E8D9892/10C1">
+											<positions>
+												<Point x="2011" y="1312"/>
+												<Point x="2582" y="1312"/>
+												<Point x="2582" y="1312"/>
+												<Point x="3429" y="1312"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_5C9/3CCC/5EC/3E8D98B4/57C4">
+											<position>
+												<Point x="1863" y="2350"/>
+											</position>
+											<size>
+												<Size width="169" height="317"/>
+											</size>
+										</EquationGE>
+										<EquationGE kind="OBJ_LIT" presentable="win_5CF/2256/5EC/3E8D98BD/7EFC">
+											<position>
+												<Point x="1842" y="1143"/>
+											</position>
+											<size>
+												<Size width="169" height="318"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_5D4/64C2/5EC/3E8D98D7/7759">
+											<position>
+												<Point x="4445" y="3006"/>
+											</position>
+											<size>
+												<Size width="1016" height="914"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_595/5552/5EC/3E8D9889/F2D" dstEquation="win_5D4/64C2/5EC/3E8D98D7/7759">
+											<positions>
+												<Point x="4445" y="2413"/>
+												<Point x="4953" y="2413"/>
+												<Point x="4953" y="3006"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_5C9/3CCC/5EC/3E8D98B4/57C4" dstEquation="win_5D4/64C2/5EC/3E8D98D7/7759">
+											<positions>
+												<Point x="2032" y="2519"/>
+												<Point x="3217" y="2519"/>
+												<Point x="3217" y="3302"/>
+												<Point x="4445" y="3302"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_22E/1D5/624/3C3EFA41/12" dstEquation="win_5D4/64C2/5EC/3E8D98D7/7759">
+											<positions>
+												<Point x="2265" y="3598"/>
+												<Point x="3598" y="3598"/>
+												<Point x="3598" y="3598"/>
+												<Point x="4445" y="3598"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_5DD/716C/5EC/3E8D98DD/6600">
+											<position>
+												<Point x="6562" y="2836"/>
+											</position>
+											<size>
+												<Size width="1016" height="914"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_5A0/41B2/5EC/3E8D9892/10C1" dstEquation="win_5DD/716C/5EC/3E8D98DD/6600">
+											<positions>
+												<Point x="4445" y="1207"/>
+												<Point x="7070" y="1207"/>
+												<Point x="7070" y="2836"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_59FA/11A7/5EC/3E8D9A5C/3814" dstEquation="win_5DD/716C/5EC/3E8D98DD/6600">
+											<positions>
+												<Point x="6160" y="2477"/>
+												<Point x="6350" y="2477"/>
+												<Point x="6350" y="3154"/>
+												<Point x="6562" y="3154"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="3" srcEquation="win_5D4/64C2/5EC/3E8D98D7/7759" dstEquation="win_5DD/716C/5EC/3E8D98DD/6600">
+											<positions>
+												<Point x="5461" y="3471"/>
+												<Point x="6287" y="3471"/>
+												<Point x="6287" y="3471"/>
+												<Point x="6562" y="3471"/>
+											</positions>
+										</Edge>
+										<EquationGE kind="OBJ_LIT" presentable="win_59FA/11A7/5EC/3E8D9A5C/3814">
+											<position>
+												<Point x="5990" y="2307"/>
+											</position>
+											<size>
+												<Size width="170" height="318"/>
+											</size>
+										</EquationGE>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+				<Operator kind="node" name="CarModel">
+					<inputs>
+						<Variable name="Throttle">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tPercent"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1B36/7C78/5A8/3C3D8C08/5C12"/>
+							</pragmas>
+						</Variable>
+						<Variable name="Brake">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tPercent"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1B39/2D99/5A8/3C3D8C38/574C"/>
+							</pragmas>
+						</Variable>
+					</inputs>
+					<outputs>
+						<Variable name="VehicleSpeed">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_1B3B/45A2/5A8/3C3D8C6B/3867"/>
+							</pragmas>
+						</Variable>
+					</outputs>
+					<locals>
+						<Variable name="_L2">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tPercent"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_39E2/76E/5A8/3C3D9613/4614"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L53">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tTorq"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_239/35D3/624/3C3EFA8E/7D01"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L54">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tPercent"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_23D/4336/624/3C3EFA91/6B29"/>
+							</pragmas>
+						</Variable>
+						<Variable name="_L55">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="tSpeed"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="win_242/45AA/624/3C3EFAD6/5CA1"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- _L2 = Brake; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L2"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Brake"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_39E0/3F9A/5A8/3C3D9613/2EAA"/>
+							</pragmas>
+						</Equation>
+						<!-- VehicleSpeed = _L55; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="VehicleSpeed"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L55"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_1CB1/7EC7/2F0/3C3D9E16/4641"/>
+							</pragmas>
+						</Equation>
+						<!-- _L53 = PowerTrainStatic(_L54); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L53"/>
+							</lefts>
+							<right>
+								<!-- PowerTrainStatic(_L54) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="1">
+											<operator>
+												<OperatorRef name="PowerTrainStatic"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L54"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_237/7229/624/3C3EFA8E/434E"/>
+							</pragmas>
+						</Equation>
+						<!-- _L54 = Throttle; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L54"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="Throttle"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_23B/46E/624/3C3EFA91/4E9F"/>
+							</pragmas>
+						</Equation>
+						<!-- _L55 = Body(_L53, _L2); -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L55"/>
+							</lefts>
+							<right>
+								<!-- Body(_L53, _L2) -->
+								<CallExpression>
+									<operator>
+										<OpCall name="0">
+											<operator>
+												<OperatorRef name="Body"/>
+											</operator>
+										</OpCall>
+									</operator>
+									<callParameters>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L53"/>
+											</path>
+										</IdExpression>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="_L2"/>
+											</path>
+										</IdExpression>
+									</callParameters>
+								</CallExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="win_240/2325/624/3C3EFAD6/30F4"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:Operator oid="win_35B4/A4D/1AC/3C3D7512/1170" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+							<diagrams>
+								<NetDiagram name="eq_car" landscape="true" format="A4 (210 297)" defaultPageFormat="false" oid="!ed/6D01/4D8A/7C0/46A080A1/4756">
+									<presentationElements>
+										<EquationGE presentable="win_39E0/3F9A/5A8/3C3D9613/2EAA">
+											<position>
+												<Point x="3725" y="4149"/>
+											</position>
+											<size>
+												<Size width="445" height="508"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_1CB1/7EC7/2F0/3C3D9E16/4641">
+											<position>
+												<Point x="11896" y="3831"/>
+											</position>
+											<size>
+												<Size width="444" height="508"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_240/2325/624/3C3EFAD6/30F4" dstEquation="win_1CB1/7EC7/2F0/3C3D9E16/4641">
+											<positions>
+												<Point x="10329" y="4085"/>
+												<Point x="11113" y="4085"/>
+												<Point x="11113" y="4085"/>
+												<Point x="11959" y="4085"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_237/7229/624/3C3EFA8E/434E">
+											<position>
+												<Point x="2845" y="940"/>
+											</position>
+											<size>
+												<Size width="2616" height="1854"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_23B/46E/624/3C3EFA91/4E9F" dstEquation="win_237/7229/624/3C3EFA8E/434E">
+											<positions>
+												<Point x="1926" y="1884"/>
+												<Point x="2032" y="1884"/>
+												<Point x="2032" y="1884"/>
+												<Point x="2836" y="1884"/>
+											</positions>
+										</Edge>
+										<EquationGE presentable="win_23B/46E/624/3C3EFA91/4E9F">
+											<position>
+												<Point x="1482" y="1630"/>
+											</position>
+											<size>
+												<Size width="444" height="508"/>
+											</size>
+										</EquationGE>
+										<EquationGE presentable="win_240/2325/624/3C3EFAD6/30F4">
+											<position>
+												<Point x="8052" y="3175"/>
+											</position>
+											<size>
+												<Size width="2286" height="1829"/>
+											</size>
+										</EquationGE>
+										<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="win_237/7229/624/3C3EFA8E/434E" dstEquation="win_240/2325/624/3C3EFAD6/30F4">
+											<positions>
+												<Point x="5461" y="1863"/>
+												<Point x="6710" y="1863"/>
+												<Point x="6710" y="3789"/>
+												<Point x="8043" y="3789"/>
+											</positions>
+										</Edge>
+										<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="win_39E0/3F9A/5A8/3C3D9613/2EAA" dstEquation="win_240/2325/624/3C3EFAD6/30F4">
+											<positions>
+												<Point x="4149" y="4403"/>
+												<Point x="6435" y="4403"/>
+												<Point x="6435" y="4403"/>
+												<Point x="8043" y="4403"/>
+											</positions>
+										</Edge>
+									</presentationElements>
+								</NetDiagram>
+							</diagrams>
+						</ed:Operator>
+					</pragmas>
+				</Operator>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="win_3/9AA/F4/46A06AA6/7398" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/7">
+					<comment>produced by ScadetoSCADE6 Revision: 1.45 </comment>
+					<diagrams>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/6D02/4D8A/7C0/46A080A1/47ED" blockKind="constants" columnsSize="0, 241, 150, 150, 300"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/6D03/4D8A/7C0/46A080A1/1FF4" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/6D04/4D8A/7C0/46A080A1/2AB0" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

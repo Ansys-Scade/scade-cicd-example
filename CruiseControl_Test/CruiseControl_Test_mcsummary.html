@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Model Coverage summary</title>
+    <style>
+  table {
+    border-collapse: collapse;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .table_cov,.th_cov,.td_cov_counter,.td_cov_operator {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    vertical-align:middle;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 9pt;
+    min-height: 0.5cm;
+    height: 0.5cm;
+    padding-left: 0.1cm;
+    padding-right: 0.1cm;
+  }
+ 
+  .th_cov { 
+    color: rgb(0,0,0);
+    background-color: rgb(217,226,255);
+    font-weight: bold;
+    padding-left: 0.1cm;
+  }
+  .td_cov_counter { 
+
+  }
+  .td_cov_operator { 
+    padding-left: 0.1cm;
+    padding-right: 0.1cm;
+    text-align: left;
+    color: rgb(0,0,255);
+    font-weight: bold;
+  }
+
+  table_info {
+    border-style:none;
+  }
+  .info_value{
+    color: rgb(0,75,0);
+    font-family: Verdana;
+    font-size: 9pt;
+    padding-left: 0.1cm;
+  }
+  .info_label{ 
+    color: rgb(0,0,128);
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    width: 240px;
+  }
+
+  body{
+    background: white;
+    counter-reset: h2
+    margin: 2%;
+    width:80%;
+    color:black;
+  }
+  body{counter-reset: h2}
+  h1 {text-align:center; margin: 0 auto 4% auto;}
+  h2 {counter-reset: h3}
+  h3 {counter-reset: h4}
+  h2:before {counter-increment: h2; content: counter(h2) ". "}
+  h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+  h2{
+    border-bottom: 1px solid black;
+    margin-top: 3%;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Model Coverage summary</h1>
+    <table class="table_info">
+      <tr>
+        <td class="info_label">Date:</td>
+        <td class="info_value">2023-02-09T16:56:02</td>
+      </tr>
+      <tr>
+        <td class="info_label">Project:</td>
+        <td class="info_value">C:\AnsysDev\examples\cicd\CruiseControl\CruiseControl.etp</td>
+      </tr>
+      <tr>
+        <td class="info_label">Root Operators:</td>
+        <td class="info_value">System::SystemSimul<br /></td>
+      </tr>
+      <tr>
+        <td class="info_label">Criterion:</td>
+        <td class="info_value">OMCDC</td>
+      </tr>
+      <tr>
+        <td class="info_label">Test information:</td>
+        <td class="info_value">
+          <pre>+------------------+---------------------------------------------------------------------------------------------------------------+<br />| Acquisition date | 2023-02-09T16:56:01                                                                                           |<br />| Test file        | C:\AnsysDev\examples\cicd\CruiseControl_Test\CruiseControl_Tests.stp                                          |<br />| Test operator    | CruiseControl::CruiseControl                                                                                  |<br />| Coverage file    | C:\AnsysDev\examples\cicd\CruiseControl_Test\Test_MC\CruiseControl_Tests\CruiseControl_Tests_coverage.info    |<br />+----+-------------+---------------------------------------------------------------------------------------------------------------+<br />| 01 | Record      | CarDrivingControl                                                                                             |<br />|    | Description | This Record containts Test cases testing Car Driving Control Requirements.                                    |<br />|    +-------------+---------------------------------------------------------------------------------------------------------------+<br />|    | Scenarios                                                                                                                   |<br />|    +----+------------------------------------------------------------------------------------------------------------------------+<br />|    | 01 | [init] C:\AnsysDev\examples\cicd\TestScenarios\CruiseControl_Aliases.sss                                               |<br />|    | 02 | [init] C:\AnsysDev\examples\cicd\TestScenarios\InitOff.sss                                                             |<br />|    | 03 | [preamble] C:\AnsysDev\examples\cicd\TestScenarios\CarDrivingControl.sss                                               |<br />|    | 04 | C:\AnsysDev\examples\cicd\TestScenarios\CruiseRegulation.csv                                                           |<br />+----+----+--------+---------------------------------------------------------------------------------------------------------------+<br />| 02 | Record      | CruiseControlBehavior                                                                                         |<br />|    | Description | This Record containts Test cases testing Cruise Control Behavior Requirements.                                |<br />|    +-------------+---------------------------------------------------------------------------------------------------------------+<br />|    | Scenarios                                                                                                                   |<br />|    +----+------------------------------------------------------------------------------------------------------------------------+<br />|    | 01 | [init] C:\AnsysDev\examples\cicd\TestScenarios\CruiseControl_Aliases.sss                                               |<br />|    | 02 | [init] C:\AnsysDev\examples\cicd\TestScenarios\InitOff.sss                                                             |<br />|    | 03 | C:\AnsysDev\examples\cicd\TestScenarios\CruiseControlBehavior.sss                                                      |<br />+----+----+--------+---------------------------------------------------------------------------------------------------------------+<br />| 03 | Record      | CruiseSpeedManagement                                                                                         |<br />|    | Description | This Record containts Test cases testing Cruise Speed Management Requirements.                                |<br />|    +-------------+---------------------------------------------------------------------------------------------------------------+<br />|    | Scenarios                                                                                                                   |<br />|    +----+------------------------------------------------------------------------------------------------------------------------+<br />|    | 01 | [init] C:\AnsysDev\examples\cicd\TestScenarios\CruiseControl_Aliases.sss                                               |<br />|    | 02 | [init] C:\AnsysDev\examples\cicd\TestScenarios\InitOn.sss                                                              |<br />|    | 03 | C:\AnsysDev\examples\cicd\TestScenarios\CruiseSpeedManagement.sss                                                      |<br />+----+----+------------------------------------------------------------------------------------------------------------------------+<br /><br /></pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Justification files:</td>
+        <td class="info_value"></td>
+      </tr>
+      <tr>
+        <td class="info_value">
+          <br />
+        </td>
+        <td class="info_value">
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td class="info_value">
+          <br />
+        </td>
+        <td class="info_value">
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Textual report file:</td>
+        <td class="info_value">
+          <a href="C:\AnsysDev\examples\cicd\CruiseControl_Test\MC_Merged_Results\CruiseControl_Test_report.txt">C:\AnsysDev\examples\cicd\CruiseControl_Test\MC_Merged_Results\CruiseControl_Test_report.txt</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Covered or justified / Total:</td>
+        <td class="info_value">178 / 182 (97.80 %)</td>
+      </tr>
+      <tr>
+        <td class="info_label">Covered or justified / Coverable:</td>
+        <td class="info_value">178 / 182 (97.80 %)</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <table class="table_cov">
+      <tr>
+        <th class="th_cov" rowspan="3" colspan="1">Operator</th>
+        <th class="th_cov" rowspan="2" colspan="2">Observed</th>
+        <th class="th_cov" colspan="4">Not observed</th>
+        <th class="th_cov" rowspan="3">Total</th>
+        <th class="th_cov" rowspan="3">% of total</th>
+        <th class="th_cov" rowspan="3">% of coverable</th>
+      </tr>
+      <tr>
+        <th class="th_cov" colspan="2">Coverable</th>
+        <th class="th_cov" colspan="2">Not coverable</th>
+      </tr>
+      <tr>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">CruiseControl::CruiseControl </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">78</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">4</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">82</td>
+        <td class="td_cov_counter">95.12 %</td>
+        <td class="td_cov_counter">95.12 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">CruiseControl::CruiseRegulation </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">37</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">37</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">CruiseControl::CruiseSpeedMgt </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">33</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">33</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">CruiseControl::SaturateThrottle </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">30</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">30</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Total</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">178</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">4</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">182</td>
+        <td class="td_cov_counter">97.80 %</td>
+        <td class="td_cov_counter">97.80 %</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+
+# Cruise Control Behavior Tests Cases
+
+
+# Test Reference: CC_TEST_CCB_01
+#
+# Test Case Objectives:
+#    verify the CC is OFF when on button was never activated.
+#
+# Covered Requirements: CC_HLR_CCB_01
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is OFF
+#
+# Test Case Description
+SSM::set Accel 50.0
+SSM::set Speed 100.0
+SSM::check CruiseState Defs::OFF sustain=22
+SSM::cycle 20
+SSM::cycle 1
+
+SSM::set Accel 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_02
+#
+# Test Case Objectives:
+#    verify the CC is ON as soon as on button is activated
+#
+# Covered Requirements: CC_HLR_CCB_02, CC_HLR_CCB_04
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is ON
+#
+# Test Case Description#
+SSM::set On true
+SSM::set Off false
+SSM::check CruiseState Defs::ON sustain=10
+SSM::cycle 10
+
+# Test Reference: CC_TEST_CCB_03
+#
+# Test Case Objectives:
+#    check that CruiseState come back to OFF as soon as off button is activated
+#
+# Covered Requirements: CC_HLR_CCB_03
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is OFF
+#
+# Test Case Description
+SSM::set On false
+SSM::set Off true
+SSM::check CruiseState Defs::OFF
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_05
+#
+# Test Case Objectives:
+#    verify the CC is STDY as soon as ON button is activated and driver accelerates
+#
+# Covered Requirements: CC_HLR_CCB_05
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is STDBY
+#
+# Test Case Description
+SSM::set Accel 100.0
+SSM::cycle 1
+SSM::set On true
+SSM::set Off false
+SSM::check CruiseState Defs::STDBY sustain=3
+SSM::cycle 1
+# Accelerator pressed up to speed remains greater than SpeedMax 
+SSM::set Speed 153.4 
+SSM::cycle 2
+
+# Test Reference: CC_TEST_CCB_06
+#
+# Test Case Objectives:
+#    verify the CC comes back to STDY when Speed is lower than SpeedMax
+#
+# Covered Requirements: CC_HLR_CCB_06
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState come back to ON when Speed is lower than SpeedMax after a while
+#
+# Test Case Description
+SSM::set Accel 0.0
+SSM::set Speed 149.99 
+SSM::cycle 1
+SSM::check CruiseState Defs::ON
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_07
+#
+# Test Case Objectives:
+#    verify the CC is INT as soon as driver brakes
+#
+# Covered Requirements: CC_HLR_CCB_07
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState is INT when Brake is true
+#
+# Test Case Description
+SSM::set Brake 10.0
+SSM::check CruiseState Defs::INT
+SSM::cycle 1
+SSM::set Speed 69.084
+SSM::set Brake 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CCB_08
+#
+# Test Case Objectives:
+#    verify the CC comes back to ON as soon as RESUME button is activated
+#
+#
+# Covered Requirements: CC_HLR_CCB_08
+#
+# Test Case Acceptance Criteria
+#    check that CruiseState comes back to ON when Resume is true
+#
+# Test Case Description
+SSM::set Resume true
+SSM::check CruiseState Defs::ON
+SSM::cycle
+SSM::set Resume false
+SSM::cycle
+
+

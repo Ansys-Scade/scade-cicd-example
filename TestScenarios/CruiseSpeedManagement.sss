@@ -1,0 +1,93 @@
+
+# Cruise Control Behavior Tests Cases
+
+# Test Reference: CC_TEST_CSM_01
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_01
+#
+# Test Case Acceptance Criteria
+#
+# Test Case Description
+## TBD
+
+
+
+
+# Test Reference: CC_TEST_CSM_02
+#
+# Test Case Objectives:
+#    Verify that CruiseSpeed is set to current speed as soons as SET button is activated
+#
+# Covered Requirements: CC_HLR_CSM_02
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is set to the current vehicle speed when Set is true
+#
+# Test Case Description
+SSM::set Speed 89.29
+SSM::set Set true
+SSM::check CruiseSpeed 89.2 real=0.1
+SSM::cycle 1
+SSM::set Set false
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CSM_03
+#
+# Test Case Objectives:
+#
+# Covered Requirements: CC_HLR_CSM_03, CC_HLR_CSM_05
+#    Verify that CruiseSpeed is incremented by SpeedInc up to SpeedMax when QuickAccel button is activated
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is incremented up to SpeedMax when QuickAccel is true
+#
+# Test Case Description
+SSM::set Speed 143.33
+SSM::set Set true
+SSM::check CruiseSpeed 143.33 real=0.1
+SSM::cycle 1
+SSM::set Set false
+SSM::cycle 1
+SSM::set QuickAccel true
+SSM::check CruiseSpeed 145.83 real=0.1
+SSM::cycle 2
+SSM::check CruiseSpeed 150.0
+SSM::cycle 1
+SSM::set QuickAccel false
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CSM_04
+#
+# Test Case Objectives:
+#    Verify that CruiseSpeed is decremented by SpeedInc up to SpeedMin when QuickDecel button is activated
+#
+# Covered Requirements: CC_HLR_CSM_04, CC_HLR_CSM_05
+#
+# Test Case Acceptance Criteria
+#    check that CruiseSpeed is decremented down to SpeedMin when QuickDecel is true
+#
+# Test Case Description
+SSM::set Speed 41.99
+SSM::set Set true
+SSM::cycle 1
+SSM::set Set false
+SSM::cycle 1
+SSM::set QuickDecel true
+SSM::check CruiseSpeed 39.49 real=0.1
+SSM::cycle 1
+SSM::set QuickDecel true
+SSM::check CruiseSpeed 36.99 real=0.1
+SSM::cycle 1
+SSM::set QuickDecel true
+SSM::check CruiseSpeed 34.49 real=0.1
+SSM::cycle 1
+SSM::set QuickDecel true
+SSM::check CruiseSpeed 31.99 real=0.1
+SSM::cycle 1
+SSM::set QuickDecel true
+SSM::check CruiseSpeed 30.0 sustain=5
+SSM::cycle 5
+SSM::set QuickDecel false
+SSM::cycle 1

@@ -1,0 +1,59 @@
+
+[Types]
+Names=Test Scenario,Test Report
+
+[Test Scenario]
+Tool=text
+ToolEdit=Text
+Image=scade_textualDiagram
+MergeHomonymousEntities=1
+Section1Name=Directory
+Section1Print=$l
+Section1Image=scaded_folder
+Section1=^BEGIN_DIRECTORY: (.+):(.+)$
+Section1End=^END_DIRECTORY: .+$
+Section2Name=File
+Section2Parents=Test Scenario,Directory
+Section2Print=$l
+Section2=^BEGIN_FILE: (.+):(.+)$
+Section2End=^END_FILE: .+$
+Requirement1Name=Requirement
+Requirement1=^#[ \t]*Test[ \t]*Reference[ \t]*:[ \t]*(.+)$
+Reference1Name=Covers Reference
+Reference1Print=[Covers: $i]
+Reference1=^#[ \t]*Covered[ \t]*Requirements[ \t]*:[ \t]*(.+)$
+Reference1Sub=[ \t]*([^\,\;]+)[ \t]*
+Text1RegularExpression=^(?:(SSM:.+?)|# (.*)$)(?=\|\d|\n)
+MatchingFileNames=*.sss
+
+[Test Report]
+;This type uses Excel converter which presents each cell separated by character | followed by column number
+Tool=ExcelWithColNumbers
+ToolEdit=Excel
+Image=excel
+Variable1Name=worksheet
+Variable1Label=Worksheet
+Variable1Type=string
+ToolParameter=
+Section1Name=Worksheet
+Section1=^Worksheet :[ \t](.*)$
+Section2Name=Section2
+Section2Parents=Worksheet
+Section2=\|2\s*(CC_TEST.*)\s*\|3
+Requirement1Name=Requirement
+Requirement1=
+Reference1Name=Covers Reference
+Reference1Print=[Covers: $i]
+Reference1=\|2[ \t]*(CC_TEST.*)OK.*\|4
+Reference1Sub=(CC_TEST\w+)
+Attribute1Name=AttributeOK
+Attribute1Print=OK
+Attribute1Image=ok
+Attribute1=\|3\s*(OK)\s*\|4
+Attribute2Name=AttributeNOK
+Attribute2Print=NOK
+Attribute2Image=ko
+Attribute2=\|3\s*(NOK)\s*\|4
+Text1RegularExpression=REQ\d+.+?\|3[ ]*([^\t]+)\|4
+FileExtension=xls
+

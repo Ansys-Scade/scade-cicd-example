@@ -1,0 +1,16 @@
+include:
+  - local: '/scade-cicd/templates/.gitlab-ci-template.yml'
+
+variables:
+    # SCADE installation folder for runners
+    SCADE_DIR: "C:\\Program Files\\ANSYS Inc\\v231\\SCADE"
+    # SCADE project relative path without extension
+    SCADE_PROJECT_ROOT: "CruiseControl\\CruiseControl"
+    # SCADE test project relative path without extension
+    SCADE_PROJECT_TEST_ROOT: "CruiseControl_Test\\CruiseControl_Test"
+    # SCADE test result project relative path without extension
+    SCADE_PROJECT_TEST_RESULT_ROOT: "CruiseControl_Test\\CruiseControl_Test"
+    CONF_CHECK: "KCG"
+    CONF_REPORT: "RTF"
+    CONF_GEN: "KCG"
+    CONF_TEST: "Test"

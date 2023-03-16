@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project id="1" oid_count="36" defaultConfiguration="2">
+	<props>
+		<Prop id="3" name="@STUDIO:PRODUCT">
+			<value>SC</value>
+		</Prop>
+		<Prop id="4" name="@GENERATOR:GENERATOR">
+			<value>C QUAL661</value>
+			<configuration>2</configuration>
+		</Prop>
+		<Prop id="5" name="@STUDIO:DESCRIPTION">
+			<value>produced by ScadetoSCADE6 Revision: 1.45 </value>
+		</Prop>
+		<Prop id="9" name="@STUDIO:TOOLCONF">
+			<value>Checker</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="10" name="@STUDIO:TOOLCONF">
+			<value>Code Generator - Simulator</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="11" name="@STUDIO:TOOLCONF">
+			<value>Instrumenter</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="12" name="@STUDIO:TOOLCONF">
+			<value>Reporter</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="13" name="@SCADE:CHECKED">
+			<value>false</value>
+		</Prop>
+		<Prop id="16" name="@STUDIO:TOOLCONF">
+			<value>Code Generator</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="17" name="@STUDIO:TOOLCONF">
+			<value>Design Verifier</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="18" name="@STUDIO:TOOLCONF">
+			<value>Timing and Stack Verifiers</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="19" name="@STUDIO:TOOLCONF">
+			<value>DiffAnalyzer</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="21" name="@STUDIO:TOOLCONF">
+			<value>Dashboard</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="26" name="@STUDIO:TOOLCONF">
+			<value>Timing and Stack Analysis Tools</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="27" name="@STUDIO:TOOLCONF">
+			<value>Synchronization</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="28" name="@STUDIO:TOOLCONF">
+			<value>Test Tool</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="29" name="@SCADE:SAVEVERSION">
+			<value>SCADE65</value>
+		</Prop>
+		<Prop id="30" name="@SCADE:SEMFILE">
+			<value>C:\projects\LaureatGit\Scade\examples\CruiseControl\Libraries\Car\Car.err</value>
+		</Prop>
+		<Prop id="31" name="@SCADE:ASSTRING_TRIM">
+			<value></value>
+		</Prop>
+		<Prop id="33" name="@SCADE:NEWVARIABLESYMBOLS">
+			<value>true</value>
+		</Prop>
+		<Prop id="34" name="@SIMULATOR:CPU_TYPE">
+			<value>win64</value>
+			<configuration>2</configuration>
+		</Prop>
+		<Prop id="35" name="@STUDIO:TOOLCONF">
+			<value>Metrics and Rules Checker</value>
+			<value>2</value>
+		</Prop>
+		<Prop id="36" name="@STUDIO:TOOLCONF">
+			<value>Import/Export</value>
+			<value>2</value>
+		</Prop>
+	</props>
+	<roots>
+		<Folder id="6" extensions="scade;xscade" name="Model Files">
+			<elements>
+				<FileRef id="7" persistAs="Car.xscade"/>
+			</elements>
+		</Folder>
+		<Folder id="14" extensions="vsp;etp" name="SCADE Libraries">
+			<elements>
+				<FileRef id="8" persistAs="$(SCADE)\libraries\SC65\libmathext\libmathext.etp"/>
+				<FileRef id="15" persistAs="..\CarType\CarType.etp"/>
+			</elements>
+		</Folder>
+	</roots>
+	<configurations>
+		<Configuration id="2" name="SCADE"/>
+	</configurations>
+</Project>

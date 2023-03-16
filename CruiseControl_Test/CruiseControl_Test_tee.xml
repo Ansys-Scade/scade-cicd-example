@@ -1,0 +1,7 @@
+<testsuites disabled="0" failures="0" tests="3">
+  <testsuite name="CruiseControl_Tests" id="0" tests="3" failures="0">
+    <testcase name="CruiseControl_Tests/CarDrivingControl" classname="CruiseControl::CruiseControl"/>
+    <testcase name="CruiseControl_Tests/CruiseControlBehavior" classname="CruiseControl::CruiseControl"/>
+    <testcase name="CruiseControl_Tests/CruiseSpeedManagement" classname="CruiseControl::CruiseControl"/>
+  </testsuite>
+</testsuites>

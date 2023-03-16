@@ -1,0 +1,76 @@
+
+# Car Driving Control Tests Cases
+
+# Tests environment init
+SSM::set System::SystemSimul/On false
+SSM::set System::SystemSimul/Resume false
+SSM::set System::SystemSimul/Set false
+SSM::set System::SystemSimul/QuickAccel false
+SSM::set System::SystemSimul/QuickDecel false
+SSM::set System::SystemSimul/Accel 0.0
+SSM::set System::SystemSimul/Brake 0.0
+SSM::cycle 1
+
+# Test Reference: CC_TEST_CDC_01
+#
+# Test Case Objectives:
+#    Verify the car is driven by the accelerator when the CC is off.
+#
+# Covered Requirements: CC_HLR_CDC_01
+#
+# Test Case Acceptance Criteria
+#    check that Throttle equals accelerator at each cycle.
+#
+# Test Case Description
+SSM::set System::SystemSimul/Accel 0.0
+SSM::cycle
+SSM::set System::SystemSimul/Accel 51.2345
+SSM::cycle 5
+SSM::set System::SystemSimul/Accel 89.687
+SSM::cycle 10
+SSM::set System::SystemSimul/Accel 0.0
+SSM::cycle
+
+# Test Reference: CC_TEST_CDC_02
+#
+# Test Case Objectives:
+#    
+# Covered Requirements: CC_HLR_CDC_02
+#
+# Test Case Acceptance Criteria
+#    check that the throttle is regulated
+#
+# Test Case Description
+SSM::set System::SystemSimul/On true
+SSM::cycle 5
+
+# Test Reference: CC_TEST_CDC_03
+#
+# Test Case Objectives:
+#    
+# Covered Requirements: CC_HLR_CDC_03
+#
+# Test Case Acceptance Criteria
+#  
+# Test Case Description
+## TBD
+
+# Test Reference: CC_TEST_CDC_04
+#
+# Test Case Objectives:
+#    
+# Covered Requirements: CC_HLR_CDC_04, CC_HLR_CDC_05
+#
+# Test Case Acceptance Criteria
+#    check that the local variable IntegralAction is equal to 0.0 when the CC is going on
+#    check that the throttle is saturated to RegulThrottleMax
+#    check that the local variable IntegralAction is maintained constant when the local variable HoldIntegralAction is true
+#
+# Test Case Description
+SSM::set System::SystemSimul/Accel 4.0
+SSM::cycle
+SSM::set System::SystemSimul/Accel 0.0
+SSM::set System::SystemSimul/QuickAccel true
+SSM::cycle 30
+SSM::set System::SystemSimul/QuickAccel false
+SSM::cycle

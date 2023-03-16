@@ -1,0 +1,11 @@
+__pycache__/
+*.htm
+*.rtf
+Coverage/
+KCG/
+KCG_with_probes/
+MC_Merged_Results/
+Test_MC/
+Test_TEE/
+CruiseControl_Report/
+CruiseControl_img/

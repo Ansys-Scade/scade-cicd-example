@@ -1,0 +1,643 @@
+<ModelCoverageCache criterion="OMCDC">
+  <roots>
+    <DesignEntity kind="Package" name="vect">
+      <children>
+        <DesignEntity kind="Operator" name="MatVectProd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Inv3x3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Det3x3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SumDup" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Inv2x2" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="ScalProd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Selector" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Inv4x4" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Det2x2" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Det4x4" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MatSub" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SelectorHelper" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MatAdd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="VectMatProd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="VectAdd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BuildArray" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="VectSub" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MatProd" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="math">
+      <children>
+        <DesignEntity kind="Operator" name="ByteToUint8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RoundFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RealToBool" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToFloat32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToInt16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Mod" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToInt8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Min3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Min" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToInt8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToUint32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToFloat64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToInt64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PolynomialStep" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Abs" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InRangeOutIn" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToUint64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InRangeInIn" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToUint32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToUint16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RoundCeil" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntToBool" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToInt16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToInt32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Mean3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToUint8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Round" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToFloat64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToUint16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToUint64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToInt32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Sign" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Mean" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Polynomial" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToInt64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="NumericToUint8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Max3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InRangeOutOut" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Max" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolToFloat32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InRangeInOut" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="mathext">
+      <children>
+        <DesignEntity kind="Package" name="mathextimpl">
+          <children>
+            <DesignEntity kind="ImportedOperator" name="TanR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AsinR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="PowerRR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SqrtR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SinR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="ExpR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AsinhR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SinhR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SinR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AcoshR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AtanhR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="CoshR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="PowerR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AcosR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="CosR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AcoshR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AtanhR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AtanR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="PowerRR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="CoshR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="PowerR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AtanR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="LnR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="TanR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="ExpR64" used="true" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="LnR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="CosR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="LogR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SqrtR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AsinhR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AcosR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="TanhR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="PowerI32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="LogR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="TanhR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="Atan2R32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="TenPowR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="SinhR32" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="Atan2R64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="TenPowR64" used="false" instrumented="false"/>
+            <DesignEntity kind="ImportedOperator" name="AsinR32" used="false" instrumented="false"/>
+          </children>
+        </DesignEntity>
+        <DesignEntity kind="ImportedOperator" name="AsinR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="HypotR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PolarToCartesian" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="AsinhR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Square" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="CartesianToPolar" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="CoshR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="CartesianToSpherical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SinCosR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="ExpR" used="true" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="AtanhR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="AcoshR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="TanR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="CelsiusToFahrenheit" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="CosR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Inv" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="PowerR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="LnR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SphericalToCartesian" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="PowerI" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FahrenheitToCelsius" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="TenPowR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="AtanR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DegreesToRadians" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="Atan2R" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="SqrtR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="AcosR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="TanhR" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RadiansToDegrees" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="PowerRR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="SinR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="LogR" used="false" instrumented="false"/>
+        <DesignEntity kind="ImportedOperator" name="SinhR" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="digital">
+      <children>
+        <DesignEntity kind="Operator" name="BoolVect2Uint16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Uint64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RisingEdgeNoRetrigger" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2IntElt" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="count_down" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Uint32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TriggerRise" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FallingEdgeRetrigger" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Int2BoolVectElt" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RisingEdgeRetrigger" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TriggerEither" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FallingEdge" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Int32" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FlipFlopSet" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FallingEdgeNoRetrigger" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Uint8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Int64" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Int2BoolVect" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InactiveCycles" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Toggle" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FlipFlopReset" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FlipFlopJK" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Relay" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InactiveTime" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="EntryDetect" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Int16" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RisingEdge" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="BoolVect2Int8" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="EitherEdge" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TriggerFall" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="Proof">
+      <children>
+        <DesignEntity kind="Operator" name="Prop4" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Prop3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Proof" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Prop5" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Prop2" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Prop1" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="lut">
+      <children>
+        <DesignEntity kind="Operator" name="Lut1DFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut1D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Interp1D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut2D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PreLutDirect" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut1DNoSat" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SearchIdxFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Interp1DFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PreLutNoSat" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut1DNearest" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut2DNearest" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Interp2D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Interp2DFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Limiter" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut2DNoSat" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Proj" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PreLut" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SearchIdxCeil" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut1DCeil" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SearchIdx" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SearchNearest" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut2DCeil" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Limiter2" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut3D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut3DNearest" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut3DNoSat" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Lut2DFloor" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="InterpolateLinear" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="linear">
+      <children>
+        <DesignEntity kind="Operator" name="Memory" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectDecrease" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntegralBackward" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntegrFwd" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectFallNegative" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Derivative" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="HitCrossingFalling" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="HitCrossingEither" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectIncrease" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MeanCycle2" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MeanCycle3" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectChange" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="HitCrossingRising" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectRiseNonNegative" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MemoryBasic" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectFallNonPositive" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter1stOrderLoop" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DetectRisePositive" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntegralForward" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Gain" used="true" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntegralTrapezoid" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="IntegrTrapez" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Backlash" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="truthtables">
+      <children>
+        <DesignEntity kind="Operator" name="TruthTableExh" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TruthTableLineIdx" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TruthTableIdx" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TruthTableElt" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TruthTable" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TruthTableLine" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="pwlinear">
+      <children>
+        <DesignEntity kind="Operator" name="PreLoadSymmetrical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Counter" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MaxReset" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PreLoadUnSymmetrical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="LimiterSymmetrical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RisingHysteresis" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="RateLimiter" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="MinReset" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DeadBandSymmetrical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="DeadBandUnSymmetrical" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FallingHysteresis" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="ClockCounter" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="CheckSlope" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Quantizer" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="LimiterUnSymmetrical" used="true" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="System">
+      <children>
+        <DesignEntity kind="Operator" name="SystemSimul" used="true" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="CruiseControl">
+      <children>
+        <DesignEntity kind="Operator" name="CruiseRegulation" used="true" instrumented="true" signature="20350c8baf3894395400d8acc6854e73e73491971195b2f6be0a674af4d3835e">
+          <coveragePoints>
+            <CoveragePoint kind="T" name="fby(_L14; 1; true)" path="CruiseControl::CruiseRegulation/HoldIntegralAction=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/HoldIntegralAction=" info="%(fby(_L14; 1; true))%"/>
+            <CoveragePoint kind="F" name="fby(_L14; 1; true)" path="CruiseControl::CruiseRegulation/HoldIntegralAction=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/HoldIntegralAction=" info="%(fby(_L14; 1; true))%"/>
+            <CoveragePoint kind="T" name="_L14" path="CruiseControl::CruiseRegulation/HoldIntegralAction=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/HoldIntegralAction=-1" info="fby(%(_L14)%; 1; true)"/>
+            <CoveragePoint kind="F" name="_L14" path="CruiseControl::CruiseRegulation/HoldIntegralAction=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/HoldIntegralAction=-1" info="fby(%(_L14)%; 1; true)"/>
+            <CoveragePoint kind="I" name="true" path="CruiseControl::CruiseRegulation/HoldIntegralAction=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/HoldIntegralAction=-3" info="fby(_L14; 1; %(true)%)"/>
+            <CoveragePoint kind="I" name="linear::Gain(_L10, Ki)" path="CruiseControl::CruiseRegulation/IntegralAction=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/IntegralAction=" info="%(linear::Gain(_L10, Ki))%"/>
+            <CoveragePoint kind="I" name="_L10" path="CruiseControl::CruiseRegulation/IntegralAction=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/IntegralAction=-1" info="linear::Gain(%(_L10)%, Ki)"/>
+            <CoveragePoint kind="I" name="Ki" path="CruiseControl::CruiseRegulation/IntegralAction=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/IntegralAction=-2" info="linear::Gain(_L10, %(Ki)%)"/>
+            <CoveragePoint kind="I" name="linear::Gain(_L3, Kp)" path="CruiseControl::CruiseRegulation/ProportionnalAction=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/ProportionnalAction=" info="%(linear::Gain(_L3, Kp))%"/>
+            <CoveragePoint kind="I" name="_L3" path="CruiseControl::CruiseRegulation/ProportionnalAction=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/ProportionnalAction=-1" info="linear::Gain(%(_L3)%, Kp)"/>
+            <CoveragePoint kind="I" name="Kp" path="CruiseControl::CruiseRegulation/ProportionnalAction=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/ProportionnalAction=-2" info="linear::Gain(_L3, %(Kp)%)"/>
+            <CoveragePoint kind="I" name="Throttle" path="CruiseControl::CruiseRegulation/Throttle=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/Throttle=" info="%(_L13)%"/>
+            <CoveragePoint kind="I" name="CruiseSpeed" path="CruiseControl::CruiseRegulation/_L1=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L1=" info="%(CruiseSpeed)%"/>
+            <CoveragePoint kind="I" name="_L16 + _L18" path="CruiseControl::CruiseRegulation/_L10=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L10=" info="%(_L16 + _L18)%"/>
+            <CoveragePoint kind="I" name="_L16" path="CruiseControl::CruiseRegulation/_L10=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L10=-1" info="%(_L16)% + _L18"/>
+            <CoveragePoint kind="I" name="_L18" path="CruiseControl::CruiseRegulation/_L10=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L10=-2" info="_L16 + %(_L18)%"/>
+            <CoveragePoint kind="I" name="_L4" path="CruiseControl::CruiseRegulation/_L13=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L13=-1" info="SaturateThrottle(%(_L4)%)"/>
+            <CoveragePoint kind="I" name="SaturateThrottle(_L4)" path="CruiseControl::CruiseRegulation/_L13=.1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L13=.1" info="%(SaturateThrottle(_L4))%"/>
+            <CoveragePoint kind="T" name="SaturateThrottle(_L4)" path="CruiseControl::CruiseRegulation/_L13=.2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L13=.2" info="%(SaturateThrottle(_L4))%"/>
+            <CoveragePoint kind="F" name="SaturateThrottle(_L4)" path="CruiseControl::CruiseRegulation/_L13=.2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L13=.2" info="%(SaturateThrottle(_L4))%"/>
+            <CoveragePoint kind="I" name="if HoldIntegralAction then (_L26) else (_L3)" path="CruiseControl::CruiseRegulation/_L16=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L16=" info="%(if HoldIntegralAction then (_L26) else (_L3))%"/>
+            <CoveragePoint kind="T" name="HoldIntegralAction" path="CruiseControl::CruiseRegulation/_L16=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L16=-1" info="if %(HoldIntegralAction)% then (_L26) else (_L3)"/>
+            <CoveragePoint kind="F" name="HoldIntegralAction" path="CruiseControl::CruiseRegulation/_L16=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L16=-1" info="if %(HoldIntegralAction)% then (_L26) else (_L3)"/>
+            <CoveragePoint kind="I" name="_L26" path="CruiseControl::CruiseRegulation/_L16=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L16=-2" info="if HoldIntegralAction then (%(_L26)%) else (_L3)"/>
+            <CoveragePoint kind="I" name="_L3" path="CruiseControl::CruiseRegulation/_L16=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L16=-3" info="if HoldIntegralAction then (_L26) else (%(_L3)%)"/>
+            <CoveragePoint kind="I" name="fby(_L10; 1; _L29)" path="CruiseControl::CruiseRegulation/_L18=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L18=" info="%(fby(_L10; 1; _L29))%"/>
+            <CoveragePoint kind="I" name="_L10" path="CruiseControl::CruiseRegulation/_L18=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L18=-1" info="fby(%(_L10)%; 1; _L29)"/>
+            <CoveragePoint kind="I" name="_L29" path="CruiseControl::CruiseRegulation/_L18=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L18=-3" info="fby(_L10; 1; %(_L29)%)"/>
+            <CoveragePoint kind="I" name="VehiculeSpeed" path="CruiseControl::CruiseRegulation/_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L2=" info="%(VehiculeSpeed)%"/>
+            <CoveragePoint kind="I" name="ZeroSpeed" path="CruiseControl::CruiseRegulation/_L26=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L26=" info="%(ZeroSpeed)%"/>
+            <CoveragePoint kind="I" name="ZeroSpeed" path="CruiseControl::CruiseRegulation/_L29=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L29=" info="%(ZeroSpeed)%"/>
+            <CoveragePoint kind="I" name="_L1 - _L2" path="CruiseControl::CruiseRegulation/_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L3=" info="%(_L1 - _L2)%"/>
+            <CoveragePoint kind="I" name="_L1" path="CruiseControl::CruiseRegulation/_L3=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L3=-1" info="%(_L1)% - _L2"/>
+            <CoveragePoint kind="I" name="_L2" path="CruiseControl::CruiseRegulation/_L3=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L3=-2" info="_L1 - %(_L2)%"/>
+            <CoveragePoint kind="I" name="ProportionnalAction + IntegralAction" path="CruiseControl::CruiseRegulation/_L4=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L4=" info="%(ProportionnalAction + IntegralAction)%"/>
+            <CoveragePoint kind="I" name="ProportionnalAction" path="CruiseControl::CruiseRegulation/_L4=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L4=-1" info="%(ProportionnalAction)% + IntegralAction"/>
+            <CoveragePoint kind="I" name="IntegralAction" path="CruiseControl::CruiseRegulation/_L4=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseRegulation/_L4=-2" info="ProportionnalAction + %(IntegralAction)%"/>
+          </coveragePoints>
+        </DesignEntity>
+        <DesignEntity kind="Operator" name="CruiseControl" used="true" instrumented="true" signature="268990d95a15bef9998ba452eb9204c7b282baee51d2a9cb492d9ec98055ed1e">
+          <coveragePoints>
+            <CoveragePoint kind="I" name="ZeroSpeed" path="CruiseControl::CruiseControl/CruiseSpeed.default" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/CruiseSpeed.default" info="%(CruiseSpeed.default)%"/>
+            <CoveragePoint kind="I" name="OFF" path="CruiseControl::CruiseControl/CruiseState.default" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/CruiseState.default" info="%(CruiseState.default)%"/>
+            <CoveragePoint kind="I" name="Accel" path="CruiseControl::CruiseControl/ThrottleCmd.default" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/ThrottleCmd.default" info="%(ThrottleCmd.default)%"/>
+          </coveragePoints>
+          <children>
+            <DesignEntity kind="StateMachine" name="SM1">
+              <children>
+                <DesignEntity kind="State" name="Enabled">
+                  <coveragePoints>
+                    <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Enabled:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:"/>
+                    <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Enabled:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:"/>
+                    <CoveragePoint kind="I" name="CruiseSpeed" path="CruiseControl::CruiseControl/SM1:Enabled:CruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:CruiseSpeed=" info="%(_L8)%"/>
+                    <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseControl/SM1:Enabled:_L5=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L5=" info="%(Speed)%"/>
+                    <CoveragePoint kind="T" name="Set" path="CruiseControl::CruiseControl/SM1:Enabled:_L6=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L6=" info="%(Set)%"/>
+                    <CoveragePoint kind="F" name="Set" path="CruiseControl::CruiseControl/SM1:Enabled:_L6=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L6=" info="%(Set)%"/>
+                    <CoveragePoint kind="T" name="QuickAccel" path="CruiseControl::CruiseControl/SM1:Enabled:_L7=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L7=" info="%(QuickAccel)%"/>
+                    <CoveragePoint kind="F" name="QuickAccel" path="CruiseControl::CruiseControl/SM1:Enabled:_L7=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L7=" info="%(QuickAccel)%"/>
+                    <CoveragePoint kind="I" name="CruiseSpeedMgt(_L6, _L7, _L9, _L5)" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=" info="%(CruiseSpeedMgt(_L6, _L7, _L9, _L5))%"/>
+                    <CoveragePoint kind="T" name="_L6" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-1" info="CruiseSpeedMgt(%(_L6)%, _L7, _L9, _L5)"/>
+                    <CoveragePoint kind="F" name="_L6" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-1" info="CruiseSpeedMgt(%(_L6)%, _L7, _L9, _L5)"/>
+                    <CoveragePoint kind="T" name="_L7" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-2" info="CruiseSpeedMgt(_L6, %(_L7)%, _L9, _L5)"/>
+                    <CoveragePoint kind="F" name="_L7" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-2" info="CruiseSpeedMgt(_L6, %(_L7)%, _L9, _L5)"/>
+                    <CoveragePoint kind="T" name="_L9" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-3" info="CruiseSpeedMgt(_L6, _L7, %(_L9)%, _L5)"/>
+                    <CoveragePoint kind="F" name="_L9" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-3" info="CruiseSpeedMgt(_L6, _L7, %(_L9)%, _L5)"/>
+                    <CoveragePoint kind="I" name="_L5" path="CruiseControl::CruiseControl/SM1:Enabled:_L8=-4" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L8=-4" info="CruiseSpeedMgt(_L6, _L7, _L9, %(_L5)%)"/>
+                    <CoveragePoint kind="T" name="QuickDecel" path="CruiseControl::CruiseControl/SM1:Enabled:_L9=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L9=" info="%(QuickDecel)%"/>
+                    <CoveragePoint kind="F" name="QuickDecel" path="CruiseControl::CruiseControl/SM1:Enabled:_L9=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:_L9=" info="%(QuickDecel)%"/>
+                    <CoveragePoint kind="I" name="local_CruiseSpeed" path="CruiseControl::CruiseControl/SM1:Enabled:local_CruiseSpeed=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:local_CruiseSpeed=" info="%(_L8)%"/>
+                  </coveragePoints>
+                  <children>
+                    <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                      <coveragePoints>
+                        <CoveragePoint kind="T" name="Off" path="CruiseControl::CruiseControl/SM1:Enabled:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:&lt;1&gt;:?" info="%(Off)%"/>
+                        <CoveragePoint kind="F" name="Off" path="CruiseControl::CruiseControl/SM1:Enabled:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:&lt;1&gt;:?" info="%(Off)%"/>
+                      </coveragePoints>
+                    </DesignEntity>
+                    <DesignEntity kind="StateMachine" name="SM2">
+                      <children>
+                        <DesignEntity kind="State" name="Active">
+                          <coveragePoints>
+                            <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:"/>
+                            <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:"/>
+                            <CoveragePoint kind="T" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:StdbyCondition=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:StdbyCondition=" info="%(_L2)%"/>
+                            <CoveragePoint kind="F" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:StdbyCondition=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:StdbyCondition=" info="%(_L2)%"/>
+                            <CoveragePoint kind="T" name="Speed &gt; SpeedMax" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=" status="NO" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=" info="%(Speed &gt; SpeedMax)%"/>
+                            <CoveragePoint kind="F" name="Speed &gt; SpeedMax" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=" info="%(Speed &gt; SpeedMax)%"/>
+                            <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=-1" info="%(Speed)% &gt; SpeedMax"/>
+                            <CoveragePoint kind="I" name="SpeedMax" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L1=-2" info="Speed &gt; %(SpeedMax)%"/>
+                            <CoveragePoint kind="T" name="_L3 or _L4 or _L1" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=" info="%(_L3 or _L4 or _L1)%"/>
+                            <CoveragePoint kind="F" name="_L3 or _L4 or _L1" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=" info="%(_L3 or _L4 or _L1)%"/>
+                            <CoveragePoint kind="T" name="_L3" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-1" info="%(_L3)% or _L4 or _L1"/>
+                            <CoveragePoint kind="F" name="_L3" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-1" info="%(_L3)% or _L4 or _L1"/>
+                            <CoveragePoint kind="T" name="_L4" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-2" status="NO" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-2" info="_L3 or %(_L4)% or _L1"/>
+                            <CoveragePoint kind="F" name="_L4" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-2" info="_L3 or %(_L4)% or _L1"/>
+                            <CoveragePoint kind="T" name="_L1" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-3" status="NO" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-3" info="_L3 or _L4 or %(_L1)%"/>
+                            <CoveragePoint kind="F" name="_L1" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-3" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L2=-3" info="_L3 or _L4 or %(_L1)%"/>
+                            <CoveragePoint kind="T" name="Accel &gt; PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=" info="%(Accel &gt; PedalsMin)%"/>
+                            <CoveragePoint kind="F" name="Accel &gt; PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=" info="%(Accel &gt; PedalsMin)%"/>
+                            <CoveragePoint kind="I" name="Accel" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=-1" info="%(Accel)% &gt; PedalsMin"/>
+                            <CoveragePoint kind="I" name="PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L3=-2" info="Accel &gt; %(PedalsMin)%"/>
+                            <CoveragePoint kind="T" name="Speed &lt; SpeedMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=" status="NO" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=" info="%(Speed &lt; SpeedMin)%"/>
+                            <CoveragePoint kind="F" name="Speed &lt; SpeedMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=" info="%(Speed &lt; SpeedMin)%"/>
+                            <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=-1" info="%(Speed)% &lt; SpeedMin"/>
+                            <CoveragePoint kind="I" name="SpeedMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:_L4=-2" info="Speed &lt; %(SpeedMin)%"/>
+                          </coveragePoints>
+                          <children>
+                            <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                              <coveragePoints>
+                                <CoveragePoint kind="T" name="Brake &gt; PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?" info="%(Brake &gt; PedalsMin)%"/>
+                                <CoveragePoint kind="F" name="Brake &gt; PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?" info="%(Brake &gt; PedalsMin)%"/>
+                                <CoveragePoint kind="I" name="Brake" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?-1" info="%(Brake)% &gt; PedalsMin"/>
+                                <CoveragePoint kind="I" name="PedalsMin" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:&lt;1&gt;:?-2" info="Brake &gt; %(PedalsMin)%"/>
+                              </coveragePoints>
+                            </DesignEntity>
+                            <DesignEntity kind="StateMachine" name="SM3">
+                              <children>
+                                <DesignEntity kind="State" name="On">
+                                  <coveragePoints>
+                                    <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:"/>
+                                    <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:"/>
+                                    <CoveragePoint kind="I" name="CruiseState" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:CruiseState=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:CruiseState=" info="%(_L12)%"/>
+                                    <CoveragePoint kind="I" name="ThrottleCmd" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:ThrottleCmd=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:ThrottleCmd=" info="%(_L3)%"/>
+                                    <CoveragePoint kind="I" name="local_CruiseSpeed" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L11=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L11=" info="%(local_CruiseSpeed)%"/>
+                                    <CoveragePoint kind="I" name="ON" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L12=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L12=" info="%(ON)%"/>
+                                    <CoveragePoint kind="I" name="CruiseRegulation(_L11, _L8)" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=" info="%(CruiseRegulation(_L11, _L8))%"/>
+                                    <CoveragePoint kind="I" name="_L11" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=-1" info="CruiseRegulation(%(_L11)%, _L8)"/>
+                                    <CoveragePoint kind="I" name="_L8" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L3=-2" info="CruiseRegulation(_L11, %(_L8)%)"/>
+                                    <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L8=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:_L8=" info="%(Speed)%"/>
+                                  </coveragePoints>
+                                  <children>
+                                    <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                                      <coveragePoints>
+                                        <CoveragePoint kind="T" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:&lt;1&gt;:?" info="%(StdbyCondition)%"/>
+                                        <CoveragePoint kind="F" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:On:&lt;1&gt;:?" info="%(StdbyCondition)%"/>
+                                      </coveragePoints>
+                                    </DesignEntity>
+                                  </children>
+                                </DesignEntity>
+                                <DesignEntity kind="State" name="StandBy">
+                                  <coveragePoints>
+                                    <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:"/>
+                                    <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:"/>
+                                    <CoveragePoint kind="I" name="CruiseState" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:CruiseState=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:CruiseState=" info="%(_L3)%"/>
+                                    <CoveragePoint kind="I" name="STDBY" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:_L3=" info="%(STDBY)%"/>
+                                  </coveragePoints>
+                                  <children>
+                                    <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                                      <coveragePoints>
+                                        <CoveragePoint kind="T" name="not StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?" info="%(not StdbyCondition)%"/>
+                                        <CoveragePoint kind="F" name="not StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?" info="%(not StdbyCondition)%"/>
+                                        <CoveragePoint kind="T" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?-1" info="not %(StdbyCondition)%"/>
+                                        <CoveragePoint kind="F" name="StdbyCondition" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Active:SM3:StandBy:&lt;1&gt;:?-1" info="not %(StdbyCondition)%"/>
+                                      </coveragePoints>
+                                    </DesignEntity>
+                                  </children>
+                                </DesignEntity>
+                              </children>
+                            </DesignEntity>
+                          </children>
+                        </DesignEntity>
+                        <DesignEntity kind="State" name="Interrupt">
+                          <coveragePoints>
+                            <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:"/>
+                            <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:"/>
+                            <CoveragePoint kind="I" name="CruiseState" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:CruiseState=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:CruiseState=" info="%(_L3)%"/>
+                            <CoveragePoint kind="I" name="INT" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:_L3=" info="%(INT)%"/>
+                          </coveragePoints>
+                          <children>
+                            <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                              <coveragePoints>
+                                <CoveragePoint kind="T" name="Resume" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:&lt;1&gt;:?" info="%(Resume)%"/>
+                                <CoveragePoint kind="F" name="Resume" path="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Enabled:SM2:Interrupt:&lt;1&gt;:?" info="%(Resume)%"/>
+                              </coveragePoints>
+                            </DesignEntity>
+                          </children>
+                        </DesignEntity>
+                      </children>
+                    </DesignEntity>
+                  </children>
+                </DesignEntity>
+                <DesignEntity kind="State" name="Off">
+                  <coveragePoints>
+                    <CoveragePoint kind="A" name="" path="CruiseControl::CruiseControl/SM1:Off:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Off:"/>
+                    <CoveragePoint kind="S" name="" path="CruiseControl::CruiseControl/SM1:Off:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Off:"/>
+                  </coveragePoints>
+                  <children>
+                    <DesignEntity kind="MainTransition" name="&lt;1&gt;">
+                      <coveragePoints>
+                        <CoveragePoint kind="T" name="On" path="CruiseControl::CruiseControl/SM1:Off:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Off:&lt;1&gt;:?" info="%(On)%"/>
+                        <CoveragePoint kind="F" name="On" path="CruiseControl::CruiseControl/SM1:Off:&lt;1&gt;:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseControl/SM1:Off:&lt;1&gt;:?" info="%(On)%"/>
+                      </coveragePoints>
+                    </DesignEntity>
+                  </children>
+                </DesignEntity>
+              </children>
+            </DesignEntity>
+          </children>
+        </DesignEntity>
+        <DesignEntity kind="Operator" name="SaturateThrottle" used="true" instrumented="true" signature="7a18d257aa628012c01ae9142422bcd73b14ea9c69b3f21428e3bdc562703a69">
+          <coveragePoints>
+            <CoveragePoint kind="T" name="Saturate" path="CruiseControl::SaturateThrottle/Saturate=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/Saturate=" info="%(_L13)%"/>
+            <CoveragePoint kind="F" name="Saturate" path="CruiseControl::SaturateThrottle/Saturate=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/Saturate=" info="%(_L13)%"/>
+            <CoveragePoint kind="I" name="ThrottleOut" path="CruiseControl::SaturateThrottle/ThrottleOut=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/ThrottleOut=" info="%(_L8)%"/>
+            <CoveragePoint kind="I" name="ThrottleIn" path="CruiseControl::SaturateThrottle/_L12=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L12=" info="%(ThrottleIn)%"/>
+            <CoveragePoint kind="T" name="_L7 or _L9" path="CruiseControl::SaturateThrottle/_L13=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=" info="%(_L7 or _L9)%"/>
+            <CoveragePoint kind="F" name="_L7 or _L9" path="CruiseControl::SaturateThrottle/_L13=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=" info="%(_L7 or _L9)%"/>
+            <CoveragePoint kind="T" name="_L7" path="CruiseControl::SaturateThrottle/_L13=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=-1" info="%(_L7)% or _L9"/>
+            <CoveragePoint kind="F" name="_L7" path="CruiseControl::SaturateThrottle/_L13=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=-1" info="%(_L7)% or _L9"/>
+            <CoveragePoint kind="T" name="_L9" path="CruiseControl::SaturateThrottle/_L13=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=-2" info="_L7 or %(_L9)%"/>
+            <CoveragePoint kind="F" name="_L9" path="CruiseControl::SaturateThrottle/_L13=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L13=-2" info="_L7 or %(_L9)%"/>
+            <CoveragePoint kind="I" name="ZeroPercent" path="CruiseControl::SaturateThrottle/_L14=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L14=" info="%(ZeroPercent)%"/>
+            <CoveragePoint kind="I" name="RegulThrottleMax" path="CruiseControl::SaturateThrottle/_L16=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L16=" info="%(RegulThrottleMax)%"/>
+            <CoveragePoint kind="I" name="if _L9 then (_L14) else (_L12)" path="CruiseControl::SaturateThrottle/_L6=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L6=" info="%(if _L9 then (_L14) else (_L12))%"/>
+            <CoveragePoint kind="T" name="_L9" path="CruiseControl::SaturateThrottle/_L6=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L6=-1" info="if %(_L9)% then (_L14) else (_L12)"/>
+            <CoveragePoint kind="F" name="_L9" path="CruiseControl::SaturateThrottle/_L6=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L6=-1" info="if %(_L9)% then (_L14) else (_L12)"/>
+            <CoveragePoint kind="I" name="_L14" path="CruiseControl::SaturateThrottle/_L6=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L6=-2" info="if _L9 then (%(_L14)%) else (_L12)"/>
+            <CoveragePoint kind="I" name="_L12" path="CruiseControl::SaturateThrottle/_L6=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L6=-3" info="if _L9 then (_L14) else (%(_L12)%)"/>
+            <CoveragePoint kind="T" name="_L12 &gt; _L16" path="CruiseControl::SaturateThrottle/_L7=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L7=" info="%(_L12 &gt; _L16)%"/>
+            <CoveragePoint kind="F" name="_L12 &gt; _L16" path="CruiseControl::SaturateThrottle/_L7=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L7=" info="%(_L12 &gt; _L16)%"/>
+            <CoveragePoint kind="I" name="_L12" path="CruiseControl::SaturateThrottle/_L7=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L7=-1" info="%(_L12)% &gt; _L16"/>
+            <CoveragePoint kind="I" name="_L16" path="CruiseControl::SaturateThrottle/_L7=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L7=-2" info="_L12 &gt; %(_L16)%"/>
+            <CoveragePoint kind="I" name="if _L7 then (_L16) else (_L6)" path="CruiseControl::SaturateThrottle/_L8=" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L8=" info="%(if _L7 then (_L16) else (_L6))%"/>
+            <CoveragePoint kind="T" name="_L7" path="CruiseControl::SaturateThrottle/_L8=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L8=-1" info="if %(_L7)% then (_L16) else (_L6)"/>
+            <CoveragePoint kind="F" name="_L7" path="CruiseControl::SaturateThrottle/_L8=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L8=-1" info="if %(_L7)% then (_L16) else (_L6)"/>
+            <CoveragePoint kind="I" name="_L16" path="CruiseControl::SaturateThrottle/_L8=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L8=-2" info="if _L7 then (%(_L16)%) else (_L6)"/>
+            <CoveragePoint kind="I" name="_L6" path="CruiseControl::SaturateThrottle/_L8=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L8=-3" info="if _L7 then (_L16) else (%(_L6)%)"/>
+            <CoveragePoint kind="T" name="_L12 &lt; _L14" path="CruiseControl::SaturateThrottle/_L9=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L9=" info="%(_L12 &lt; _L14)%"/>
+            <CoveragePoint kind="F" name="_L12 &lt; _L14" path="CruiseControl::SaturateThrottle/_L9=" status="O" core="true" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L9=" info="%(_L12 &lt; _L14)%"/>
+            <CoveragePoint kind="I" name="_L12" path="CruiseControl::SaturateThrottle/_L9=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L9=-1" info="%(_L12)% &lt; _L14"/>
+            <CoveragePoint kind="I" name="_L14" path="CruiseControl::SaturateThrottle/_L9=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::SaturateThrottle/_L9=-2" info="_L12 &lt; %(_L14)%"/>
+          </coveragePoints>
+        </DesignEntity>
+        <DesignEntity kind="Operator" name="CruiseSpeedMgt" used="true" instrumented="true" signature="48420917f81a3c21bee64021b83dccc7a6fb47d8d740ed6b16405fde48d80158">
+          <coveragePoints>
+            <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseSpeedMgt/CruiseSpeed.last" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/CruiseSpeed.last" info="%(CruiseSpeed.last)%"/>
+            <CoveragePoint kind="I" name="CruiseSpeed" path="CruiseControl::CruiseSpeedMgt/CruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/CruiseSpeed=" info="%(_L42)%"/>
+            <CoveragePoint kind="I" name="pwlinear::LimiterUnSymmetrical(_L43, SpeedMin, SpeedMax)" path="CruiseControl::CruiseSpeedMgt/_L42=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/_L42=" info="%(pwlinear::LimiterUnSymmetrical(_L43, SpeedMin, SpeedMax))%"/>
+            <CoveragePoint kind="I" name="_L43" path="CruiseControl::CruiseSpeedMgt/_L42=-1" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/_L42=-1" info="pwlinear::LimiterUnSymmetrical(%(_L43)%, SpeedMin, SpeedMax)"/>
+            <CoveragePoint kind="I" name="SpeedMin" path="CruiseControl::CruiseSpeedMgt/_L42=-2" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/_L42=-2" info="pwlinear::LimiterUnSymmetrical(_L43, %(SpeedMin)%, SpeedMax)"/>
+            <CoveragePoint kind="I" name="SpeedMax" path="CruiseControl::CruiseSpeedMgt/_L42=-3" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/_L42=-3" info="pwlinear::LimiterUnSymmetrical(_L43, SpeedMin, %(SpeedMax)%)"/>
+            <CoveragePoint kind="I" name="LocalCruiseSpeed" path="CruiseControl::CruiseSpeedMgt/_L43=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/_L43=" info="%(LocalCruiseSpeed)%"/>
+          </coveragePoints>
+          <children>
+            <DesignEntity kind="IfBlock" name="IfBlock1">
+              <coveragePoints>
+                <CoveragePoint kind="T" name="Set" path="CruiseControl::CruiseSpeedMgt/IfBlock1:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:?" info="%(Set)%"/>
+                <CoveragePoint kind="F" name="Set" path="CruiseControl::CruiseSpeedMgt/IfBlock1:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:?" info="%(Set)%"/>
+              </coveragePoints>
+              <children>
+                <DesignEntity kind="IfAction" name="then">
+                  <coveragePoints>
+                    <CoveragePoint kind="A" name="" path="CruiseControl::CruiseSpeedMgt/IfBlock1:then:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:then:"/>
+                    <CoveragePoint kind="I" name="LocalCruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:then:LocalCruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:then:LocalCruiseSpeed=" info="%(_L2)%"/>
+                    <CoveragePoint kind="I" name="Speed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:then:_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:then:_L2=" info="%(Speed)%"/>
+                  </coveragePoints>
+                </DesignEntity>
+                <DesignEntity kind="IfNode" name="else">
+                  <coveragePoints>
+                    <CoveragePoint kind="T" name="QuickAccel" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:?" info="%(QuickAccel)%"/>
+                    <CoveragePoint kind="F" name="QuickAccel" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:?" info="%(QuickAccel)%"/>
+                  </coveragePoints>
+                  <children>
+                    <DesignEntity kind="IfAction" name="then">
+                      <coveragePoints>
+                        <CoveragePoint kind="A" name="" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:"/>
+                        <CoveragePoint kind="I" name="LocalCruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:LocalCruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:LocalCruiseSpeed=" info="%(_L2)%"/>
+                        <CoveragePoint kind="I" name="last 'CruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L1=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L1=" info="%(last 'CruiseSpeed)%"/>
+                        <CoveragePoint kind="I" name="_L1 + _L3" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=" info="%(_L1 + _L3)%"/>
+                        <CoveragePoint kind="I" name="_L1" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=-1" info="%(_L1)% + _L3"/>
+                        <CoveragePoint kind="I" name="_L3" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L2=-2" info="_L1 + %(_L3)%"/>
+                        <CoveragePoint kind="I" name="SpeedInc" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else:then:_L3=" info="%(SpeedInc)%"/>
+                      </coveragePoints>
+                    </DesignEntity>
+                    <DesignEntity kind="IfNode" name="else">
+                      <coveragePoints>
+                        <CoveragePoint kind="T" name="QuickDecel" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:?" info="%(QuickDecel)%"/>
+                        <CoveragePoint kind="F" name="QuickDecel" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:?" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:?" info="%(QuickDecel)%"/>
+                      </coveragePoints>
+                      <children>
+                        <DesignEntity kind="IfAction" name="then">
+                          <coveragePoints>
+                            <CoveragePoint kind="A" name="" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:"/>
+                            <CoveragePoint kind="I" name="LocalCruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:LocalCruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:LocalCruiseSpeed=" info="%(_L4)%"/>
+                            <CoveragePoint kind="I" name="last 'CruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L2=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L2=" info="%(last 'CruiseSpeed)%"/>
+                            <CoveragePoint kind="I" name="SpeedInc" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L3=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L3=" info="%(SpeedInc)%"/>
+                            <CoveragePoint kind="I" name="_L2 - _L3" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=" info="%(_L2 - _L3)%"/>
+                            <CoveragePoint kind="I" name="_L2" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=-1" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=-1" info="%(_L2)% - _L3"/>
+                            <CoveragePoint kind="I" name="_L3" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=-2" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^2:then:_L4=-2" info="_L2 - %(_L3)%"/>
+                          </coveragePoints>
+                        </DesignEntity>
+                        <DesignEntity kind="IfAction" name="else">
+                          <coveragePoints>
+                            <CoveragePoint kind="A" name="" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:"/>
+                            <CoveragePoint kind="I" name="LocalCruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:LocalCruiseSpeed=" status="O" core="true" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:LocalCruiseSpeed=" info="%(_L1)%"/>
+                            <CoveragePoint kind="I" name="last 'CruiseSpeed" path="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:_L1=" status="O" core="false" coverable="true" localizationPath="CruiseControl::CruiseSpeedMgt/IfBlock1:else^3:_L1=" info="%(last 'CruiseSpeed)%"/>
+                          </coveragePoints>
+                        </DesignEntity>
+                      </children>
+                    </DesignEntity>
+                  </children>
+                </DesignEntity>
+              </children>
+            </DesignEntity>
+          </children>
+        </DesignEntity>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="filters">
+      <children>
+        <DesignEntity kind="Operator" name="Filter0DNorm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter12Norm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FilterNDNorm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter01Norm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TransferFcn02" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter01" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="SumDelay" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TransferFcn0D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TransferFcn12" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FilterNNNorm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TransferFcnND" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter02Norm" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="TransferFcn01" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FilterNN" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter02" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter12" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter0D" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter11" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="FilterND" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Filter11Norm" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="verif">
+      <children>
+        <DesignEntity kind="Operator" name="AlwaysAfterFirstCond" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="ImpliesWithinNTick" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="AfterNthTick" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="Implies" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="HasNeverBeenTrue" used="false" instrumented="false"/>
+        <DesignEntity kind="Operator" name="AtLeastNTicks" used="false" instrumented="false"/>
+      </children>
+    </DesignEntity>
+    <DesignEntity kind="Package" name="Car">
+      <children>
+        <DesignEntity kind="Operator" name="Body" used="true" instrumented="false"/>
+        <DesignEntity kind="Operator" name="PowerTrainStatic" used="true" instrumented="false"/>
+        <DesignEntity kind="Operator" name="CarModel" used="true" instrumented="false"/>
+      </children>
+    </DesignEntity>
+  </roots>
+</ModelCoverageCache>
